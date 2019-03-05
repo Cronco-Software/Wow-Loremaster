@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7411F036-F843-447F-922E-887D18ACAE22}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LoremasterHelper</RootNamespace>
+    <AssemblyName>LoremasterHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44357</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.13605.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2\lib\Elmah.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elmah.Mvc, Version=2.1.2.1389, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Mvc.2.1.2\lib\net40\Elmah.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="500.aspx.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="500.aspx.designer.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Code\Achievement.cs" />
+    <Compile Include="Code\AchieveResult.cs" />
+    <Compile Include="Code\CharacterRecomentationResult.cs" />
+    <Compile Include="Code\Config.cs" />
+    <Compile Include="Code\GameData.cs" />
+    <Compile Include="Code\Loremaster.cs" />
+    <Compile Include="Code\Meta.cs" />
+    <Compile Include="Code\MetaResult.cs" />
+    <Compile Include="Code\Quest.cs" />
+    <Compile Include="Code\LMResult.cs" />
+    <Compile Include="Code\QuestResult.cs" />
+    <Compile Include="Code\Simulation.cs" />
+    <Compile Include="Code\Zone.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\GuidesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OAuthController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CharacterAchiev.cs" />
+    <Compile Include="Models\BNetCharacterDetails.cs" />
+    <Compile Include="Models\BNetContext.cs" />
+    <Compile Include="Models\BNetCharacter.cs" />
+    <Compile Include="Models\BNetUser.cs" />
+    <Compile Include="Models\CharacterDefinition.cs" />
+    <Compile Include="Models\ClientCredential.cs" />
+    <Compile Include="Models\Layout.cs" />
+    <Compile Include="Models\OAuthTokenForm.cs" />
+    <Compile Include="Models\SimulationForm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Code\Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="404.html" />
+    <Content Include="500.aspx" />
+    <Content Include="500.html" />
+    <Content Include="App_Data\loremaster.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\background.jpg" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Bowing.jpg" />
+    <Content Include="Content\Errinar.jpg" />
+    <Content Include="Content\faction-bullets.png" />
+    <Content Include="Content\Guides\Cata\CataGuideBanner.jpg" />
+    <Content Include="Content\Guides\Cata\TwiliightTower.jpg" />
+    <Content Include="Content\Guides\Cata\Uldum.jpg" />
+    <Content Include="Content\Guides\Classic\ClassicGuideBanner.jpg" />
+    <Content Include="Content\Guides\Classic\Ghostlands\andaroth.jpg" />
+    <Content Include="Content\Guides\Classic\Ghostlands\ghostlandsbanner.jpg" />
+    <Content Include="Content\Guides\Classic\Ghostlands\ghostlandslocation.jpg" />
+    <Content Include="Content\Guides\Classic\Ghostlands\reporttohelios.jpg" />
+    <Content Include="Content\Guides\Classic\Ghostlands\Sanctumofthesun.jpg" />
+    <Content Include="Content\Guides\Classic\hogger.jpg" />
+    <Content Include="Content\Guides\Classic\LockModan\Chogall.png" />
+    <Content Include="Content\Guides\Classic\LockModan\farstrider.png" />
+    <Content Include="Content\Guides\Classic\LockModan\Foodquest.png" />
+    <Content Include="Content\Guides\Classic\LockModan\lochmodanbanner.jpg" />
+    <Content Include="Content\Guides\Classic\LockModan\LockModanLoc.png" />
+    <Content Include="Content\Guides\Classic\LockModan\Whosincharge.png" />
+    <Content Include="Content\Guides\Classic\sargstab.jpg" />
+    <Content Include="Content\Guides\Classic\Zidormi.jpg" />
+    <Content Include="Content\Guides\Legion\Gunric.jpg" />
+    <Content Include="Content\Guides\Legion\LegionGuideBanner.jpg" />
+    <Content Include="Content\Guides\Legion\NotQuiteRight.jpg" />
+    <Content Include="Content\Guides\Legion\Pillars.jpg" />
+    <Content Include="Content\Guides\Legion\Suramar\AncientGiftMap.jpg" />
+    <Content Include="Content\Guides\Legion\Suramar\Feline.jpg" />
+    <Content Include="Content\Guides\Legion\Suramar\Jandvik.jpg" />
+    <Content Include="Content\Guides\Legion\Suramar\LyanaLocation.jpg" />
+    <Content Include="Content\Guides\Legion\Suramar\MoonGuard.jpg" />
+    <Content Include="Content\Guides\Legion\Suramar\SuramarGuideBanner.jpg" />
+    <Content Include="Content\Guides\Legion\Suramar\Thalyssra.jpg" />
+    <Content Include="Content\Guides\Loremaster\ErrinarReading.jpg" />
+    <Content Include="Content\Guides\Loremaster\FoamSword.jpg" />
+    <Content Include="Content\Guides\Loremaster\LoremasterGuideBanner.jpg" />
+    <Content Include="Content\Guides\Loremaster\OrcAlt.jpg" />
+    <Content Include="Content\Guides\Loremaster\takinCandle.jpg" />
+    <Content Include="Content\Guides\Loremaster\ThumbsUp.jpg" />
+    <Content Include="Content\Guides\Loremaster\TrivialQuests.jpg" />
+    <Content Include="Content\Guides\Loremaster\WendigoBattle.jpg" />
+    <Content Include="Content\Guides\MoP\DragonHead.jpg" />
+    <Content Include="Content\Guides\MoP\MoPGuideBanner.jpg" />
+    <Content Include="Content\Guides\MoP\MountTrainer.jpg" />
+    <Content Include="Content\Guides\TBC\netherstorm.jpg" />
+    <Content Include="Content\Guides\TBC\orgportal.jpg" />
+    <Content Include="Content\Guides\TBC\ShadowmoonValley\BaneShard.jpg" />
+    <Content Include="Content\Guides\TBC\ShadowmoonValley\HandOfGuldanAlliance.png" />
+    <Content Include="Content\Guides\TBC\ShadowmoonValley\HandOfGuldanHorde.png" />
+    <Content Include="Content\Guides\TBC\ShadowmoonValley\karabortraining.jpg" />
+    <Content Include="Content\Guides\TBC\ShadowmoonValley\service.jpg" />
+    <Content Include="Content\Guides\TBC\ShadowmoonValley\smvBanner.jpg" />
+    <Content Include="Content\Guides\TBC\ShadowmoonValley\Vet.jpg" />
+    <Content Include="Content\Guides\TBC\swportal.jpg" />
+    <Content Include="Content\Guides\TBC\TBCGuideBanner.jpg" />
+    <Content Include="Content\Guides\WoD\AllianceGarrison.jpg" />
+    <Content Include="Content\Guides\WoD\HordeGarrison.jpg" />
+    <Content Include="Content\Guides\WoD\KhadQuest.jpg" />
+    <Content Include="Content\Guides\WoD\WodGuideBanner.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\basictraining.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\bloodspore.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\BoreanTundraBanner.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\ears.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\enemies.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\grimwalker.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\naxx.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\Notwithoutafight.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\stand.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\tanks.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\taunkale.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\them.jpg" />
+    <Content Include="Content\Guides\WotLK\BoreanTundra\untold.jpg" />
+    <Content Include="Content\Guides\WotLK\Ship.jpg" />
+    <Content Include="Content\Guides\WotLK\TheMenethils.jpg" />
+    <Content Include="Content\Guides\WotLK\WotLKGuideBanner.jpg" />
+    <Content Include="Content\Guides\WotLK\Zep.jpg" />
+    <Content Include="Content\icon_no_guide.jpg" />
+    <Content Include="Content\icon_read_guide.jpg" />
+    <Content Include="Content\inv_drink_05.jpg" />
+    <Content Include="Content\inv_drink_milk_02.jpg" />
+    <Content Include="Content\jquery.smartmenus.bootstrap.css" />
+    <Content Include="Content\lmh.css" />
+    <Content Include="Content\lmhIcon-large.png" />
+    <Content Include="Content\lmhIcon.png" />
+    <Content Include="Content\Logo-alliance-small.png" />
+    <Content Include="Content\Logo-alliance-tiny.png" />
+    <Content Include="Content\Logo-alliance.png" />
+    <Content Include="Content\Logo-horde-small.png" />
+    <Content Include="Content\Logo-horde-tiny.png" />
+    <Content Include="Content\Logo-horde.png" />
+    <Content Include="Content\portrait-not-found.png" />
+    <Content Include="Content\questGiver.png" />
+    <Content Include="Content\sm-core-css.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\races.json" />
+    <Content Include="App_Data\classes.json" />
+    <Content Include="App_Data\questZones.json" />
+    <Content Include=".well-known\acme-challenge\web.config" />
+    <Content Include=".well-known\acme-challenge\7y8Iqnxj5J3QJ2UMZFEhAWZTirxBTQhoiym4Mu8-fIs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\croncosoftware.com.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\wowloreamster.com.pubxml" />
+    <None Include="Properties\PublishProfiles\WowLoremaster - FTP.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.smartmenus.bootstrap.min.js" />
+    <Content Include="Scripts\jquery.smartmenus.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\typeahead.bundle.min.js" />
+    <Content Include="Scripts\wowservers.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Calculator.cshtml" />
+    <Content Include="Views\OAuth\Index.cshtml" />
+    <Content Include="Views\OAuth\Token.cshtml" />
+    <Content Include="Views\Home\Progress.cshtml" />
+    <Content Include="Views\Home\Achievements.cshtml" />
+    <Content Include="Views\Guides\Loremaster.cshtml" />
+    <Content Include="Views\Guides\Classic_Zone_Guides.cshtml" />
+    <Content Include="Views\Guides\Loremaster_of_Outland.cshtml" />
+    <Content Include="Views\Guides\Loremaster_of_Northrend.cshtml" />
+    <Content Include="Views\Guides\Loremaster_of_Pandaria.cshtml" />
+    <Content Include="Views\Guides\Loremaster_of_Cataclysm.cshtml" />
+    <Content Include="Views\Guides\Loremaster_of_Draenor.cshtml" />
+    <Content Include="Views\Guides\Loremaster_of_Legion.cshtml" />
+    <Content Include="Views\Guides\Good_Suramaritan.cshtml" />
+    <Content Include="Views\Guides\Ghostlands_Quests.cshtml" />
+    <Content Include="Views\Guides\Loch_Modan_Quests.cshtml" />
+    <Content Include="Views\Guides\Nothing_Boring_About_Borean.cshtml" />
+    <Content Include="Views\Guides\Shadow_of_the_Betrayer.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62020</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62020/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

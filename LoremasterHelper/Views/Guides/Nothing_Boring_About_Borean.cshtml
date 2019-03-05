@@ -1,0 +1,584 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Nothing Boring About Borean achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Nothing Boring About Borean: Loremaster guide for Borean Tundra";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Nothing-Boring-About-Borean";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well zone-guide-container">
+        <h2>Nothing Boring About Borean: Loremaster guide for Borean Tundra </h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img src="~/Content/Guides/WotLK/BoreanTundra/BoreanTundraBanner.jpg" alt="Borean Tundra guide banner image" class="img-responsive guide-banner"/>
+        <p>
+            This guide is intended to be a quick overview of how to get started questing in Borean Tundra, with some pointers along
+            the way in case you get stuck. These quests have been in the game for about a decade, so if you
+            have been playing for a while you may have already completed most of the quests you need. Be sure to check the <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a> to see which of your characters
+            has already completed the most quests in Borean Tundra.
+        <p>
+
+            <h3>Getting to Borean Tundra</h3>
+        <p>
+            There are transports to Borean Tundra in the faction capital cities.  Alliance players can take a ship from Stormwind and Horde players
+            can hop on a zeppelin in Orgrimmar.
+        </p>
+
+        <h3>Pain Points</h3>
+        <p>
+            <img src="~/Content/Guides/WotLK/BoreanTundra/naxx.jpg" alt="Wide angle shot of Naxxramas" class="img-right"/>
+            These quests have generated the most questions, comments, and general frustration on the forums.
+            <dl>
+                <dt>
+                    <span class="guide-quest">
+                        Last Rites
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=12019">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/12019">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This quest is frustrating for two big reasons:
+                    <ol>
+                        <li>
+                            The teleporter can be hard to find.  The first teleporter is in the temple just to the right of the entrance.  The second
+                            teleporter is pretty much right above the first on a little alcove.
+                        </li>
+                        <li>
+                            It is brutally hard to accomplish solo.  Contrary to modern WoW quest design, when WoTLK was current there were
+                            a few open world quests in each zone that was intended for groups of players.  This is one of those quests. If you try
+                            it solo, watch out when the boss casts Soul Deflection: all damage you do to the boss will be redirected back at you.
+                        </li>
+                    </ol>
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Springing the Trap
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11969">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/11969">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    While (probably) not much of an issue anymore, this quest has a tendency to bug out of too many people
+                    try to do it at the same time.  When you use the quest item, there is a solid minute of RP you have to watch
+                    in order to complete the quest.  If another player is in the middle of the RP, you can't summon yours.  Sometimes
+                    it may look like you did it, but it was really another player and you will sit there and be taken to the next part
+                    of the quest.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Nedar, Lord of Rhinos...
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11884">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/11884">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This can cause a bit of confusion if you don't carefully read the quest text.  You first have to engage "Lunchbox,"
+                    then after he is defeated the second mob will spawn.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Just a Few More Things...
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11650">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/11650">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    The best news about this quest is that it is not required for the Nothing Boring about Borean achievement.  If you are
+                    a completionist however, you will need to find an engineer to craft an Overcharded Capacitor for you.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        The Art of Persuasion
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11648">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/11648">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This quest isn't exactly difficult, but it was fun researching it on the forums.  Apparently people are a little
+                    turned off by the idea of, quite literally, torturing information out of someone.  The best/worst part is after
+                    you complete the quest objective you can keep right on torturing him and he will use different dialog text.  That means
+                    that someone at Blizzard went out of their way to script this in knowing that some people enjoy torture just a little
+                    too much.
+                </dd>
+            </dl>
+        </p>
+
+        <h3>Storylines</h3>
+        <p>
+            There are some slight differences between the Horde and Alliance storylines in Borean Tundra.  As such they will be
+            listed separately below.
+        </p>
+        <h4 class="alliance-stories">Alliance</h4>
+        <h5>Hiding in Plain Sight</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/enemies.jpg" alt="Location of Enemies of the Light" />
+                <figcaption>Location of Enemies of the Light</figcaption>
+            </figure>
+            The Hiding in Plain Sight quest chain starts with <span class="guide-quest">
+                Enemies of the Light
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11792">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11792">WoW DB</a>)
+            </span>.
+            The quest items drop from the cultists in the farm north of Valiance Keep.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Hiding in Plain Sight will be given after completing <span class="guide-quest">
+                The Hunt is On
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11794">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11794">WoW DB</a>)
+            </span>.
+            These guys can be a little hard to find, especially if you are used the quest objectives being clearly marked on the
+            mini map.  You have to use the Occulus item you got when you started the quest, then speak to each NPC.  They are located:
+            <ul>
+                <li>On the docks</li>
+                <li>In the basement of the keep</li>
+                <li>In the kitchen of the inn</li>
+            </ul>
+        </p>
+        <h5>To the Aid of Farshire</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/enemies.jpg" alt="Location of Farshire" />
+                <figcaption>Location of Farshire</figcaption>
+            </figure>
+            The To the Aid of Farshire quest chain starts with <span class="guide-quest">
+                Farshire
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11928">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11928">WoW DB</a>)
+            </span>.
+            You pick up most of the quests for this storyline in the keep at Valiance Keep, but the actual questing happens
+            in Farshire: the village to the north of the keep.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for To the Aid of Farshire will be given after completing <span class="guide-quest">
+                Call to Arms!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11965">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11965">WoW DB</a>)
+            </span>.
+            This quest is a shout out to the Warcraft RTS games.  One ability the Human faction has in those games to call
+            all workers to the Town Hall and arm them for combat.  Sure, they were still terrible, but it was better than unarmed
+            workers getting slaughtered without fighting back.
+        </p>
+        <h5>Last Rites</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/stand.jpg" alt="Location of Finding the Phylactery" />
+                <figcaption>Location of Finding the Phylactery</figcaption>
+            </figure>
+            The Last Rites quest chain starts with <span class="guide-quest">
+                Finding the Phylactery
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11956">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11956">WoW DB</a>)
+            </span>.
+            There are no prerequisites for picking up this quest.  Note: the quest item you have to pick up is at the bottom
+            of the pool of water the horse leads you to.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Last Rites will be given after completing <span class="guide-quest">
+                Last Rites
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=12019">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/12019">WoW DB</a>)
+            </span>.
+            Warning: this is a difficult quest to solo when working through it as an appropriately leveled character.
+        </p>
+        <h5>A Family Reunion</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/enemies.jpg" alt="Location of Word on the Street" />
+                <figcaption>Location of Word on the Street</figcaption>
+            </figure>
+            The A Family Reunion quest chain starts with <span class="guide-quest">
+                Word on the Street
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11927">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11927">WoW DB</a>)
+            </span>.
+            this quest becomes available after completing the intro quest chain at Valiance Keep: <span class="guide-quest">
+                A Time for Heroes
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11727">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11727">WoW DB</a>)
+            </span>
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for A Family Reunion will be given after completing <span class="guide-quest">
+                Thassarian, the Death Knight
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=12088">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/12088">WoW DB</a>)
+            </span>.
+        </p>
+        <h5>Friends from the Sea</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/Notwithoutafight.jpg" alt="Location of Not without a fight quest" />
+                <figcaption>Location of Not Without a Fight!</figcaption>
+            </figure>
+            The Friends from the Sea quest chain starts with <span class="guide-quest">
+                Not Without a Fight!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11949">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11949">WoW DB</a>)
+            </span>.
+            There are no prerequisites for this quest, you can just fly over to the quest area and start it.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Friends from the Sea will be given after completing <span class="guide-quest">
+                The Tides Turn
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11968">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11968">WoW DB</a>)
+            </span>.
+            Fun fact: the named mob you have to kill, Heigar the Horrible, is likely a reference to the comic strip Hägar the Horrible.
+        </p>
+        <h5>Participant Observation</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/them.jpg" alt="Location of Oh Noes, the Tadpoles quest." />
+                <figcaption>Location of Oh Noes, the Tadpoles!</figcaption>
+            </figure>
+            The Participant Observation quest chain starts with <span class="guide-quest">
+                Oh Noes, the Tadpoles!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11560">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11560">WoW DB</a>)
+            </span>.
+            This quest requires you to run around rescuing baby murlocks from cages.  Each one you release follows you around, so you get to
+            build an adorable baby murlock army.  There does not appear to be a prerequisite for this quest: you can just fly up
+            to the quest area and pick it up.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Participant Observation will be given after completing <span class="guide-quest">
+                Surrender... Not!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11566">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11566">WoW DB</a>)
+            </span>.
+            This quest is fairly straight forward.  Make sure you check out all of the emotes while in the murlock costume.
+        </p>
+        <h5>D.E.H.T.A.</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/ears.jpg" alt="Location of Ears of our Enimies" />
+                <figcaption>Location of Ears of Our Enemies</figcaption>
+            </figure>
+            The D.E.H.T.A. quest chain starts with <span class="guide-quest">
+                Ears of Our Enemies
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11866">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11866">WoW DB</a>)
+            </span>.
+            There is no prerequisite to picking up this quest.  This is one of those quests where you would expect the drop
+            rate to be <i>really</i> regular, but some people have one ear.  Some have three.  It's probably best not to ask
+            too many questions.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for D.E.H.T.A. will be given after completing <span class="guide-quest">
+                The Assassination of Harold Lane
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11892">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11892">WoW DB</a>)
+            </span>.
+            The quest itself it straight-forward.  Max-level character gotcha:  even with track trivial quests enabled you will not
+            see the (!) above the quest givers head.  The Ears of our Enemies quest is repeatable, and for some reason at max level
+            it will show the blue (?) above the quest giver instead of the new quest.
+        </p>
+        <h5>The Blue Dragonflight</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/basictraining.jpg" alt="Location of Basic Training" />
+                <figcaption>Location of Basic Training</figcaption>
+            </figure>
+            The The Blue Dragonflight quest chain starts with <span class="guide-quest">
+                Basic Training
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11918">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11918">WoW DB</a>)
+            </span>.
+            There is no prerequisite for picking up this quest.  Prior to the 7.3.5 questing revamp, most of the quests
+            in the Coldarra did not count towards Nothing Boring about Borean.  Now, all of them are required to complete
+            the Blue Dragonflight storyline.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Blue Dragonflight will be given after completing <span class="guide-quest">
+                Keep the Secret Safe
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11914">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11914">WoW DB</a>)
+            </span>.
+        </p>
+
+        <h4 class="horde-stories">Horde</h4>
+
+        <h5>Somber Realization</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/taunkale.jpg" alt="Location of Shrouds of the Scourge" />
+                <figcaption>Location of Shrouds of the Scourge</figcaption>
+            </figure>
+            The Somber Realization quest chain starts with <span class="guide-quest">
+                Shrouds of the Scourge
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11628">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11628">WoW DB</a>)
+            </span>.
+            This is the beginning of a very long series of quest chains.  This quest becomes available after you complete
+            <span class="guide-quest">
+                Patching Up
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11894">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11894">WoW DB</a>)
+            </span>.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Somber Realization will be given after completing <span class="guide-quest">
+                Across Transborea
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11930">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11930">WoW DB</a>)
+            </span>.
+            This is a more-than-typically annoying escort quest.  Pay attention to your ward, since he will
+            stop frequently.
+        </p>
+
+        <h5>The Fate of Fareseer Grimwalker</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/grimwalker.jpg" alt="Location of Farseer Grimwalker's Spirit" />
+                <figcaption>Location of Farseer Grimwalker's Spirit</figcaption>
+            </figure>
+            The The Fate of Fareseer Grimwalker quest chain starts with <span class="guide-quest">
+                Farseer Grimwalker's Spirit
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11635">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11635">WoW DB</a>)
+            </span>.
+            Farseer Grimwalker is located in the cave to the northeast of the quest giver.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Fate of Fareseer Grimwalker will be given after completing <span class="guide-quest">
+                Return My Remains
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11638">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11638">WoW DB</a>)
+            </span>.
+            Be sure to actually pick up his remains after accepting the quest.  Don't be like me and run off right after
+            talking to him, leaving the quest item behind.
+        </p>
+        <h5>Return of the Dread Citadel</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/tanks.jpg" alt="Location of Tanks a lot..." />
+                <figcaption>Location of Tanks a lot...</figcaption>
+            </figure>
+            The Return of the Dread Citadel quest chain starts with <span class="guide-quest">
+                Tanks a lot...
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11651">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11651">WoW DB</a>)
+            </span>.
+            This quest becomes available after you complete <span class="guide-quest">
+                Super Strong Metal Plates!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11644">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11644">WoW DB</a>)
+            </span> and <span class="guide-quest">
+                Mobu's Pneumatic Tank Transjigamarig
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11643">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11643">WoW DB</a>)
+            </span> in the same area.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Return of the Dread Citadel will be given after completing <span class="guide-quest">
+                The Plains of Nasam
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11652">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11652">WoW DB</a>)
+            </span>.
+            There are two annoyances with this quest:
+            <ol>
+                <li>The tanks are hard to find.  They are near the cost south of Garrosh's Landing</li>
+                <li>
+                    The quest can bug out and not give you credit for identifying the scourge leader, even if you run over him.  When that happens
+                    you can abandon the quest and hope that it doesn't happen again.
+                </li>
+            </ol>
+        </p>
+        <h5>The Scourge Necrolord</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/untold.jpg" alt="Location of Untold Truths" />
+                <figcaption>Location of Untold Truths</figcaption>
+            </figure>
+            The The Scourge Necrolord quest chain starts with <span class="guide-quest">
+                Untold Truths
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11614">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11614">WoW DB</a>)
+            </span>.
+            It is hard to tell on the mimimap, but the quest giver is outside of Warsong Hold on the west side.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Scourge Necrolord will be given after completing <span class="guide-quest">
+                Foolish Endeavors
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11705">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11705">WoW DB</a>)
+            </span>.
+            There is a long RP involving High Overlord Saurfang after you turn in this quest.  It is worth the watch for
+            us lore nerds.
+        </p>
+        <h5>To the Aid of the Taunka</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/taunkale.jpg" alt="Location of Scouting the Sinkholes" />
+                <figcaption>Location of Scouting the Sinkholes</figcaption>
+            </figure>
+            The To the Aid of the Taunka quest chain starts with <span class="guide-quest">
+                Scouting the Sinkholes
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11684">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11684">WoW DB</a>)
+            </span>.
+            There are 3 sink holes: one directly to the south, one to the north-east, and another to the north-west.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for To the Aid of the Taunka will be given after completing <span class="guide-quest">
+                The Collapse
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11706">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11706">WoW DB</a>)
+            </span>.
+            Make sure you are in the southern-most tunnel in the geyser field before you use the Horn of Elemental Fury.
+        </p>
+        <h5>Hellscream's Champion</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/bloodspore.jpg" alt="Location of The Wondrous Bloodspore" />
+                <figcaption>Location of The Wondrous Bloodspore</figcaption>
+            </figure>
+            The Hellscream's Champion quest chain starts with <span class="guide-quest">
+                The Wondrous Bloodspore
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11716">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11716">WoW DB</a>)
+            </span>.
+            The opening quest is a standard "run around and collect the things" quest.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Hellscream's Champion will be given after completing the quest <span class="guide-quest">
+                Hellscream's Champion
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11916">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11916">WoW DB</a>)
+            </span>.
+            The final quest in this storyline has a weird dependency on having completed some of the other Horde storylines first.
+            You can pick up the initial quest with no prerequisites, but in order to pick up the Hellscream's Champion
+            you must first have completed the To the Aid of the Taunka and the Return of the Dread Citadel quest chains.
+        </p>
+        <h5>Participant Observation</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/them.jpg" alt="Location of Oh Noes, the Tadpoles quest." />
+                <figcaption>Location of Oh Noes, the Tadpoles!</figcaption>
+            </figure>
+            The Participant Observation quest chain starts with <span class="guide-quest">
+                Oh Noes, the Tadpoles!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11560">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11560">WoW DB</a>)
+            </span>.
+            This quest requires you to run around rescuing baby murlocks from cages.  Each one you release follows you around, so you get to
+            build an adorable baby murlock army.  There does not appear to be a prerequisite for this quest: you can just fly up
+            to the quest area and pick it up.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Participant Observation will be given after completing <span class="guide-quest">
+                Surrender... Not!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11566">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11566">WoW DB</a>)
+            </span>.
+            This quest is fairly straight forward.  Make sure you check out all of the emotes while in the murlock costume.
+        </p>
+        <h5>D.E.H.T.A.</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/ears.jpg" alt="Location of Ears of our Enimies" />
+                <figcaption>Location of Ears of Our Enemies</figcaption>
+            </figure>
+            The D.E.H.T.A. quest chain starts with <span class="guide-quest">
+                Ears of Our Enemies
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11866">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11866">WoW DB</a>)
+            </span>.
+            There is no prerequisite to picking up this quest.  This is one of those quests where you would expect the drop
+            rate to be <i>really</i> regular, but some people have one ear.  Some have three.  It's probably best not to ask
+            too many questions.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for D.E.H.T.A. will be given after completing <span class="guide-quest">
+                The Assassination of Harold Lane
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11892">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11892">WoW DB</a>)
+            </span>.
+            The quest itself it straight-forward.  Max-level character gotcha:  even with track trivial quests enabled you will not
+            see the (!) above the quest givers head.  The Ears of our Enemies quest is repeatable, and for some reason at max level
+            it will show the blue (?) above the quest giver instead of the new quest.
+        </p>
+        <h5>The Blue Dragonflight</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/basictraining.jpg" alt="Location of Basic Training" />
+                <figcaption>Location of Basic Training</figcaption>
+            </figure>
+            The The Blue Dragonflight quest chain starts with <span class="guide-quest">
+                Basic Training
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11918">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11918">WoW DB</a>)
+            </span>.
+            There is no prerequisite for picking up this quest.  Prior to the 7.3.5 questing revamp, most of the quests
+            in the Coldarra did not count towards Nothing Boring about Borean.  Now, all of them are required to complete
+            the Blue Dragonflight storyline.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Blue Dragonflight will be given after completing <span class="guide-quest">
+                Keep the Secret Safe
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11914">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11914">WoW DB</a>)
+            </span>.
+        </p>
+
+        <h5>The Friends from the Sea</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/WotLK/BoreanTundra/Notwithoutafight.jpg" alt="Location of Not without a fight quest" />
+                <figcaption>Location of Not Without a Fight!</figcaption>
+            </figure>
+            The Friends from the Sea quest chain starts with <span class="guide-quest">
+                Not Without a Fight!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11949">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11949">WoW DB</a>)
+            </span>.
+            There are no prerequisites for this quest, you can just fly over to the quest area and start it.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Friends from the Sea will be given after completing <span class="guide-quest">
+                The Tides Turn
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11968">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11968">WoW DB</a>)
+            </span>.
+            Fun fact: the named mob you have to kill, Heigar the Horrible, is likely a reference to the commic strip Hägar the Horrible.
+        </p>
+    </div>
+</div>

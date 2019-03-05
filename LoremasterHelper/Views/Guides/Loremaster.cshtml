@@ -1,0 +1,208 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "The Loremaster achievement guide for " + Config.WowVersionPhrase;
+    Model.PageTitle = "The Loremaster Guide";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Loremaster";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well guide-container">
+        <h2>Loremaster Guide</h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img class="img-responsive guide-banner" src="~/Content/Guides/Loremaster/LoremasterGuideBanner.jpg" alt="Loremaster Guide" />
+        <p>
+            Want to complete the Loremaster achievement?  Be sure to start with the <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a>.
+            It will let you know which of your characters are close to finishing off a zone.  You may already be closer than you think!
+        </p>
+        <p>
+            At the time of writing I do not have the Loremaster achievement.  I made this website because I wanted a tool like this to help me figure out how close
+            I really was to getting the achievement.  As I work my way through the achievements,
+            I will be adding to these guides.  Expect the guides to be expanded on as time goes on.
+
+        </p>
+        <h3>Using These Guides</h3>
+        <p>
+            <img class="img-right" src="~/Content/Guides/Loremaster/ErrinarReading.jpg" alt="Image of character reading a map" />
+            These guides are not intended to be “run here, collect this” kind of guides.  What these guides attempt to do is give some general advice about how you might
+            approach the Loremaster achievement, how to get started in each zone, and what stumbling blocks to look out for along the way.  As I work through the zones and
+            progress towards my own Loremaster achievement, I will be documenting my pitfalls so everyone can learn from my frustration.
+        </p>
+        <h3>
+            Getting started
+        </h3>
+        <p>
+            The <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">calculator</a> will give you a list of low hanging fruit zones you are close to
+            completing the zone achievements for.  First things first: get those zones out of the way before you really dig into the quests you haven’t started yet.
+        </p>
+        <p>
+            After that, you have a choice to make:  progress towards Loremaster while leveling alts or get it done quickly on a max level character?  This is a personal choice.
+            There is no right or wrong way in general, but there is a right and wrong way for you.  Only you can figure that out.
+        </p>
+        <h4>Loremaster by Leveling Alts</h4>
+        <p>
+            <img src="~/Content/Guides/Loremaster/OrcAlt.jpg" class="img-right" alt="Image of Orc mage in the starting zone" />
+            If you have ever wanted an account full of alts, now is the time.  Completing the Loremaster purely though leveling will likely require you to create several new
+            characters to finish the whole thing.  Even after the leveling zone revamp implemented towards the end of the Legion expansion, you can reach max level on a
+            character before setting foot in most of the zones in Azeroth.
+
+        </p>
+        <p>
+            How many characters will this take exactly?  I don’t know!  I will be taking this route as I progress towards the Loremaster achievement.  By the end, I will
+            have enough information to give a good answer as to exactly how many characters it takes.
+        </p>
+        <p>
+            Progressing through the quest zones at an appropriately leveled character sidesteps some of the problems you face if you were to instead use a higher level
+            character.  Be sure to still read that section of the guide since some of those pointers will still apply here.
+        </p>
+
+        <h5>
+            Level Scaling
+        </h5>
+        <p>
+            It is worth mentioning that Legion patch 7.3.5 applied the level-scaling tech to previous expansion content.  Now, any Vanilla WoW zones will scale with your
+            character’s level up to a max level of 60, Burning Crusade and Wrath of the Lich King zones will be available at level 58 and scale up to level 80, and the
+            Cataclysm and Pandaria zones will be available at level 78 and scale up to level 90.
+        </p>
+        <p>
+
+            <img src="~/Content/Guides/Loremaster/WendigoBattle.jpg" class="img-right" alt="Dwarf warrior battling Wendigos.  And losing." />
+            Patch 7.3.5 also changed the relative power of your character compared to mobs in those level-scaled zones.  This has the net effect that things now take
+            longer to kill, and you run the real risk of dying to mobs if you pull too many.
+        </p>
+        <p>
+            For the record, I think this is a good thing for the game in general, and a good thing for the Loremaster achievement.  Despite making it technically
+            take longer to level characters, and by extension take longer to complete zones while leveling characters for the Loremaster achievement, it makes it
+            more <em>fun</em>.  There is a good reason that even though I have been playing this game for over a decade and I been interested in the Loremaster
+            title since it was first introduced, it has taken until now for me to really commit to it.
+        </p>
+        <p>
+            If you haven’t tried it yet, the new leveling content is just so much more engaging.  Leveling a new character now feels like you are playing a
+            real game again, not just a mob-looting mini-game.  Even if you didn’t equip any heirlooms, the pre 7.3.5 leveling content was a face-roll, with mobs
+            falling over after a few hits.  I have never been serious about completing the Loremaster achievement because of how boring the gameplay was.  It just
+            felt like a chore, and the extrinsic motivation of the title and tabard was just not enough to get through it . . .
+        </p>
+        <p>
+            And, if we’re being honest with ourselves, we can all admit the tabard is really ugly.
+        </p>
+        <h4>Loremaster on a Max Level Character</h4>
+        <p>
+            If you just want the title & tabard as quickly as possible, there are some things to consider.
+        </p>
+        <h5>Enable Trivial Quests</h5>
+        <p>
+            <img src="~/Content/Guides/Loremaster/TrivialQuests.jpg" alt="Screenshot of Trivial Quests option" class="img-right" />
+            If you are attempting to complete a zone on a capped or high-level character, you will need to enable the “Trivial Quests” option on your minimap.
+            By default, once you out-level a quest you will no longer see the quest on your minimap and you will not see the quest available marker (!) above the quest giver.
+        </p>
+        <h5>
+            Loot Everything
+        </h5>
+        <p>
+            You will leave many corpses in your wake as you progress through the Loremaster quests.  99% of that loot won’t be worth the bother of collecting off the
+            ground.  However, there are about 100 quests that will only start after you loot a certain item.  It can be incredibly frustrating to be so close to completing a
+            zone only to find out you missed the magical doohickey needed to start a quest.  If you are disciplined about always checking mobs for loot, you can largely
+            mitigate this problem and bypass a lot of frustration.
+        </p>
+        <h5>Soft Foam Sword</h5>
+        <p>
+            <img src="~/Content/Guides/Loremaster/FoamSword.jpg" class="img-right" alt="Screenshot of Soft Foam sword in the Collections interface" />
+            The Soft Foam Sword is a toy sold by the toy vendors in Orgrimmar, Stormwind, and Dalaran.  On use, the toy will do 90% of the targets’ health in damage.
+            It is only usable on targets that are 20 or more levels lower than your character.  This is important for those quests where you must lower a mob’s health,
+            but not kill it, to trigger an event.
+        </p>
+
+        <h5>Character Selection</h5>
+        <p>
+            If you want to use your main character, then no sweat.  As with most things in World of Warcraft, you can min/max around the edges of any system if you
+            want to be hardcore, but you can still perform well by using whatever setup you want.
+        </p>
+        <p>
+            Some specs have toolkits that make grinding through low level content take less time:
+            <ul>
+                <li>Does it have good in-combat movement mechanics?</li>
+                <li>Does it have any out-of-combat movement mechanics?</li>
+                <li>Does it have on-demand AOE with no cooldown?</li>
+                <li>Does it have on-demand single target damage with no cooldown?</li>
+
+            </ul>
+        </p>
+        <p>
+            The more of these boxes you can tick, the faster you can move from quest hub to quest hub, from mob to mob, and burn them all down as quickly as possible.
+        </p>
+        <p>
+            <img src="~/Content/Guides/Loremaster/takinCandle.jpg" class="img-right" alt="Screenshot of balance druid takin' a candle" />
+            The one spec that does this the best is the Balance Druid.  Instant-cast flight form by itself is a compelling reason to pick any druid, but Balance Druids
+            have access to Moonfire and Sunfire.  Both are instant cast with no cooldown.  Sunfire is especially powerful for clearing out low level mobs quickly because
+            it spreads to all targets within 5 yards of the primary target.
+        </p>
+        <p>
+            However, if you don’t have a Druid and don’t want to level a Druid, then most classes in the game have some movement mechanics that will make getting around
+            easier.  And every class has access to flying mounts for moving from place to place.
+        </p>
+        <h3>Don't Stress Out</h3>
+        <p>
+
+            Completing this achievement takes a long time.  Each person’s level of motivation is their own.  If you chip away at it during content droughts or during other
+            periods of downtime, you will eventually get there.
+            <img src="~/Content/Guides/Loremaster/ThumbsUp.jpg" class="img-right" alt="Screenshot of character giving a thumbs up" />
+        </p>
+        <p>
+            For my attempt at Loremaster, I’m eager to get the title.  But I’m also excited to experience more of the lore of the game as presented in the quests and
+            stories.  I plan on reading every quest, the broadcast text, and all the other little accents that I missed when rushing a character to max level.
+        </p>
+        <p>
+            Sure, it will take a little longer this way.  But just maybe this is the motivation I need to get this achievement done.  I plan on sharing any interesting
+            bits I found on the internet or discover while working towards Loremaster.  Stay tuned and let’s enjoy this journey together!
+
+        </p>
+        <h3>The Loremaster Meta Achievements</h3>
+        <div id="guide-achiev-container">
+            <div id="loremaster-container">
+                <div id="loremaster-pane">
+                    <div class="criteria-container">
+                        @foreach (var meta in GameData.Loremaster.Criteria)
+                        {
+                            <div class="meta-pane">
+                                <div class="achiev-container">
+                                    <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(meta.Icon).jpg)'></div>
+                                    <div class="achiev-details">
+                                        <h4>@meta.Name</h4>
+                                        <div class="achiev-faction-@(meta.Faction)"></div>
+                                        <div class="ach-quest-count">
+                                            <h6>Total Quests</h6>
+                                            @if (meta.Faction == Faction.Neutral)
+                                            {
+                                                <span>Alliance: @(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.AllianceQuestCount))</span>
+                                                <span>Horde: @(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.HordeQuestCount))</span>
+                                            }
+                                            else if (meta.Faction == Faction.Alliance)
+                                            {
+                                                <span>Allaince: @(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.AllianceQuestCount))</span>
+                                            }
+                                            else
+                                            {
+                                                <span>Horde:@(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.HordeQuestCount))</span>
+                                            }
+                                        </div>
+                                        @if (!string.IsNullOrWhiteSpace(meta.Guide))
+                                        {
+                                            <div id='lm-guide-link' class='guide-link achieve-page'>
+                                                <a href='@Url.Action("Index", "Guides", new { guide = meta.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                                    <div class='guide-icon-anchor'></div>
+                                                    <span>Guide</span>
+                                                </a>
+                                            </div>
+                                        }
+                                    </div>
+
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

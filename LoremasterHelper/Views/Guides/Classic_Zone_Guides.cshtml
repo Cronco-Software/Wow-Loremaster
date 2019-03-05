@@ -1,0 +1,203 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Loremaster of Eastern Kingdom and Loremaster of Kalimdor achievement guides updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Loremaster Guide for WoW Classic Zones";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Classic-Zone-Guides";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well guide-container">
+        <h2>Loremaster of Eastern Kingdoms and Loremaster of Kalimdor Guide</h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img src="~/Content/Guides/Classic/ClassicGuideBanner.jpg" class="img-responsive guide-banner" alt="Classic zones guide banner" />
+        <p>
+            The Eastern Kingdoms and Kalimdor continents each have their own Loremaster meta achievements, but they can be considered as
+            basically the same things.  These achievements cover all the "Classic" or "Vanilla" WoW zones
+        </p>
+        <p>
+            <img src="~/Content/Guides/Classic/hogger.jpg" class="img-right" alt="Hogger's ugly mug" />
+            The events of the Cataclysm expansion changed all the original WoW zones.  This is a mixed blessing: the nostalgic part of me
+            misses the game I played as a carefree young adult, while the rational part of me recognizes that the original leveling content was,
+            from a design perspective, objectively awful.  However, that's not going to stop me from Playing World of Warcraft Classic when it is finally launched.
+        </p>
+        <p>
+            There are 35 different zones that contribute to these two meta achievements.  Prior to Legion patch 7.3.5 and the leveling zone updates that came
+            with it, you could out-level these zones before completing half of the available quests.  The longer you have been playing this game and the more
+            characters you have on your account, the greater the probability that you have at least some progress in these zones.  This was the reason I made
+            the <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a>:
+            so, you can know which character has completed the most quests in each zone.
+        </p>
+        <h3>Battle for Azeroth Updates</h3>
+        <p>
+            <img src="~/Content/Guides/Classic/sargstab.jpg" class="img-right" alt="Sargaras stabbing Azeroth" />
+            The events leading up to the Battle for Azeroth left notable changes on some of the WoW classic zones. This isn’t the first time Blizzard updated 
+            old zones to reflect changes in the game world.  However, this time they did it a little differently so that there is no real impact of 
+            completing your Loremaster achievements.
+        </p>
+        <p>
+            <img src="~/Content/Guides/Classic/Zidormi.jpg" class="img-left" alt="Zidormi's chat buttle in Darkshore" />
+            The scenarios immediately preceding the launch of Battle for Azeroth saw the burning of Teldrassil followed by the destruction of the Undercity.  
+            However, new Night Elf and Forsaken characters still begin their adventures in their classic starting areas.  Players can still level through 
+            Tirisfal Glades or Teldrassil and adventure in Arathi Highlands or Silithus as though nothing has happened since the Cataclysm updates.
+        </p>
+        <p>
+            
+            Upon reaching level 110 players will see the effects of the BFA changes to the game world.  Even then, each of the zones updated for BFA will 
+            have a member of the Bronze Dragonflight available to send you back in time to the same zone phase as new characters see.  These NPCs are marked 
+            with a little chat bubble on the in-game map.
+        </p>
+        <p>
+            <em>P.S Hey Blizzard, if we could get Zidormi to visit the Vale of Eternal Blossoms that would be swell.</em>
+        </p>
+        <h3>Storyline</h3>
+        <p>
+            There are too many different zones in Kalimdor and the Eastern Kingdoms to have one single narrative tying them all together.  As with the new zones
+            introduced by the Cataclysm expansion, many of the reworked classic zones are dealing with the ramifications the Shattering caused by Deathwing.
+            This gives each zone the opportunity to tell its own story with its own characters.  It is different than the more recent expansions that are very
+            heavily focused on the core narrative.  Whether or not that is a good thing is up to the individual player.
+        </p>
+
+        <h3>Where to Start</h3>
+        <p>
+            <img src="~/Content/Guides/Loremaster/OrcAlt.jpg" class="img-right" alt="Fresh orc alt" />
+            World of Warcraft Legion brought with it the level-scaling system.  Prior to this, each quest and monster in the game had a narrow band of levels it was
+            relevant for.  This means you could start questing in a zone, but long before you had finished all the quests, your character's level would be high enough
+            to move on to the next one.
+        </p>
+        <p>
+            Nothing really stopped you from completing all the quests in a zone if you were determined to do so, but the leveling system didn't incentivize that behavior.
+            It was more efficient to move on to the next zone.  After the Adventure Guide menu was introduced to the game, an in-game prompt would tell you that there was
+            new content available, which likely made players feel they should drop what they were doing and move on instead.
+        </p>
+        <p>
+            Legion initially launched with the level scaling systems only in the Broken Isle zones.  Patch 7.3.5 applied the level scaling tech to all expansion content from
+            Vanilla through Mists of Pandaria.  The original WoW zones in the Eastern Kingdoms and Kalimdor were impacted by this change more than any other.  Now, once you
+            leave your character's starting zone, all the original WoW zones will scale with your character up to a maximum of level 60.  This means you are no longer punished
+            by the leveling system if you want to complete the entire storyline of a zone.
+        </p>
+        <p>
+            Each zone still has a minimum required level.  The level ranges of the individual zones are shown below.
+        </p>
+        <h3>Classic Zone Achievements</h3>
+        <div id="guide-achiev-container">
+            <div id="loremaster-container">
+                <div id="loremaster-pane">
+
+                    @foreach (var meta in GameData.Loremaster.Criteria.Where(x => x.Guide == "Classic-Zone-Guides"))
+                    {
+                        <div class="meta-pane">
+                            <div class="achiev-container">
+                                <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(meta.Icon).jpg)'></div>
+                                <div class="achiev-details">
+                                    <h4>@meta.Name</h4>
+                                    <div class="achiev-faction-@(meta.Faction)"></div>
+                                    <div class="ach-quest-count">
+                                        <h6>Total Quests</h6>
+                                        @if (meta.Faction == Faction.Neutral)
+                                        {
+                                            <span>Alliance: @(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.AllianceQuestCount))</span>
+                                            <span>Horde: @(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.HordeQuestCount))</span>
+                                        }
+                                        else if (meta.Faction == Faction.Alliance)
+                                        {
+                                            <span>Allaince: @(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.AllianceQuestCount))</span>
+                                        }
+                                        else
+                                        {
+                                            <span>Horde:@(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.HordeQuestCount))</span>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="criteria-container">
+                                @foreach (var achiev in meta.Criteria.OrderBy(x => x.MinLevel))
+                                {
+                                    <div class="achiev-pane">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="achiev-container">
+                                                    <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(achiev.Icon).jpg)'></div>
+                                                    <div class="achiev-details">
+                                                        <h5>@achiev.Name</h5>
+                                                        <div class="achiev-faction-@(achiev.Faction)"></div>
+
+                                                        <div class="ach-quest-count">
+                                                            <h6>Level Range</h6>
+                                                            <span class="ach-level-range">@achiev.MinLevel - @achiev.MaxLevel</span>
+                                                            <h6>Total Quests</h6>
+                                                            @if (achiev.Faction == Faction.Neutral)
+                                                            {
+                                                                <span>Alliance: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                                <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                            }
+                                                            else if (achiev.Faction == Faction.Alliance)
+                                                            {
+                                                                <span>Allaince: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                            }
+                                                        </div>
+                                                        @if (!string.IsNullOrWhiteSpace(achiev.Guide))
+                                                        {
+                                                            <div id='lm-guide-link' class='guide-link achieve-page'>
+                                                                <a href='@Url.Action("Index", "Guides", new { guide = achiev.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                                                    <div class='guide-icon-anchor'></div>
+                                                                    <span>Guide</span>
+                                                                </a>
+                                                            </div>
+                                                        }
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="criteria-container">
+                                                    <div class="row">
+
+                                                        <h6>Storylines</h6>
+                                                        @foreach (var nStory in achiev.Storylines.Where(x => x.Faction == Faction.Neutral))
+                                                        {
+                                                            <div class="col-md-6 col-sm-12">
+                                                                <div class="storyline faction-@(Faction.Neutral)">@nStory.Name</div>
+                                                            </div>
+                                                        }
+                                                        @foreach (var bStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                                        {
+                                                            <div class="col-md-6 col-sm-12">
+                                                                <div class="storyline faction-@(Faction.Neutral)">@bStory.Name</div>
+                                                            </div>
+                                                        }
+                                                        @foreach (var aStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                                        {
+                                                            <div class="col-md-6 col-sm-12">
+                                                                <div class="storyline faction-@(Faction.Alliance)">@aStory.Name</div>
+                                                            </div>
+                                                        }
+                                                        @foreach (var hStory in achiev.Storylines.Where(x => x.Faction == Faction.Horde && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                                        {
+                                                            <div class="col-md-6 col-sm-12">
+                                                                <div class="storyline faction-@(Faction.Horde)">@hStory.Name</div>
+                                                            </div>
+                                                        }
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

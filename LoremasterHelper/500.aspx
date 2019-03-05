@@ -1,0 +1,82 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="500.aspx.cs" Inherits="LoremasterHelper._500" %>
+<% Response.StatusCode = 500; %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>WoW Loremaster </title>
+    <meta name="description" content="WoW Loremaster achievement guides, news, and progress calculator updated for World of Warcraft Legion patch 7.3.5" />
+    <link rel="icon" type="image/png" href="/Content/lmhIcon.png" sizes="32x32" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/lmh.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="lmh-wrapper">
+        <header>
+            <a href="/Calculator">
+                <img src="/Content/lmhIcon-large.png" alt="Logo image" /> <h1>WoW Loremaster</h1>
+            </a>
+        </header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#lmh-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="lmh-nav">
+                    <ul id="nav-root" class="nav navbar-nav">
+                        <li><a href="/Calculator" role="navigation">Calculator</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Guides </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Guides/Loremaster">The Loremaster Guide</a></li>
+                                <li><a href="/Guides/Classic-Zone-Guides">Classic Zone Guides</a></li>
+                                <li><a href="/Guides/Loremaster-of-Outland">The Burning Crusade Guides</a></li>
+                                <li><a href="/Guides/Loremaster-of-Northrend">Wrath of the Lich King Guides</a></li>
+                                <li><a href="/Guides/Loremaster-of-Cataclysm">Cataclysm Guides</a></li>
+                                <li><a href="/Guides/Loremaster-of-Pandaria">Mists of Pandaria Guides</a></li>
+                                <li><a href="/Guides/Loremaster-of-Draenor">Warlords of Draenor Guides</a></li>
+                                <li><a href="/Guides/Loremaster-of-Legion">Legion Guides</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/Achievements" role="navigation">Achievements</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <main>
+            <div class="container body-content">
+                <div class="row">
+                    <div class="col-md-12 lmh-well">
+                        <h2>System Error</h2>
+                        <p>
+                            You found a bug!  The error details have been recorded so hopefully this can get fixed in the future.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-12">
+                    All rights reserved. World of Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. All other trademarks are the property of their respective owners.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+

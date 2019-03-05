@@ -1,0 +1,429 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Good Suramaritan achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Good Suramaritan: Loremaster guide for Suramar";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Good-Suramaritan";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well zone-guide-container">
+        <h2>Good Suramaritan: Loremaster Guide for Suramar</h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img src="~/Content/Guides/Legion/Suramar/SuramarGuideBanner.jpg" class="img-responsive guide-banner" alt="Good Suramaritan guide banner image" />
+        <p>
+            This guide is intended to be a quick overview of how to get started in Suramar, with some warnings about the problems I encountered
+            while working through it.  Wowhead has an excellent <a class="external-link" href="http://www.wowhead.com/comprehensive-suramar-guide">comprehensive guide</a> for further reading.
+            Be sure to check the <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a> to see which of your characters
+            has already completed the most quests in Suramar.
+        </p>
+
+        <h3>Getting to Suramar</h3>
+        <p>
+            <img src="~/Content/Guides/Legion/Suramar/Thalyssra.jpg" class="img-right" alt="Echo of First Arcanish Thalyssra in Dalaran" />
+            The Suramar zone is located in the center of the Broken Isles.  You can technically go to the zone at any time, but you can't begin any of the quest lines
+            unless you start with the
+            <span class="guide-quest">
+                Khadgar's Discovery
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=39985">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/39985">WoW DB</a>)
+            </span> quest you automatically get when you reach level 110.
+
+        </p>
+
+        <h3>Pain Points</h3>
+        <p>
+            These quests have generated the most questions, comments, and general frustration on the forums.
+            <dl>
+                <dt>
+                    <span class="guide-quest">
+                        Rumor Has It
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=43313">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/43313">WoW DB</a>)
+                    </span>
+
+                </dt>
+                <dd>
+                    To complete this quest you have to talk to 3 different NPCs around Suramar.  The pseudo-stealth mechanic makes this one difficult
+                    because you will inevitably have to fight as some point, and the group of mobs you pull can contain elites.  Your best bet
+                    will be to sprint in, talk to your target, and prepare to fight.  If you can't take on the mobs yourself, just die and move on
+                    to your next target full of resentment for what could have been an awesome quest if the gameplay was better.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Arcane Thirst
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40009">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/40009">WoW DB</a>)
+                    </span>
+
+                </dt>
+                <dd>
+                    This was a frustrating quest.  The mob shooting spells at you is immune and will interrupt you when you try to gather the
+                    Crystallized Ancient Mana around the base the thing she is standing on.  Ignore the boss at first and focus on the two
+                    Eternal Tether mobs moving around the outer ring of the room.  Once those are killed, the boss will no longer be
+                    immune and you can make quick work of her.  If you do die, and you weren't paying attention to how you got to the cave,
+                    the coords are 34.9, 47.4
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        You've Got to Be Kitten Me Right Meow
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=41197">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/41197">WoW DB</a>)
+                    </span>
+
+                </dt>
+                <dd>
+                    This quest perfectly emulates the frustration of herding cats.  You cannot do it while mounted and you have to watch out for
+                    the patrolling elite.  Rogues &amp; Druids can complete the quest while in stealth, which takes care of the roving elite
+                    problem.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Power Grid
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=41028">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/41028">WoW DB</a>)
+                    </span>
+
+                </dt>
+                <dd>
+                    To solve the puzzle, you have to get both colored  beams of light pointing at one of the seals.  It will take a bit
+                    of trial and error to get it right, but there aren't that many different combinations possible.  It's not that obvious,
+                    but you have to click on the seal after you get the lights pointing at it.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        The Delicate Art of Telemancy
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40747">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/40747">WoW DB</a>)
+                    </span>
+
+                </dt>
+                <dd>
+                    By the Earthmother, this quest was frustrating!  You can do what I did and randomly click on portals until you eventually get it right.
+                    The correct pattern is Garden -> Fountain -> Telemetry Lab (grab the Weathered Telemancy Beacon from the building) -> Garden ->
+                    Warp Lab (grab the Cracked Warpsleeve by the fountain).
+                </dd>
+            </dl>
+        </p>
+
+        <h3>Storylines</h3>
+
+        <h4>Horde &amp; Alliance</h4>
+
+        <h5>An Ancient Gift</h5>
+
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/AncientGiftMap.jpg" alt="Map showing the location of the quest giver for Arcane Communion" />
+                <figcaption>Location of Arcane Communion</figcaption>
+            </figure>
+
+            The An Ancient Gift quest chain starts with
+            <span class="guide-quest">
+                Arcane Communion
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40324">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40324">WoW DB</a>)
+            </span>.
+            This quest becomes available after you complete the Suramar introduction quest chain starting with
+            <span class="guide-quest">
+                Khadgar's Discovery
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=39985">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/39985">WoW DB</a>)
+            </span> in Dalaran.
+        </p>
+        <p>
+            If you have completed Arcane Communion, but aren't able to turn it in, you will need to feed First Arcanist Thalyssra some ancient
+            mana to open up that dialog option.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for An Ancient Gift will be given after completing
+            <span class="guide-quest">
+                The Valewalker's Burden
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=42230">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/42230">WoW DB</a>)</span>.
+        </p>
+
+        <h5>Blood and Wine</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/AncientGiftMap.jpg" alt="Map showing the location of the questgiver for Moths to a Flame" />
+                <figcaption>Location of Moths to a Flame</figcaption>
+            </figure>
+
+            The Blood and Wine quest chain starts with
+            <span class="guide-quest">
+                Moths to a Flame
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=42828">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/42828">WoW DB</a>)
+
+            </span>.
+            In order for this quest to be available you will need to have Honored rep with The Nightfallen faction.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Blood and Wine will be given after completing
+            <span class="guide-quest">
+                And They Will Tremble
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=44052">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/44052">WoW DB</a>)
+
+            </span>.
+        </p>
+        <h5>A Growing Crisis</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/AncientGiftMap.jpg" alt="Map showing the location of the quest giver for A Growing Crisis" />
+                <figcaption>Location of A Growing Crisis</figcaption>
+            </figure>
+
+            The A Growing Crisis quest chain starts with the quest
+            <span class="guide-quest">
+                A Growing Crisis
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=44152">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/44152">WoW DB</a>)
+
+            </span>.
+            This quest becomes available once you are 7,000/21,0000 Revered rep with The Nightfallen faction.  To complete
+            the quest, you can take the portal to Falanaar instead of flying to the quest area.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for A Growing Crisis will be given after completing
+            <span class="guide-quest">
+                The Emerald Nightmare: The Stuff of Dreams
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=43362">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/43362">WoW DB</a>)
+
+            </span>.  This quest requires
+            you to kill Xavious in the Emerald Nightmare raid.  After defeating Xavious, the item you need to collect will be
+            next to Cenarious.  You can complete this on any difficulty, so when it was current content players would just hop
+            into LFR.  It remains to be seen how this requirement will be completed in future expansions.
+        </p>
+        <h5>Breaking the Lightbreaker</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/LyanaLocation.jpg" alt="Map showing the location of the quest giver for Lyana Darksorrow" />
+                <figcaption>Location of Lyana Darksorrow</figcaption>
+            </figure>
+            The Breaking the Lightbreaker quest chain starts with
+            <span class="guide-quest">
+                Lyana Darksorrow
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40297">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40297">WoW DB</a>)
+
+            </span>.
+            The quest giver is in a building on the northern end of Felsoul Hold, and can be a bit of a pain to find.
+            Fun fact: you get a different quest description if you are on a Demon Hunter.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Breaking the Lightbreaker will be given after completing
+            <span class="guide-quest">
+                Azoran Must Die
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40412">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40412">WoW DB</a>)
+
+            </span>.  After accepting this quest
+            you will get a portal to the Legion ship where you kill Azoran.  Be careful when you first enter the portal, because there
+            are mobs all over the place.
+        </p>
+        <h5>Tidying Tel'anor</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/AncientGiftMap.jpg" alt="Map showing the location of the questgiver for The Lost Advisor" />
+                <figcaption>Location of The Lost Advisor</figcaption>
+            </figure>
+            The Tidying Tel'anor quest chain starts with
+            <span class="guide-quest">
+                The Lost Advisor
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40266">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40266">WoW DB</a>)
+
+            </span>.  This quest chain
+            becomes available after completing Breaking the Lightbreaker.
+            After you accept the quest don't just mindlessly start killing stuff like I did; you have to pick up items from the ground.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Tidying Tel'anor will be given after completing
+            <span class="guide-quest">
+                Feathersong's Redemption
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40321">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40321">WoW DB</a>)
+
+            </span>.
+            The questgiver moves around quite a bit, so you may have to run around looking for him.
+        </p>
+        <h5>Jandvik' Jarl</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/Jandvik.jpg" alt="Map showing the location of the questgiver for Removing Obstacles" />
+                <figcaption>Location of Removing Obstacles</figcaption>
+            </figure>>
+            The Jandvik' Jarl quest chain starts with
+            <span class="guide-quest">
+                Removing Obstacles
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40907">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40907">WoW DB</a>)
+
+            </span>.
+            Warning: accepting this quest will make the mobs in Jandvik friendly.  So if you are a hunter and
+            want to take one of the wolves there you will need to do that before accepting this quest.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Jandvik' Jarl will be given after completing
+            <span class="guide-quest">
+                Turning the Tidemistress
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40336">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40336">WoW DB</a>)
+
+            </span>.
+            Note: make sure to use the Makeshift Ballista before you start killing naga, or you won't get credit for the kills.
+        </p>
+        <h5>The Waning Crescent</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/AncientGiftMap.jpg" alt="Map showing the location of the quest giver for Lady Lunastre" />
+                <figcaption>Location of Lady Lunastre</figcaption>
+            </figure>
+            The The Waning Crescent quest chain starts with
+            <span class="guide-quest">
+                Lady Lunastre
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=41877">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/41877">WoW DB</a>)
+
+            </span>.
+            You need to be 1,750 rep into Friendly with the Nightfallen in order to see this quest.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Waning Crescent will be given after completing
+            <span class="guide-quest">
+                Redistribution
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40730">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40730">WoW DB</a>)
+
+            </span>.
+        </p>
+        <h5>Statecraft</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/AncientGiftMap.jpg" alt="Map showing the location of the quest giver for The Perfect Opportunity" />
+                <figcaption>Location of The Perfect Opportunity</figcaption>
+            </figure>
+            The Statecraft quest chain starts with
+            <span class="guide-quest">
+                The Perfect Opportunity
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=43309">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/43309">WoW DB</a>)
+
+            </span>.
+            You need to have 8,000 rep into Honored with The Nightfalled to start this quest.  Initially, you had to complete
+            this quest chain in order to unlock The Arcway and Court of Stars dungeons.  I believe that is no longer the case,
+            but I am unable to personally confirm that.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Statecraft will be given after completing
+            <span class="guide-quest">
+                Ly'leth's Champion
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=43318">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/43318">WoW DB</a>)
+
+            </span>.
+            Note:  you have to watch the entire RP exchange between Ly'leth and Coryn in order to actual fight him.
+        </p>
+        <h5>Moon Guard Stronghold</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/MoonGuard.jpg" alt="Map showing the location of the quest giver for Fate of the Guard" />
+                <figcaption>Location of Fate of the Guard</figcaption>
+            </figure>
+            The Moon Guard Stronghold quest chain starts with
+            <span class="guide-quest">
+                Fate of the Guard
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40883">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40883">WoW DB</a>)
+
+            </span>.
+            Note: There is a tunnel to the left of the stairs that leads to Kailea Windfeather that allows you to skip a bunch
+            of patrolling mobs.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Moon Guard Stronghold will be given after completing
+            <span class="guide-quest">
+                Last Stand of the Moon Guard
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=40972">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/40972">WoW DB</a>)
+
+            </span>.
+            Make sure to activate the ley-line portal before accepting this quest.  The quest itself is just an RP event that ends with
+            you being teleported away.  If you don't activate the portal first you will have to walk all the way back up to get it.
+        </p>
+        <h5>Eminent Grow-main</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/Feline.jpg" alt="Map showing the location of the quest giver for Feline Frantic" />
+                <figcaption>Location of Feline Frantic</figcaption>
+            </figure>
+            The Eminent Grow-main quest chain starts with
+            <span class="guide-quest">
+                Feline Frantic
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=41452">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/41452">WoW DB</a>)</span>.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Eminent Grow-main will be given after completing the quest
+            <span class="guide-quest">
+                Eminent Grow-main
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=41494">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/41494">WoW DB</a>)
+            </span>.
+            Note: the item you need to complete this quest is on a moonwell near by.
+        </p>
+        <h5>A Change of Seasons</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Legion/Suramar/AncientGiftMap.jpg" alt="Map showing the location of the quest giver for All In" />
+                <figcaption>Location of All In</figcaption>
+            </figure>
+            The A Change of Seasons quest chain starts with
+            <span class="guide-quest">
+                All In
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=43567">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/43567">WoW DB</a>)
+            </span>.
+            To pick up this quest you have to be at least 20,000 rep into Revered with The Nightfallen and have
+            completed all the other Suramar storylines.  RIP Arluin.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for A Change of Seasons will be given after completing
+            <span class="guide-quest">
+                Arcan'dor, Gift of the Ancient Magi
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=43568">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/43568">WoW DB</a>)
+            </span>.
+            Grats on your Good Suramaritan achievement!
+        </p>
+    </div>
+</div>

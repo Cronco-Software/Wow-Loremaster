@@ -1,0 +1,161 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Loremaster of Draenor achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Loremaster of Draenor Guide";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Loremaster-of-Draenor";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well guide-container">
+        <h2>Loremaster of Draenor Guide</h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img src="~/Content/Guides/WoD/WodGuideBanner.jpg" class="img-responsive guide-banner" alt="Loremaster of Draenor banner image" />
+        <p>
+            Loremaster of Draenor is required for both the Loremaster achievement and the Draenor Pathfinder, which unlocks flying mounts in
+            Draenor.  Warlords of Draenor was the first expansion where you had to essentially complete all the solo content before they would
+            allow you to fly.  In previous expansions, you could unlock flying when you were near or at level cap.  The “Pathfinder” route to
+            unlock flying stuck around for Legion and Battle for Azeroth.  This means that if you played WoD after Pathfinder was introduced
+            there is a good chance you have achievement completed.  Make sure to check the
+            <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a> to be sure.
+        </p>
+        <p>
+            If, however, you did not play WoD towards the end of the expansion, then odds are you still have a few zones to finish off.  Each
+            of the leveling zone’s starter quests becomes available based on your character's level, so unless you went out of your way to
+            complete the storylines, you got moved on to the next zone before completing the one you are in.
+        </p>
+        <h3>Faction Considerations</h3>
+        <p>
+            <img src="~/Content/Guides/WoD/HordeGarrison.jpg" class="img-right" alt="Entrance to the Horde Garrison" />
+            Loremaster of Draenor is different from the Loremaster meta achievements that came before. You must complete all the zones on
+            one faction.  With the other Loremaster meta achievements, you could complete each of the zones on whatever character you like,
+            Horde or Alliance, and the progress would count.
+        </p>
+        <p>
+            <img src="~/Content/Guides/WoD/AllianceGarrison.jpg" class="img-left" alt="Entrance to the Alliance Garrison" />
+            All it takes is one trip to the forums to see this has been a source of frustration for players attempting to complete Loremaster of
+            Draenor.  From a game data perspective, there are two different achievements named Loremaster of Draenor: one available to Horde players
+            and one available to Alliance.  Compare this with Loremaster of Outland or Loremaster of Northrend: there is only one achievement each
+            that is available to both Horde and Alliance players.  You can see this reflected on the Achievements Listing page on WoW Loremaster.
+        </p>
+        <p>
+            <b>
+                What this means is that you must pick either Horde or Alliance and only use characters from your chosen faction to progress towards Loremaster of Draenor.
+            </b>
+        </p>
+        <h3>Storyline</h3>
+        <p>
+            he events of Warlords of Draenor take place in an alternate universe version of Draenor: the home world of the Orcs and the setting for the Burning Crusades
+            expansion.  In our version of Draenor, too many portals to other worlds were opened which caused the land to break and created the Outlands as seen in
+            Warcraft III and the Burning Crusades.  WoD takes place just before the first portal was opened on Draenor, so we get the see the world as it was before the
+            events of Warcraft: Orc &amp; Humans.
+        </p>
+
+        <p>
+            I, personally, am not a fan of using time travel and/or alternate universes as a narrative element.  In addition to all the logical inconsistencies, it took an
+            entire novel just to explain how the story of Warcraft transitioned from the Siege of Orgrimmar to fighting the Iron Horde on an alternate version of Outland set
+            30 years in the past.
+        </p>
+        <p>
+            If you can look beyond that though, the individual story lines of the WoD leveling zones are engaging.  The zones are packed with Warcraft lore and characters that
+            we previously had only read about, and the leveling content was well received by the community when the expansion launched.  I thought the Garrisons were an
+            interesting idea and I initially had fun progressing mine and sending followers on missions.  There are no shortages of retrospectives on what the Garrison system
+            became and the impact that had on the game experience, but don't let those reviews prevent you from trying it out.  If you haven't yet experienced it, I would
+            encourage you to approach the Garrison with an open mind and enjoy it for what it is.
+        </p>
+        <h3>Where to Start</h3>
+        <p>
+            <img src="~/Content/Guides/WoD/KhadQuest.jpg" class="img-right" alt="Khadgar offering the Through the Dark Portal Quest" />
+            At the time of writing, the level zone changes implemented in patch 7.3.5 did not impact the WoD leveling experience.  At level 90, a quest to speak to Khadgar at
+            the Dark Portal in the Blasted Lands becomes available on the Command Boards in Stormwind and Orgrimmar.  This will initiate the assault on the Dark Portal and begin
+            the quest chains for Shadowmoon Valley for the Alliance or Frostfire Ridge for the Horde.  If you are trying to complete this achievement on a boosted character, this
+            quest will not be available on the boards.  Instead, you just must go to the Blasted Lands and talk to Khadgar.
+        </p>
+        <h3>Draenor Zone Achievements</h3>
+        <div id="guide-achiev-container">
+            <div id="loremaster-container">
+                <div id="loremaster-pane">
+                    @foreach (Achievement achiev in LoremasterHelper.GameData.Loremaster.Criteria.Where(x => x.Guide == "Loremaster-of-Draenor").SelectMany(x => x.Criteria))
+                    {
+                        <div class="achiev-pane">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="achiev-container">
+                                        <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(achiev.Icon).jpg)'></div>
+                                        <div class="achiev-details">
+                                            <h5>@achiev.Name</h5>
+                                            <div class="achiev-faction-@(achiev.Faction)"></div>
+                                            <div class="ach-quest-count">
+                                                <h6>Level Range</h6>
+                                                <span class="ach-level-range">@achiev.MinLevel - @achiev.MaxLevel</span>
+                                                <h6>Total Quests</h6>
+                                                @if (achiev.Faction == Faction.Neutral)
+                                                {
+                                                    <span>Alliance: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                                else if (achiev.Faction == Faction.Alliance)
+                                                {
+                                                    <span>Allaince: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                            </div>
+                                            @if (!string.IsNullOrWhiteSpace(achiev.Guide))
+                                            {
+                                                <div id='lm-guide-link' class='guide-link achieve-page'>
+                                                    <a href='@Url.Action("Index", "Guides", new { guide = achiev.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                                        <div class='guide-icon-anchor'></div>
+                                                        <span>Guide</span>
+                                                    </a>
+                                                </div>
+                                            }
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="criteria-container">
+                                        <div class="row">
+
+                                            <h6>Storylines</h6>
+                                            @foreach (var nStory in achiev.Storylines.Where(x => x.Faction == Faction.Neutral))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@nStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var bStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@bStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var aStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Alliance)">@aStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var hStory in achiev.Storylines.Where(x => x.Faction == Faction.Horde && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Horde)">@hStory.Name</div>
+                                                </div>
+                                            }
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

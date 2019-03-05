@@ -1,0 +1,155 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Loremaster of Pandaria achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Loremaster of Pandaria Gudie";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Loremaster-of-Pandaria";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well guide-container">
+        <h2>Loremaster of Pandaria Guide</h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img src="~/Content/Guides/MoP/MoPGuideBanner.jpg" class="img-responsive guide-banner" alt="Mists of Pandaria guide banner" />
+        <p>
+            As with most expansion sets in the World of Warcraft game, you could reach level cap without finish all the storylines in each
+            zone.  You should check the <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a>
+            to see how far you have gotten and which characters are closest to completing the Loremaster of Pandaria zone achievements.
+        </p>
+        <p>
+            My IRL obligations took priority towards the end of the Cataclysm expansion, so I did not play Pandaria when it was current content.  My
+            experience with the Pandaria leveling zones was the Jade Forest and a few quests in the Valley of the Four Winds sometime right before the
+            launch of Legion.  With full heirloom gear, that is all it took to progress from 85 to 90.  As I complete my own Loremaster achievement I
+            have a lot of work to do in finishing off the Pandaria zones.
+        </p>
+        <h3>Flying Mounts</h3>
+        <p>
+            <img src="~/Content/Guides/MoP/MountTrainer.jpg" alt="MoP mount vendor" class="img-right" />
+            Prior to the Legion 7.3.5 patch, each character you wanted to unlock flying on in the Pandaria zones needed to spend 2,500 gold on the Wisdom
+            of the Four Winds scroll to unlock flying.   This item was only available to characters level 85 or higher, which meant that had to use ground
+            mounts while leveling.  If you have been putting off completing the Loremaster of Pandaria because of this, then I have some good news for you!
+            The 7.3.5 leveling zone changes also removed the requirement to purchase flying for Azeroth, Northrend, and Pandaria.  If you train Expert Flying
+            at level 60, you can fly anywhere in WoW except for the Draenor and Legion zones.
+        </p>
+        <h3>Storyline</h3>
+        <p>
+            Mists of Pandaria was the first time Blizzard tried to follow one main narrative through the entire expansion.  Each content patch expanded upon
+            the central story, culminating with the events of the Siege of Orgrimmar raid.  As such, storytelling and narrative delivery was a major design
+            aspect of Pandaria, and that comes through in the quest content.  Whether or not you enjoy the story they are telling is up to you.
+        </p>
+
+        <p>
+            The events of Mists of Pandaria take place after Deathwing's defeat in the end of the Cataclysm expansion.  With the tensions rising between the
+            Horde and Alliance, the hidden continent of Pandaria is re-discovered in the mists created to hide it from the rest of the world.  As the two sides
+            come to blows in the Jade Forest, they discover the Sha: a malignant force in Pandaria that manifests as physical representations of negative emotions.
+        </p>
+        <p>
+            The central theme of the story is the conflict between the Alliance and Horde reflected by the Sha.  The peoples and lands of Pandaria themselves have
+            rich backstories that are explored as you progress through the leveling content.  These individual stories explain the Sha and view the conflict between
+            the Horde and Alliance in a different light.
+        </p>
+        <p>
+            The story-driven experience of Mists of Pandaria was polarizing in the WoW community at launch.  It was different stylistically from the what we had seen
+            before in the game.  People reacted strongly to it, both positively and negatively.  If you can approach it with an open mind and let go of any pre-conceived
+            expectations you get from a trip to the forums, you will find it to be a fun and engaging bit of content and a story worth listening to.
+        </p>
+        <h3>Where to Start</h3>
+        <p>
+            <img src="~/Content/Guides/MoP/DragonHead.jpg" alt="Jade Forest Dragon statue" class="img-right" />
+            The level zone updates released during the Legion 7.3.5 patch changed the requirements for accessing the Pandaria leveling zones.  Prior to 7.3.5, you
+            had to visit your faction capitol to pick up a quest to start the Jade Forest story lines and get access to the continent of Pandaria.
+        </p>
+        <p>
+            Now, the Pandaria zones share a level range with the Cataclysm content.  Both expansions’ zones will become available on the Command Boards in capital
+            cities and the Adventure Guide menu based on your character's level, starting at level 80.  Quests and monsters within the Pandaria zones will scale with
+            your characters level up to a max level of 90.  The level ranges for the individual Pandaria zones are shown below.
+        </p>
+        <h3>Pandaria Zone Achievements</h3>
+        <div id="guide-achiev-container">
+            <div id="loremaster-container">
+                <div id="loremaster-pane">
+                    @foreach (Achievement achiev in LoremasterHelper.GameData.Loremaster.Criteria.Where(x => x.Guide == "Loremaster-of-Pandaria").SelectMany(x => x.Criteria).OrderBy(x => x.MinLevel))
+                    {
+                        <div class="achiev-pane">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="achiev-container">
+                                        <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(achiev.Icon).jpg)'></div>
+                                        <div class="achiev-details">
+                                            <h5>@achiev.Name</h5>
+                                            <div class="achiev-faction-@(achiev.Faction)"></div>
+                                            <div class="ach-quest-count">
+                                                <h6>Level Range</h6>
+                                                <span class="ach-level-range">@achiev.MinLevel - @achiev.MaxLevel</span>
+                                                <h6>Total Quests</h6>
+                                                @if (achiev.Faction == Faction.Neutral)
+                                                {
+                                                    <span>Alliance: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                                else if (achiev.Faction == Faction.Alliance)
+                                                {
+                                                    <span>Allaince: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                            </div>
+                                            @if (!string.IsNullOrWhiteSpace(achiev.Guide))
+                                            {
+                                                <div id='lm-guide-link' class='guide-link achieve-page'>
+                                                    <a href='@Url.Action("Index", "Guides", new { guide = achiev.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                                        <div class='guide-icon-anchor'></div>
+                                                        <span>Guide</span>
+                                                    </a>
+                                                </div>
+                                            }
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="criteria-container">
+                                        <div class="row">
+
+                                            <h6>Storylines</h6>
+                                            @foreach (var nStory in achiev.Storylines.Where(x => x.Faction == Faction.Neutral))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@nStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var bStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@bStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var aStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Alliance)">@aStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var hStory in achiev.Storylines.Where(x => x.Faction == Faction.Horde && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Horde)">@hStory.Name</div>
+                                                </div>
+                                            }
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,174 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Loremaster of Outland achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Loremaster of Outland Guide";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Loremaster-of-Outland";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well guide-container">
+        <h2>Loremaster of Outland Guide</h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img src="~/Content/Guides/TBC/TBCGuideBanner.jpg" class="img-responsive guide-banner" />
+        <p>
+            If you played WoW during The Burning Crusade, you are probably close to completing Loremaster of Outland.
+            When it was current content, it took most of the quests in the leveling zones to move on to the next.
+            This only really diverges with Netherstorm and Shadowmoon Valley, as you could pick one or the other at level 68
+            and stay there until level 70.
+        </p>
+        <p>
+            If you did not play WoW during this expansion cycle, then you are probably much less progressed towards Loremaster of
+            Outland.  Later expansions reduced the amount of experience you need to level in the 60 – 70 level range.  Taking into
+            consideration Heirloom gear, you could out level all the Outland content with two zones worth of quests.  Be sure to
+            check the <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a>
+            to see exactly where you left off and on what characters.
+        </p>
+        <h3>Storyline</h3>
+        <p>
+            <img src="~/Content/Guides/TBC/netherstorm.jpg" class="img-right" alt="Broken land in Netherstorm" />
+            The Burning Crusade expansion was before Blizzard tried to give game content in WoW a central narrative focus.  The
+            trailer for the expansion had Illidan brooding over Gul'dan's skull while informing us how unprepared we were.  That
+            narrative focus did not carry through to the design of the questing zones.  The individual storylines of the Outland
+            zones were so disjoint that when Blizzard wanted to revisit the Illidan storyline in Legion, they first needed to
+            publish a 368-page book to fill in those gaps . . .  if not outright retcon the events of The Burning Crusade.
+            (<a href="https://www.amazon.com/gp/product/0399177574/ref=as_li_tl?ie=UTF8&tag=croncosoftwar-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0399177574&linkId=d195f963be1da5e57573686d5d407e5b">Illidan by William King</a>
+            is a good read. You should check it out to see how much had to change to set up Legion.)
+        </p>
+        <p>
+            The setting of The Burning Crusade expansion took place on Outland, the Orcish home world once known as Draenor.
+            After the events of Warcraft II: Tides of Darkness, Draenor was broken and corrupted into what we see in the Outlands today.
+        </p>
+        <p>
+            The Burning Crusade expansion was launched in January of 2007, meaning that the Outland zones have the oldest quest content
+            still in the game.  The classic zones in the Eastern Kingdoms and Kalimdor were all reworked as part of the Cataclysm
+            expansion released in December 2010.  By going back and experiencing content created over 10 years ago, you can really
+            appreciate how the design of the game has evolved since it was launched.
+        </p>
+        <h3>The Aldors and Scryers</h3>
+        <p>
+            Back when The Burning Crusade was current content, players received a breadcrumb quest to head to Shattrath.  When they arrived, they get sent 
+            on a tour of the city by the slowest arcane elemental Khadgar could summon.  On this tour, the player is introduced to the recent lore of
+            Shattrath city and the two faction that share control of it: the Scryers and the Aldors.  Afterwards you are directed to pick one faction to
+            join.
+        </p>
+        <p>
+            Each faction had their own rep rewards, and it was through your faction that you gained access to some end-game quest lines.  In order to start the final quest chains
+            in both Shadowmoon Valley and Netherstorm you will need to have picked a faction.  Both factions give the
+            same quests, but if you don't choose a faction you cannot pick up the quests.  If you didn't play during TBC, odds are you never had
+            to pick a Shattrath faction while leveling.  If you are coming back to finish off your Loremaster of Outland achievement, make sure you head to Shattrath
+            and pick up the <span class="guide-quest">
+                Haggard War Veteran
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=19684">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/19684">WoW DB</a>)
+            </span> quest to start the process of picking your faction.
+        </p>
+
+        <h3>Where to Start</h3>
+        <p>
+            <img src="~/Content/Guides/TBC/orgportal.jpg" class="img-right" alt="Hellfire portal in Orgrimmar" />
+            The leveling zone changes implemented in the Legion 7.3.5 patch changed when you can get access to Outland.  Prior to the 7.3.5
+            leveling changes, Hellfire Peninsula alone became available at level 58.  Now, Outland and Northrend zones are both in the 58 – 80
+            level range.  This means that the questing zones in those two expansions become available starting at level 58 and will scale with
+            your character's level up to 80.
+        </p>
+        <p>
+            <img src="~/Content/Guides/TBC/swportal.jpg" class="img-left" alt="Hellfire portal in Stormwind" />
+            Prior to the launch of the Warlords of Draenor expansion, you could begin your adventure in Outland by walking through the Dark Portal
+            in the Blasted Lands at level 58.  The events of the novel <a href="https://www.amazon.com/gp/product/074347130X/ref=as_li_tl?ie=UTF8&tag=croncosoftwar-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=074347130X&linkId=e5627576ac0cf2ab241ef909c42f41cb">Warcrimes by Christie Golden</a>, a 400-page read required to understand how
+            Warlords of Draenor happened, changed how the Dark Portal behaves.  The Dark Portal now connects Azeroth to an alternate Draenor: the same
+            planet just in an alternate universe set 30 years in the past.
+        </p>
+        <p>
+            In the present-day World of Warcraft, there are portals to Hellfire Peninsula inside the Mage Tower in Stormwind and the Cleft of Shadows in
+            Orgrimmar.  Taking this portal will place you right next to the quest giver you need to start your questing in Hellfire Peninsula.  All the
+            questing zones in Outland will scale with your character's level up to a max of 80.  The level ranges of the individual zones are shown below.
+        </p>
+        <h3>Outland Zone Achievements</h3>
+        <div id="guide-achiev-container">
+            <div id="loremaster-container">
+                <div id="loremaster-pane">
+                    @foreach (Achievement achiev in LoremasterHelper.GameData.Loremaster.Criteria.Where(x => x.Guide == "Loremaster-of-Outland").SelectMany(x => x.Criteria).OrderBy(x => x.MinLevel))
+                    {
+                        <div class="achiev-pane">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="achiev-container">
+                                        <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(achiev.Icon).jpg)'></div>
+                                        <div class="achiev-details">
+                                            <h5>@achiev.Name</h5>
+                                            <div class="achiev-faction-@(achiev.Faction)"></div>
+                                            <div class="ach-quest-count">
+                                                <h6>Level Range</h6>
+                                                <span class="ach-level-range">@achiev.MinLevel - @achiev.MaxLevel</span>
+                                                <h6>Total Quests</h6>
+                                                @if (achiev.Faction == Faction.Neutral)
+                                                {
+                                                    <span>Alliance: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                                else if (achiev.Faction == Faction.Alliance)
+                                                {
+                                                    <span>Allaince: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                            </div>
+                                            @if (!string.IsNullOrWhiteSpace(achiev.Guide))
+                                            {
+                                                <div id='lm-guide-link' class='guide-link achieve-page'>
+                                                    <a href='@Url.Action("Index", "Guides", new { guide = achiev.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                                        <div class='guide-icon-anchor'></div>
+                                                        <span>Guide</span>
+                                                    </a>
+                                                </div>
+                                            }
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="criteria-container">
+                                        <div class="row">
+
+                                            <h6>Storylines</h6>
+                                            @foreach (var nStory in achiev.Storylines.Where(x => x.Faction == Faction.Neutral))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@nStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var bStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@bStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var aStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Alliance)">@aStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var hStory in achiev.Storylines.Where(x => x.Faction == Faction.Horde && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Horde)">@hStory.Name</div>
+                                                </div>
+                                            }
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

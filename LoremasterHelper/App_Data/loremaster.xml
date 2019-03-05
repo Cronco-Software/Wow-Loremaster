@@ -1,0 +1,948 @@
+<loremaster achievementName="The Loremaster" achievementId="7520" guide="Loremaster" icon="inv_misc_book_07" faction="2"  >
+  <meta achievementName="Loremaster of Eastern Kingdoms" achievementId="1676" faction="2" guide="Classic-Zone-Guides" icon="achievement_zone_easternkingdoms_01"  >
+    <achievement minLevel="25" maxLevel="60"  achievementId="4896" achievementName="Arathi Highlands Quests" faction="2" guide="" icon="achievement_zone_arathihighlands_01" >
+      <storyline questName="Death From Below" name="Faldir's Cove" faction="2" questId="26628" />
+      <storyline questName="For Southshore" name="Refuge Pointe" faction="0" questId="26117" />
+      <storyline questName="The Princess Unleashed" name="Myzreal's Tale" faction="0" questId="26049" />
+      <storyline questName="Hammerfall" name="Hammerfall" faction="1" questId="26084" />
+      <storyline questName="Alina's Reward" name="Galen's Fall" faction="1" questId="26081" />
+      <zone id="45" name="Arathi Highlands" hordeQuests="39" allianceQuests="37" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4900" achievementName="Badlands Quests" faction="2" guide="" icon="achievement_zone_badlands_01" >
+      <storyline questName="The Day that Deathwing Came: What Really Happened" name="The Day that Deathwing Came" faction="2" questId="27715" />
+      <storyline questName="Rhea Revealed" name="Rhea" faction="2" questId="27769" />
+      <storyline questName="The Egg Lives On" name="The Fate of a Dragonflight" faction="2" questId="27859" />
+      <storyline questName="Return to Blam" name="The Titans' Knowledge" faction="1" questId="27888" />
+      <storyline questName="Return to Blam" name="The Titans' Knowledge" faction="0" questId="27794" />
+      <zone id="3" name="Badlands" hordeQuests="55" allianceQuests="50" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4909" achievementName="Blasted Lands Quests" faction="2" guide="" icon="achievement_zone_blastedlands_01"  >
+      <storyline questName="Neptool's Revenge" name="Avenging the Rockpool" faction="2" questId="25706" />
+      <storyline questName="You Are Rakh'likh, Demon" name="Razelikh" faction="1" questId="25701" />
+      <storyline questName="You Are Rakh'likh, Demon" name="Razelikh" faction="0" questId="26171" />
+      <storyline questName="The Downfall of Marl Wormthorn" name="The Tainted Forest" faction="1" questId="25720" />
+      <storyline questName="The Downfall of Marl Wormthorn" name="The Tainted Forest" faction="0" questId="26187" />
+      <zone id="4" name="Blasted Lands" hordeQuests="60" allianceQuests="62" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4901" achievementName="Burning Steppes Quests" faction="2" guide="" icon="achievement_zone_burningsteppes_01">
+      <storyline questName="Return to Ariok" name="Preperation" faction="1" questId="28425" />
+      <storyline questName="Enough Damage For One Day" name="Infiltration" faction="1" questId="28441" />
+      <storyline questName="Placing the Pawns" name="Anticipation" faction="1" questId="28449" />
+      <storyline questName="The Spoils of War" name="Annililation" faction="1" questId="28456" />
+      <storyline questName="Return to Keeshan" name="Preperation" faction="0" questId="28183" />
+      <storyline questName="Enough Damage For One Day" name="Infiltration" faction="0" questId="28286" />
+      <storyline questName="Placing the Pawns" name="Anticipation" faction="0" questId="28326" />
+      <storyline questName="The Spoils of War" name="Annililation" faction="0" questId="28322" />
+      <zone id="46" name="Burning Steppes" hordeQuests="64" allianceQuests="55" />
+    </achievement>
+    <achievement minLevel="30" maxLevel="60"  achievementId="4905" achievementName="Cape of Stranglethorn Quests" faction="2" guide="" icon="achievement_zone_stranglethorn_01">
+      <storyline questName="High Priest Venoxis" name="The Trolls of Zul'Gurub" faction="1" questId="26555" />
+      <storyline questName="High Priest Venoxis" name="The Trolls of Zul'Gurub" faction="0" questId="26814" />
+      <storyline questName="Up to Snuff" name="Bustling Booty Bay" faction="2" questId="26613" />
+      <storyline questName="Call of Booty" name="A Pirate's Life For You" faction="2" questId="26665" />
+      <storyline questName="Bloodsail's End" name="Bloodsail and Brashtide" faction="2" questId="26703" />
+      <zone id="5287" name="The Cape of Stranglethorn" hordeQuests="92" allianceQuests="91" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4892" achievementName="Eastern Plaguelands Quests" faction="2" guide="" icon="achievement_zone_easternplaguelands">
+      <storyline questName="Onward, to Light's Hope Chapel" name="The Paladin Pals" faction="2" questId="27373" />
+      <storyline questName="Hidden Treasures" faction="2" name="Serving the Argent Cursade" questId="27391" />
+      <storyline questName="Nobody to Blame but Myself" name="The Redpaths of Darrowshire" faction="2" questId="27489" />
+      <storyline questName="Journey's End" name="Journey' End" faction="2" questId="27527" />
+      <storyline questName="Like Rats" name="Tyr' Hand" faction="2" questId="27620" />
+      <zone id="139" name="Eastern Plaguelands" hordeQuests="234" allianceQuests="233" />
+    </achievement>
+    <achievement minLevel="10" maxLevel="60"  achievementId="4908" achievementName="Ghostlands Quests" faction="1" guide="Ghostlands-Quests" icon="achievement_zone_ghostlands">
+      <storyline questName="Deactivate An'owyn" name="Citizens of Tranquillien" faction="1" questId="9169" />
+      <storyline questName="Troll Juju" name="Dar'Khan Drathir" faction="1" questId="9199" />
+      <storyline questName="War on Deatholme" name="Farstrider Enclave" faction="1" questId="9220" />
+      <zone id="3433" name="Ghostlands" hordeQuests="60" allianceQuests="1" />
+    </achievement>
+    <achievement minLevel="15" maxLevel="60"  achievementId="4895" achievementName="Hillsbrad Foothills Quests" faction="1" guide="" icon="achievement_zone_hillsbradfoothills">
+      <storyline name="Azurelode Mine" faction="1" questName="Coastal Delicacies!" questId="28146" />
+      <storyline name="The Sludge Fields" faction="1" questName="A Blight Upon the Land" questId="28237" />
+      <storyline name="Stormpike" faction="1" questName="Stormpike Apocalypse" questId="28616" />
+      <storyline name="Eastpoint Tower" faction="1" questName="Extinction" questId="28634" />
+      <zone id="267" name="Hillsbrad Foothills" hordeQuests="85" allianceQuests="27" />
+    </achievement>
+    <achievement minLevel="30" maxLevel="60"  achievementId="4897" achievementName="Hinterlands Quests" faction="2" guide="" icon="achievement_zone_hinterlands_01">
+      <storyline name="Reventusk Village" questName="Skulk Rock Supplies" faction="1" questId="26268" />
+      <storyline name="Jintha'Alor" questName="Venomous Secrets" faction="1" questId="26368" />
+      <storyline name="Hiri'watha" questName="Starvation Diet" faction="1" questId="26387" />
+      <storyline name="Stormfeather Outpost" questName="The Wicked Revantusk" faction="0" questId="26462" />
+      <storyline name="Jintha'Alor" questName="Faces of Evil" faction="0" questId="26521" />
+      <storyline name="Quel'Danil Lodge" questName="Starvation Diet" faction="0" questId="26643" />
+      <zone id="47" name="The Hinterlands" hordeQuests="40" allianceQuests="41" />
+    </achievement>
+    <achievement minLevel="10" maxLevel="60"  achievementId="4899" achievementName="Loch Modan Quests" faction="0" guide="Loch-Modan-Quests" icon="achievement_zone_lochmodan">
+      <storyline name="The Road to Thelsamar" questName="Looking for Lurkers" faction="0" questId="25118" />
+      <storyline name="Axis of Awful" questName="Axis of Awful" faction="0" questId="26868" />
+      <storyline name="Twilight Threats" questName="Skystrider's Heart" faction="0" questId="27033" />
+      <storyline name="The Farstrider Lodge" questName="The Winds of Loch Modan" faction="0" questId="27116" />
+      <zone id="38" name="Loch Modan" hordeQuests="3" allianceQuests="62" />
+    </achievement>
+    <achievement minLevel="25" maxLevel="60"  achievementId="12429" achievementName="Wetlands Quests" faction="0" guide="" icon="achievement_zone_wetlands_01">
+      <storyline name="Slabchisel Survey" questName="Incendicite Ore" faction="0" questId="25735" />
+      <storyline name="The Flooding of Menethil" questName="Assault on Menethil Keep" faction="0" questId="25780" />
+      <storyline name="Wardens of the Wetlands" questName="The Battle of Thandol Span" faction="0" questId="26128" />
+      <storyline name="Engineers and Archaeologists" questName="The Angerfang Menace" faction="0" questId="26189" />
+      <zone id="11" name="Wetlands" hordeQuests="5" allianceQuests="56" />
+    </achievement>
+    <achievement minLevel="25" maxLevel="60"  achievementId="4906" achievementName="Northern Stranglethorn Quests" faction="2" guide="" icon="achievement_zone_stranglethorn_01">
+      <storyline name="Nesingwary's Expedition" questName="Excelsior" faction="2" questId="26345" />
+      <storyline name="Ohgan'aka" questName="Be Raptor" faction="0" questId="26775" />
+      <storyline name="Rebel Camp" questName="Sacred to the Bloodscalp" faction="0" questId="26743" />
+      <storyline name="Yennimku" questName="Saving Yenniku" faction="1" questId="26305" />
+      <storyline name="Ohgan'aka" questName="Be Raptor" faction="1" questId="26362" />
+      <zone id="33" name="Northern Stranglethorn" hordeQuests="71" allianceQuests="70" />
+    </achievement>
+    <achievement minLevel="15" maxLevel="60"  achievementId="4902" achievementName="Redridge Mountains Quests" faction="0" guide="" icon="achievement_zone_redridgemountains">
+      <storyline name="The Gnoll Offensive" questName="Yowler Must Die!" faction="0" questId="26545" />
+      <storyline name="First Blood" questName="They Drew First Blood" faction="0" questId="26607" />
+      <storyline name="Keeshan's Raiders" questName="Triumphant Return" faction="0" questId="26726" />
+      <zone id="44" name="Redridge Mountains" hordeQuests="2" allianceQuests="49" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4910" achievementName="Searing Gorge Quests" faction="2" guide="" icon="achievement_zone_searinggorge_01">
+      <storyline questName="Dig-Boss Dinwhisker" name="Thorium Advance" faction="2" questId="27964" />
+      <storyline questName="The Mountain-Lord's Support" faction="2" name="In the Hall of the Mountain-Lord" questId="27979" />
+      <storyline questName="Dark Ministry" name="The Seat of the Brotherhood" faction="2" questId="28035" />
+      <storyline questName="Welcome to the Brotherhood" name="Into the Gorge" faction="2" questId="28064" />
+      <zone id="51" name="Searing Gorge" hordeQuests="44" allianceQuests="44" />
+    </achievement>
+    <achievement minLevel="10" maxLevel="60"  achievementId="4894" achievementName="Silverpine Forest Quests" faction="1" guide="" icon="achievement_zone_silverpine_01">
+      <storyline faction="1" name="Forsaken High Command" questName="Belmont's Report" questId="27056" />
+      <storyline faction="1" name="Forsaken Rear Guard" questName="Orcs are in Order" questId="27096" />
+      <storyline faction="1" name="The Sepulcher" questName="To Forsaken Forward Command" questId="27290" />
+      <storyline faction="1" name="The Ruins of Gilneas" questName="The Great Escape" questId="27438" />
+      <storyline faction="1" name="Ambermill" questName="Transdimensional Warfare: Chapter III" questId="27518" />
+      <storyline faction="1" name="On the Battlefront" questName="Cities in Dust" questId="27601" />
+      <zone id="130" name="Silverpine Forest" hordeQuests="56" allianceQuests="1" />
+      <zone id="4706" name="Ruins of Gilneas" hordeQuests="13" allianceQuests="0" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4904" achievementName="Swamp of Sorrows Quests" faction="2" guide="" icon="achievement_zone_swampsorrows_01">
+      <storyline name="Bogpaddle" questName="In With a Bang" faction="2" questId="27600" />
+      <storyline name="The Sunken Temple" questName="Blessing of the Green Dragonflight" faction="2" questId="27914" />
+      <storyline name="The Shifting Mire" questName="With Dying Breath" faction="1" questId="27911" />
+      <storyline name="The Shifting Mire" questName="Remember the Light" faction="0" questId="24913" />
+      <storyline name="The Bloodmire" questName="Assault on Stonard" faction="0" questId="27849" />
+      <storyline name="The Bloodmire" questName="We're Under Attack" faction="1" questId="27857" />
+      <zone id="8" name="Swamp of Sorrows" hordeQuests="41" allianceQuests="43" />
+    </achievement>
+    <achievement minLevel="35" maxLevel="60"  achievementId="4893" achievementName="Western Plaguelands Quests" faction="2" guide="" icon="achievement_zone_westernplaguelands_01">
+      <storyline name="The Mender's Stead" questName="Zen'Kiki and the Cultists" faction="2" questId="26955" />
+      <storyline name="The First Battle for Andorhal" questName="Victory, For Now" faction="0" questId="27165" />
+      <storyline name="The First Battle for Andorhal" questName="Victory, For Now" faction="1" questId="26926" />
+      <storyline name="A Temporary Peace" questName="Combat Training" faction="0" questId="27174" />
+      <storyline name="A Temporary Peace" questName="Combat Training" faction="1" questId="26938" />
+      <storyline name="The Second Battle for Andorhal" questName="Alas, Andorhal" faction="0" questId="27206" />
+      <storyline name="The Second Battle for Andorhal" questName="The Reckoning" faction="1" questId="27144" />
+      <zone id="28" name="Western Plaguelands" hordeQuests="52" allianceQuests="63" />
+    </achievement>
+    <achievement minLevel="10" maxLevel="60"  achievementId="4903" achievementName="Westfall Quests" faction="0" guide="" icon="achievement_zone_westfall_01">
+      <storyline questName="You Have Our Thanks" name="Crime Scene Investigation" faction="0" questId="26270" />
+      <storyline questName="The Dawning of a New Day" name="The Defias Brotherhood Reborn" faction="0" questId="26297" />
+      <storyline questName="Return to Sentinel Hill" name="Investigating the Shadows" faction="0" questId="26370" />
+      <zone id="40" name="Westfall" hordeQuests="5" allianceQuests="47" />
+    </achievement>
+    <achievement minLevel="20" maxLevel="60"  achievementId="12430" achievementName="Duskwood Quests" faction="0" guide="" icon="achievement_zone_duskwood">
+      <storyline name="Citizens of Darkshire" questName="Dusky Crab Cakes" faction="0" questId="26623" />
+      <storyline name="The Legend of Stalvan" questName="Mistmantle's Revenge" faction="0" questId="26674" />
+      <storyline name="A Hermit's Errand" questName="The Embalmer's Revenge" faction="0" questId="26727" />
+      <storyline name="Morbent Fel" questName="Morbent's Bane" faction="0" questId="26754" />
+      <storyline name="Mor'ladim" questName="A Daughter's Love" faction="0" questId="26797" />
+      <zone id="10" name="Duskwood" hordeQuests="14" allianceQuests="68" />
+    </achievement>
+  </meta>
+  <meta achievementName="Loremaster of Kalimdor" achievementId="1678" faction="2" guide="Classic-Zone-Guides" icon="achievement_zone_kalimdor_01">
+    <achievement minLevel="15" maxLevel="60"  achievementId="4925" achievementName="Ashenvale Quests" faction="0" guide="" icon="achievement_zone_ashenvale_01">
+      <storyline name="Maestra's Post" questName="Respect for the Fallen" faction="0" questId="13626" />
+      <storyline name="The Satyr of Satyrnaar" questName="Stopping the Rituals" faction="0" questId="13683" />
+      <storyline name="The Corrupted Heart of the Forest" questName="The Forest Heart" faction="0" questId="13796" />
+      <storyline name="Saving Astranaar" questName="Return Fire" faction="0" questId="13853" />
+      <storyline name="Bringing Harmony to the Elements" questName="Vortex" faction="0" questId="13886" />
+      <storyline name="Stardust Spire" questName="The Last Stand" faction="0" questId="13987" />
+      <storyline name="The Power of Dartol's Rod" questName="True Power of the Rod" faction="0" questId="26482" />
+      <zone id="331" name="Ashenvale" hordeQuests="74" allianceQuests="94" />
+    </achievement>
+    <achievement minLevel="15" maxLevel="60"  achievementId="4976" achievementName="Ashenvale Quests" faction="1" guide="" icon="achievement_zone_ashenvale_01">
+      <storyline name="The Corrupted Heart of the Forest" questName="Pierce Their Heart!" faction="1" questId="13805" />
+      <storyline name="Splintertree's Demonic Defense" questName="Dread Head Redemption" faction="1" questId="13842" />
+      <storyline name="The Diplomat from Silvermoon" questName="Sheelah's Last Wish" faction="1" questId="13873" />
+      <storyline name="Bringing Harmony to the Elements" questName="Vortex" faction="1" questId="13888" />
+      <storyline name="The Bombing of Astranaar" questName="Blastranaar!" faction="1" questId="13947" />
+      <storyline name="Weapons of Their Destruction" questName="They're Out There!" faction="1" questId="13980" />
+      <storyline name="Zoram'gar Outpost" questName="Vorsha the Lasher" faction="1" questId="6641" />
+      <zone id="331" name="Ashenvale" hordeQuests="74" allianceQuests="94" />
+    </achievement>
+    <achievement minLevel="10" maxLevel="60"  achievementId="4927" achievementName="Azshara Quests" faction="1" guide="" icon="achievement_zone_azshara_01">
+      <storyline name="Defending Orgrimmar" questName="Arborcide" faction="1" questId="14155" />
+      <storyline name="Redirecting the Ley Lines" questName="Mystery of the Sarcen Stone" faction="1" questId="14216" />
+      <storyline name="Sisters of the Sea" questName="Sisters of the Sea" faction="1" questId="14295" />
+      <storyline name="the Rarest Substance on Azeroth" questName="Azsharite Experiment Number Two" faction="1" questId="14388" />
+      <storyline name="The Best Apprentice" questName="Farewell, Minnow" faction="1" questId="14392" />
+      <storyline name="Subject Nine from Outer Space!" questName="Raptor Raptor Rocket" faction="1" questId="14422" />
+      <storyline name="The Conquest of Azshara" questName="The Conquest of Azshara" faction="1" questId="24439" />
+      <storyline name="Heart of Arkkoroc" questName="Shore Leave" faction="1" questId="24449" />
+      <zone id="16" name="Azshara" hordeQuests="129" allianceQuests="12" />
+    </achievement>
+    <achievement minLevel="10" maxLevel="60"  achievementId="4926" achievementName="Bloodmyst Isle Quests" faction="0" guide="" icon="achievement_zone_bloodmystisle_01">
+      <storyline name="Galaen's Fate" questName="Galaen's Fate" faction="0" questId="9579" />
+      <storyline name="Ending the Bloodcurse" questName="Ending the Bloodcurse" faction="0" questId="9683" />
+      <storyline name="Loreth'Aran" questName="Razormaw" faction="0" questId="9689" />
+      <storyline name="The Triumvirate's First, Boros" questName="I Shoot Magic Into the Darkness" faction="0" questId="9700" />
+      <storyline name="The Triumvirate's Second, Kuros" questName="Matis the Cruel" faction="0" questId="9711" />
+      <storyline name="The Triumvirate's Thirs, Aesom" questName="The Sun Gate" faction="0" questId="9740" />
+      <storyline name="Defending Vindicator's Rest" questName="Critters of the Void" faction="0" questId="9741" />
+      <storyline name="The Unwritten Prophecy" questName="Ending Their World" faction="0" questId="9759" />
+      <zone id="3525" name="Bloodmyst Isle" hordeQuests="1" allianceQuests="71" />
+    </achievement>
+    <achievement minLevel="10" maxLevel="60"  achievementId="4928" achievementName="Darkshore Quests" faction="0" guide="" icon="achievement_zone_darkshore_01">
+      <storyline name="The Shatterspear" faction="0" questName="Ending the Threat" questId="13515" />
+      <storyline name="Consumed by Madness" faction="0" questName="The Defiler" questId="13546" />
+      <storyline name="The Great Animal Spirit" faction="0" questName="The Ritual Bond" questId="13569" />
+      <storyline name="The Eye of All Storms" faction="0" questName="The Eye of All Storms" questId="13588" />
+      <storyline name="The Devourer" faction="0" questName="The Devourer of Darkshore" questId="13891" />
+      <storyline name="The Battle for Darkshore" faction="0" questName="The Battle for Darkshore" questId="13897" />
+      <zone id="148" name="Darkshore" hordeQuests="2" allianceQuests="104" />
+    </achievement>
+    <achievement minLevel="30" maxLevel="60"  achievementId="4930" achievementName="Desolace Quests" faction="2" guide="" icon="achievement_zone_desolace">
+      <storyline name="The Naga Threat" faction="2" questName="Official Assessment" questId="14302" />
+      <storyline name="Karnum's Glade" faction="2" questName="My Word is My Bond" questId="14327" />
+      <storyline name="Uniting the Tribes" faction="2" questName="Death to Agogridon" questId="14394" />
+      <storyline name="Threats from Sar'theris Stand" faction="0" questName="Putting their Heads Together" questId="14364" />
+      <storyline name="Threats from Sar'theris Stand" faction="1" questName="Putting their Heads Together" questId="14227" />
+      <zone id="405" name="Desolace" hordeQuests="77" allianceQuests="69" />
+    </achievement>
+    <achievement minLevel="35" maxLevel="60"  achievementId="4929" achievementName="Dustwallow Marsh Quests" faction="0" guide="" icon="achievement_zone_dustwallowmarsh">
+      <storyline name="Disgrace the Defectors" faction="0" questName="The End of the Deserters" questId="27213" />
+      <storyline name="The Terror of Theramore" faction="0" questName="Take Down Tethyr!" questId="27222" />
+      <storyline name="Defias in Dustwallow" faction="0" questName="Return to Jaina" questId="27241" />
+      <storyline name="Prisoners of the Grimtotems" faction="0" questName="Prisoners of the Grimtotems" questId="27245" />
+      <storyline name="Swamp Eye Story" faction="0" questName="Captain Vimes" questId="27247" />
+      <storyline name="The Hyal Family" faction="0" questName="Peace at Last" questId="27291" />
+      <storyline name="The Challenge of the Stonemaul" faction="2" questName="Challenge to the Black Flight" questId="27411" />
+      <zone id="15" name="Dustwallow Marsh" hordeQuests="63" allianceQuests="78" />
+    </achievement>
+    <achievement minLevel="35" maxLevel="60"  achievementId="4978" achievementName="Dustwallow Marsh Quests" faction="1" guide="" icon="achievement_zone_dustwallowmarsh">
+      <storyline name="Work Left Undone" faction="1" questName="The Theramore Docks" questId="1202" />
+      <storyline name="Wild Threats" faction="1" questName="SMASH BROODQUEEN" questId="27229" />
+      <storyline name="Swamp Eye Story" faction="1" questName="The Lost Report" questId="27244" />
+      <storyline name="Connection to the Grimtotem" faction="1" questName="Justice Dispensed" questId="27297" />
+      <storyline name="The Challenge of the Stonemaul" faction="2" questName="Challenge to the Black Flight" questId="27411" />
+      <storyline name="Onyxia's Brood" faction="1" questName="The Brood of Onyxia" questId="27415" />
+      <storyline name="Challenging the Overlord" faction="1" questName="Challenge Overlord Mok'Morokk" questId="27418" />
+      <zone id="15" name="Dustwallow Marsh" hordeQuests="63" allianceQuests="78" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4931" achievementName="Felwood Quests" faction="2" guide="" icon="achievement_zone_felwood">
+      <storyline name="Emerald Sanctuary" faction="2" questName="Dance for Ruumbo!" questId="27995" />
+      <storyline name="Wildheart Point" faction="2" questName="Lord Banehollow" questId="28155" />
+      <storyline name="Bloodvenom Post" faction="2" questName="Cleanup at Bloodvenom Post" questId="28214" />
+      <storyline name="Rejoining the Forest" faction="2" questName="Rejoining the Forest" questId="28228" />
+      <storyline name="A Destiny of Flame and Sorrow" faction="2" questName="Navarax's Gambit" questId="28264" />
+      <storyline name="Ruins of Constellas" faction="2" questName="Open Their Eyes" questId="28288" />
+      <storyline name="The Timbermaw's Ally" faction="2" questName="Deadwood of the North" questId="28338" />
+      <storyline name="Whisperwind Grove" faction="2" questName="The Core of Kroshius" questId="28359" />
+      <storyline name="War in the Forest" faction="0" questName="Report to the Denmother" questId="28389" />
+      <storyline name="War in the Forest" faction="1" questName="Fire in the Hole" questId="28368" />
+      <zone id="361" name="Felwood" hordeQuests="87" allianceQuests="86" />
+    </achievement>
+    <achievement minLevel="35" maxLevel="60"  achievementId="4932" achievementName="Feralas Quests" faction="0" guide="" icon="achievement_zone_feralas">
+      <storyline name="The Twilight Sermon" faction="0" questName="Might of the Sentinels" questId="25333" />
+      <storyline name="The Fate of Taerar" faction="0" questName="Sealing the Dream" questId="25398" />
+      <storyline name="The Dragons of Nightmare" faction="0" questName="Ysondre's Farewell" questId="25438" />
+      <storyline name="Forces of Nature" faction="0" questName="Forces of Nature: Mountain Giants" questId="25469" />
+      <storyline name="Freed" faction="0" questName="Return to Vestia" questId="26401" />
+      <zone id="357" name="Feralas" hordeQuests="63" allianceQuests="63" />
+    </achievement>
+    <achievement minLevel="35" maxLevel="60"  achievementId="4979" achievementName="Feralas Quests" faction="1" guide="" icon="achievement_zone_feralas">
+      <storyline name="The Fate of Taerar" faction="1" questName="Sealing the Dream" questId="25250" />
+      <storyline name="The Twilight Sermon" faction="1" questName="Might of the Stonemaul" questId="25329" />
+      <storyline name="The Dragons of Nightmare" faction="1" questName="Ysondre's Farewell" questId="25383" />
+      <storyline name="Muisek" faction="1" questName="Weapons of Spirit" questId="25391" />
+      <storyline name="Freed" faction="1" questName="Return to Sage Palerunner" questId="25645" />
+      <zone id="357" name="Feralas" hordeQuests="63" allianceQuests="63" />
+    </achievement>
+    <achievement minLevel="10" maxLevel="60"  achievementId="4933" achievementName="Northern Barrens Quests" faction="1" guide="" icon="achievement_zone_barrens_01">
+      <storyline name="Gol'dom Farm" faction="1" questName="The Kodo's Return" questId="13971" />
+      <storyline name="Ratchet" faction="1" questName="Gazlowe's Fortune" questId="14050" />
+      <storyline name="Nozzlepot's Outpost" faction="1" questName="The Short Way Home" questId="29094" />
+      <storyline name="Inspiration and Hope" faction="1" questName="Mor'shan Caravan Delivery" questId="29111" />
+      <storyline name="Defeating the Kolkar" faction="1" questName="Counterattack!" questId="4021" />
+      <storyline name="Far Watch" faction="1" questName="Supplies for the Crossroads" questId="5041" />
+      <storyline name="Mysteries of the Oasis" faction="1" questName="The Stagnant Oasis" questId="877" />
+      <zone id="17" name="Northern Barrens" hordeQuests="113" allianceQuests="13" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4934" achievementName="Silithus Quests" faction="2" guide="" icon="achievement_zone_silithus_01">
+      <storyline name="A Terrible Purpose" faction="2" questName="A Terrible Purpose" questId="8287" />
+      <storyline name="Mistress Natalia Mar'alith" faction="2" questName="Into The Maw of Madness" questId="8306" />
+      <storyline name="Unraveling the Mystery" faction="2" questName="Unraveling the Mystery" questId="8314" />
+      <storyline name="Twilight's Run" faction="2" questName="Vyral the Vile" questId="8321" />
+      <storyline name="Twilight Lexicon" faction="2" questName="True Believers" questId="8323" />
+      <zone id="1377" name="Silithus" hordeQuests="61" allianceQuests="63" />
+    </achievement>
+    <achievement minLevel="20" maxLevel="60"  achievementId="4936" achievementName="Stonetalon Mountains Quests" faction="0" guide="" icon="achievement_zone_stonetalon_01">
+      <storyline name="Clearing a Path" faction="0" questName="Windshear Mine Cleanup" questId="25646" />
+      <storyline name="Slay the Warlord" faction="0" questName="Rumble in the Lumber... Mill" questId="25669" />
+      <storyline name="An Unconventional Ally" faction="0" questName="Dances with Grimtotem" questId="25851" />
+      <storyline name="Seldarria" faction="0" questName="Brood of Seldarria" questId="25931" />
+      <zone id="406" name="Stonetalon Mountains" hordeQuests="49" allianceQuests="63" />
+    </achievement>
+    <achievement minLevel="20" maxLevel="60"  achievementId="4980" achievementName="Stonetalon Mountains Quests" faction="1" guide="" icon="achievement_zone_stonetalon_01">
+      <storyline name="A Short-Lived Vicroty" faction="1" questName="Ashes to Ashes" questId="26010" />
+      <storyline name="Legionnaire" faction="1" questName="In Defense of Krom'gar Fortress" questId="26058" />
+      <storyline name="Da Voodoo" faction="1" questName="Kobold Fury!" questId="26068" />
+      <storyline name="Honor... Never Forsake It" faction="1" questName="To Be Horde..." questId="26115" />
+      <zone id="406" name="Stonetalon Mountains" hordeQuests="49" allianceQuests="63" />
+    </achievement>
+    <achievement minLevel="25" maxLevel="60"  achievementId="4937" achievementName="Southern Barrens Quests" faction="0" guide="" icon="achievement_boss_charlgarazorflank">
+      <storyline name="Life from the Dream" faction="2" questName="Sowing a Solution" questId="24566" />
+      <storyline name="Firestone Point" faction="2" questName="Echoes of Agamaggan" questId="24653" />
+      <storyline name="Northwatch Hold" faction="0" questName="Silencing Rageroar" questId="24956" />
+      <storyline name="Teegan's Expedition" faction="0" questName="Teegan's People" questId="25000" />
+      <storyline name="Forward Command" faction="0" questName="Marching On Our Stomachs" questId="25042" />
+      <storyline name="Fort Triumph" faction="0" questName="The Deed Is Done" questId="25185" />
+      <storyline name="Honor's Stand" faction="0" questName="Futile Resistance" questId="25186" />
+      <zone id="4709" name="Southern Barrens" hordeQuests="60" allianceQuests="69" />
+      <zone id="17" name="Northern Barrens" hordeQuests="113" allianceQuests="13" />
+    </achievement>
+    <achievement minLevel="25" maxLevel="60"  achievementId="4981" achievementName="Southern Barrens Quests" faction="1" guide="" icon="achievement_boss_charlgarazorflank">
+      <storyline name="Hunter's Hill" faction="1" questName="Stalling the Survey" questId="24519" />
+      <storyline name="Camp Una'fe" faction="1" questName="Keeping the Dogs at Bay" questId="24525" />
+      <storyline name="Vendetta Point" faction="1" questName="Lion's Pride" questId="24552" />
+      <storyline name="Life from the Dream" faction="2" questName="Sowing a Solution" questId="24566" />
+      <storyline name="Firestone Point" faction="1" questName="Mangletooth" questId="24608" />
+      <storyline name="Desolation Hold" faction="1" questName="Silithissues" questId="24654" />
+      <storyline name="Spearhead" faction="1" questName="Sabotage!" questId="24747" />
+      <zone id="4709" name="Southern Barrens" hordeQuests="60" allianceQuests="69" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4935" achievementName="Tanaris Quests" faction="2" guide="" icon="achievement_zone_tanaris_01">
+      <storyline name="Buf Free" faction="2" questName="Just Trying to Kill Some Bugs" questId="24953" />
+      <storyline name="Southsea Pirates" faction="0" questName="Captain Dreadbeard" questId="25166" />
+      <storyline name="Southsea Pirates" faction="1" questName="Captain Dreadbeard" questId="24950" />
+      <storyline name="Advancing Our Intersts" faction="0" questName="You Too, Brute?" questId="25065" />
+      <storyline name="Advancing Our Intersts" faction="1" questName="Sandscraper" questId="25001" />
+      <storyline name="The Titans" faction="1" questName="The Grand Tablet" questId="25421" />
+      <storyline name="The Titans" faction="1" questName="The Grand Tablet" questId="25107" />
+      <storyline name="Grudge Match!" faction="1" questName="Thunderdrome: Grudge Match!" questId="25513" />
+      <storyline name="Grudge Match!" faction="1" questName="Thunderdrome: Grudge Match!" questId="25591" />
+      <zone id="440" name="Tanaris" hordeQuests="114" allianceQuests="111" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4938" achievementName="Thousand Needles Quests" faction="2" guide="" icon="achievement_zone_thousandneedles_01">
+      <storyline name="Bugs in the Ice Cream" faction="2" questName="That Smart One's Gotta Go" questId="28048" />
+      <storyline name="Mind the Drop" faction="2" questName="The Twilight Skymaster" questId="28098" />
+      <storyline name="The Treasure Trove" faction="0" questName="Two-Tusk Takedown" questId="25627" />
+      <storyline name="The Treasure Trove" faction="1" questName="Two-Tusk Takedown" questId="25628" />
+      <storyline name="The Chief of Chiefs" faction="0" questName="Grimtotem Chiefs: The Chief of Chiefs" questId="27327" />
+      <storyline name="The Chief of Chiefs" faction="1" questName="Grimtotem Chiefs: The Chief of Chiefs" questId="27328" />
+      <storyline name="The Evil you Know..." faction="0" questName="Spread the Word" questId="28160" />
+      <storyline name="The Evil you Know..." faction="1" questName="Spread the Word" questId="28161" />
+      <zone id="400" name="Thousand Needles" hordeQuests="74" allianceQuests="69" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4939" achievementName="Un'Goro Crater Quests" faction="2" guide="" icon="achievement_zone_ungorocrater_01">
+      <storyline name="Observe the World" faction="2" questName="Ever Watching From Above" questId="24695" />
+      <storyline name="The Ballad of Maximillian" faction="2" questName="The Ballad of Maximillian" questId="24707" />
+      <storyline name="The Pylons of Un'Goro" faction="2" questName="Crystals of Power" questId="24720" />
+      <zone id="490" name="Un'Goro Crater" hordeQuests="68" allianceQuests="65" />
+    </achievement>
+    <achievement minLevel="40" maxLevel="60"  achievementId="4940" achievementName="Winterspring Quests" faction="2" guide="" icon="achievement_zone_winterspring">
+      <storyline name="The Winterfall Furlbolg" faction="2" questName="Words of the High Chief" questId="28472" />
+      <storyline name="Superior Weapons" faction="2" questName="Ice Delivery" questId="28628" />
+      <storyline name="Spray It and Slay It" faction="2" questName="Spray it One More Time" questId="28710" />
+      <storyline name="Yeti Suprise!" faction="2" questName="Yetiphobia" questId="28722" />
+      <storyline name="The Hub of Doodgrub's Grub" faction="2" questName="You Gotta Have Eggs" questId="28828" />
+      <storyline name="Jadrag's Fate" faction="2" questName="Chips off the Old Block" questId="28830" />
+      <storyline name="Umbranse's Deliverance" faction="2" questName="Umbranse's Deliverance" questId="28842" />
+      <storyline name="Ruins of Kel'Theril" faction="2" questName="Trailing the Spiritspeaker" questId="28848" />
+      <zone id="618" name="Winterspring" hordeQuests="74" allianceQuests="76" />
+    </achievement>
+  </meta>
+  <meta achievementName="Loremaster of Outland" achievementId="1262" faction="2" guide="Loremaster-of-Outland" icon="achievement_zone_outland_01">
+    <achievement minLevel="58" maxLevel="80"  achievementId="1189" achievementName="To Hellfire and Back" faction="0" guide="" icon="achievement_zone_hellfirepeninsula_01">
+      <storyline name="Cenarion Post" faction="2" questName="Natural Remedies" questId="10351" />
+      <storyline name="Disrupt the Burning Legion" faction="0" questName="Invasion Point: Annihilator" questId="10397" />
+      <storyline name="Overthrow the Overlord" faction="0" questName="Overlord" questId="10400" />
+      <storyline name="Green, But Not Orcs" faction="2" questName="Beneath Thrallmar" questId="10630" />
+      <storyline name="The Exorcism of Colonel Jules" faction="0" questName="The Exorcism of Colonel Jules" questId="10935" />
+      <storyline name="Drill the Drillmaster" faction="0" questName="Drill the Drillmaster" questId="10937" />
+      <storyline name="Temple of Telhamat" faction="0" questName="An Ambitious Plan" questId="9383" />
+      <storyline name="In Search of Sedai" faction="0" questName="The Seer's Relic" questId="9545" />
+      <zone id="3483" name="Hellfire Peninsula" hordeQuests="108" allianceQuests="104" />
+    </achievement>
+    <achievement minLevel="58" maxLevel="80"  achievementId="1271" achievementName="To Hellfire and Back" faction="1" guide="" icon="achievement_zone_hellfirepeninsula_01">
+      <storyline name="Spinebreaker Post" faction="1" questName="Honor the Fallen" questId="10258" />
+      <storyline name="Cenarion Post" faction="2" questName="Natural Remedies" questId="10351" />
+      <storyline name="Disrupt the Burning Legion" faction="1" questName="Return to Thrallmar" questId="10388" />
+      <storyline name="Cruel's Intentions" faction="1" questName="The Agony and the Darkness" questId="10389" />
+      <storyline name="Green, But not Orcs" faction="2" questName="Beneath Thrallmar" questId="10630" />
+      <storyline name="The Hand of Kargath" faction="1" questName="The Foot of the Citadel" questId="10876" />
+      <storyline name="Falcon Watch" faction="1" questName="The Cleansing Must Be Stopped" questId="9370" />
+      <storyline name="The Mag'har" faction="1" questName="The Mag'har" questId="9406" />
+      <zone id="3483" name="Hellfire Peninsula" hordeQuests="108" allianceQuests="104" />
+    </achievement>
+    <achievement minLevel="60" maxLevel="80"  achievementId="1190" achievementName="Mysteries of the Marsh" faction="2" guide="" icon="achievement_zone_zangarmarsh">
+      <storyline name="Saving the Poreloks" faction="2" questName="A Damp, Dark Place" questId="9788" />
+      <storyline name="Dont't Eat THOSE Muchrooms!" faction="2" questName="Stealing Back the Mushrooms" questId="9709" />
+      <storyline name="A Trip With the Sporelings" faction="2" questName="Now That We're Friends..." questId="9726" />
+      <storyline name="Draining the Marsh" faction="2" questName="Return to the Marsh" questId="9732" />
+      <storyline name="The Defense of Zabra'jin" faction="1" questName="Message to the Daggerfen" questId="10118" />
+      <storyline name="Swamprat Post" faction="1" questName="Jyoba's Report" questId="9772" />
+      <storyline name="Telredor" faction="0" questName="An Unnatural Drought" questId="9783" />
+      <storyline name="Draenei Diplomacy" faction="0" questName="Messenger to the Feralfen" questId="9803" />
+      <storyline name="Orebor Harborage" faction="0" questName="The Terror of Marshlight Lake" questId="9902" />
+      <storyline name="Zabra'jin" faction="1" questName="Pursuing Terrorclaw" questId="9904" />
+      <zone id="3521" name="Zangarmarsh" hordeQuests="77" allianceQuests="81" />
+    </achievement>
+    <achievement minLevel="62" maxLevel="80"  achievementId="1191" achievementName="Terror of Terokkar" faction="0" guide="" icon="achievement_zone_terrokar">
+      <storyline name="Allerian Stronghold" faction="0" questName="Kill the Shadow Council!" questId="10042" />
+      <storyline name="The Skettis Offensive" faction="2" questName="The Skettis Offensive" questId="10879" />
+      <storyline name="Refugee Caravan" faction="2" questName="The Shadow Tomb" questId="10881" />
+      <storyline name="Sha'tari Base Camp" faction="2" questName="The Fallen Exarch" questId="10915" />
+      <storyline name="the Warden's Secret" faction="2" questName="It's Watching You!" questId="9951" />
+      <zone id="3519" name="Terokkar Forest" hordeQuests="98" allianceQuests="95" />
+    </achievement>
+    <achievement minLevel="62" maxLevel="80"  achievementId="1272" achievementName="Terror of Terokkar" faction="1" guide="" icon="achievement_zone_terrokar">
+      <storyline name="Stonebreaker Hold" faction="1" questName="Kill the Shadow Council!" questId="10043" />
+      <storyline name="The Skettis Offensive" faction="2" questName="The Skettis Offensive" questId="10879" />
+      <storyline name="Refugee Caravan" faction="2" questName="The Shadow Tomb" questId="10881" />
+      <storyline name="Sha'tari Base Camp" faction="2" questName="The Fallen Exarch" questId="10915" />
+      <storyline name="The Warden's Secret" faction="2" questName="It's Watching You!" questId="9951" />
+      <zone id="3519" name="Terokkar Forest" hordeQuests="98" allianceQuests="95" />
+    </achievement>
+    <achievement minLevel="64" maxLevel="80"  achievementId="1192" achievementName="Nagrand Slam" faction="0" guide="" icon="achievement_zone_nagrand_01">
+      <storyline name="Threats to Nagrand" faction="2" questName="Forge Camp: Annihilated" questId="10011" />
+      <storyline name="The Ultimate Bloodsport" faction="2" questName="The Ultimate Bloodsport" questId="9852" />
+      <storyline name="Throne of Elements" faction="2" questName="Gurok the Usurper" questId="9853" />
+      <storyline name="The Murkblood" faction="0" questName="Ortor My Old Friend..." questId="9873" />
+      <storyline name="Encountering the Ethereals" faction="2" questName="Matters of Security" questId="9925" />
+      <storyline name="Lantresor of the Blade" faction="0" questName="Message to Telaar" questId="9933" />
+      <storyline name="the Adventures of Corki " faction="0" questName="Cho'war the Pillager" questId="9955" />
+      <storyline name="The Ring of Blood" faction="2" questName="The Ring of Blood: The Final Challenge" questId="9977" />
+      <zone id="3518" name="Nagrand" hordeQuests="111" allianceQuests="98" />
+    </achievement>
+    <achievement minLevel="64" maxLevel="80"  achievementId="1273" achievementName="Nagrand Slam" faction="1" guide="" icon="achievement_zone_nagrand_01">
+      <storyline name="Birth of a Warchief" faction="1" questName="There Is No Hope" questId="10172" />
+      <storyline name="The Ultimate Bloodsport" faction="2" questName="The Ultimate Bloodsport" questId="9852" />
+      <storyline name="Throne of Elements" faction="2" questName="Gurok the Usurper" questId="9853" />
+      <storyline name="The Murkblood" faction="1" questName="The Totem of Kar'dash" questId="9868" />
+      <storyline name="Encountering the Ethereals" faction="2" questName="Matters of Security" questId="9925" />
+      <storyline name="Lantresor of the Blade" faction="1" questName="Message to Garadar" questId="9934" />
+      <storyline name="threats to Nagrand" faction="1" questName="Wanted: Durn the Hungerer" questId="9937" />
+      <storyline name="The Ring of Blood" faction="2" questName="The Ring of Blood: The Final Challenge" questId="9977" />
+      <zone id="3518" name="Nagrand" hordeQuests="111" allianceQuests="98" />
+    </achievement>
+    <achievement minLevel="65" maxLevel="80"  achievementId="1193" achievementName="On the Blade'ss Edge" faction="2" guide="" icon="achievement_zone_bladesedgemtns_01">
+      <storyline name="Ogres of Ogri'la" faction="2" questName="To Rule The Skies" questId="11078" />
+      <storyline name="Sylvanaar" faction="2" questName="The Bladespire Ogres" questId="10504" />
+      <storyline name="Ruuan Weald" faction="2" questName="Maxnar Must Die!" questId="10748" />
+      <storyline name="Thunderlord Stronghold" faction="1" questName="The Bloodmaul Ogres" questId="10505" />
+      <storyline name="Toshley's Station" faction="0" questName="More than a Pound of Flesh" questId="10671" />
+      <storyline name="The Gronn Threat" faction="1" questName="Showdown" questId="10742" />
+      <storyline name="The Gronn Threat" faction="0" questName="Showdown" questId="10806" />
+      <storyline name="The Mok'Nathal" faction="1" questName="There Can Be Only One Response" questId="10867" />
+      <zone id="3522" name="Blade's Edge Mountains" hordeQuests="121" allianceQuests="110" />
+    </achievement>
+    <achievement minLevel="67" maxLevel="80"  achievementId="1194" achievementName="Into the Nether" faction="2" guide="" icon="achievement_zone_netherstorm_01">
+      <storyline name="Building the X-52 Nether-Rocket" faction="2" questName="Dr. Boom!" questId="10221" />
+      <storyline name="The Violet Tower" faction="2" questName="Building a Perimeter" questId="10240" />
+      <storyline name="Protect Area 52!" faction="2" questName="Back to the Chief!" questId="10249" />
+      <storyline name="The Consortium" faction="2" questName="Full Triangle" questId="10276" />
+      <storyline name="Destroying the All-Devouring" faction="2" questName="Dimensius the All-Devouring" questId="10439" />
+      <storyline name="Socrethar" faction="2" questName="Turning Point" questId="10507" />
+      <zone id="3523" name="Netherstorm" hordeQuests="166" allianceQuests="166" />
+    </achievement>
+    <achievement minLevel="67" maxLevel="80"  achievementId="1195" achievementName="Shadow of the Betrayer" faction="2" guide="Shadow-of-the-Betrayer" icon="achievement_zone_shadowmoon">
+      <storyline name="The Cipher of Damnation" faction="2" questName="The Cipher of Damnation" questId="10588" />
+      <storyline name="The First Death Knight" faction="0" questName="Teron Gorefiend, I am..." questId="10645" />
+      <storyline name="The First Death Knight" faction="1" questName="Teron Gorefiend, I am..." questId="10639" />
+      <storyline name="Anti-Demon Weapons" faction="2" questName="Quenching the Blade" questId="10679" />
+      <storyline name="Borrowed Power" faction="2" questName="Varedis Must Be Stopped" questId="10692" />
+      <storyline name="Wildhammer Stronghold" faction="0" questName="News of Victory" questId="10744" />
+      <storyline name="Shadowmoon Village" faction="1" questName="News of Victory" questId="10745" />
+      <storyline name="The Dark Conclave" faction="2" questName="Thwart the Dark Conclave" questId="10808" />
+      <storyline name="Netherwing Ledge" faction="2" questName="A Job Unfinished..." questId="11041" />
+      <zone id="3520" name="Shadowmoon Valley" hordeQuests="163" allianceQuests="156" />
+    </achievement>
+  </meta>
+  <meta achievementName="Loremaster of Northrend" achievementId="41" faction="2" guide="Loremaster-of-Northrend" icon="achievement_zone_northrend_01">
+    <achievement minLevel="58" maxLevel="80"  achievementId="33" achievementName="Nothing Boring About Borean" faction="0" guide="Nothing-Boring-About-Borean" icon="achievement_zone_boreantundra_07">
+      <storyline name="Friends from the Sea" faction="2" questName="The Tides Turn" questId="11968" />
+      <storyline name="Participant Observation" faction="2" questName="Them!" questId="11561" />
+      <storyline name="D.E.H.T.A." faction="2" questName="The Assassination of Harold Lane" questId="11892" />
+      <storyline name="The Blue Dragonflight" faction="2" questName="Keep the Secret Safe" questId="11914" />
+      <storyline name="Hiding in Plain Sight" faction="0" questName="The Hunt is On" questId="11794" />
+      <storyline name="To the Aid of Farshire" faction="0" questName="Call to Arms!" questId="11965" />
+      <storyline name="Last Rites" faction="0" questName="Last Rites" questId="12019" />
+      <storyline name="A Family Reunion" faction="0" questName="Thassarian, the Death Knight" questId="12088" />
+      <zone id="3537" name="Borean Tundra" hordeQuests="202" allianceQuests="178" />
+    </achievement>
+    <achievement minLevel="58" maxLevel="80"  achievementId="1358" achievementName="Nothing Boring About Borean" faction="1" guide="Nothing-Boring-About-Borean" icon="achievement_zone_boreantundra_07">
+      <storyline name="Participant Observation" faction="2" questName="Them!" questId="11561" />
+      <storyline name="The Fate of Fareseer Grimwalker" faction="1" questName="Return My Remains" questId="11638" />
+      <storyline name="Return of the Dread Citadel" faction="1" questName="The Plains of Nasam" questId="11652" />
+      <storyline name="The Scourge Necrolord" faction="1" questName="Foolish Endeavors" questId="11705" />
+      <storyline name="To the Aid of the Taunka" faction="1" questName="The Collapse" questId="11706" />
+      <storyline name="D.E.H.T.A." faction="2" questName="The Assassination of Harold Lane" questId="11892" />
+      <storyline name="The Blue Dragonflight" faction="2" questName="Keep the Secret Safe" questId="11914" />
+      <storyline name="Hellscream's Champion" faction="1" questName="Hellscream's Champion" questId="11916" />
+      <storyline name="Somber Realization" faction="1" questName="Across Transborea" questId="11930" />
+      <storyline name="Friends from the Sea" faction="2" questName="The Tides Turn" questId="11968" />
+      <zone id="3537" name="Borean Tundra" hordeQuests="202" allianceQuests="178" />
+    </achievement>
+    <achievement minLevel="58" maxLevel="80"  achievementId="34" achievementName="I've Toured the Fjord" faction="0" guide="" icon="achievement_zone_howlingfjord_07">
+      <storyline name="The Scourge and the Vrykul" faction="0" questName="The Frost Wyrm and its Master" questId="11238" />
+      <storyline name="The Conqueror of Skorn" faction="0" questName="All Hail the Conqueror of Skorn!" questId="11250" />
+      <storyline name="Alpha Worg" faction="0" questName="Alpha Worg" questId="11326" />
+      <storyline name="A New Plague" faction="0" questName="Mission: Plague This!" questId="11332" />
+      <storyline name="Descendants of the Vrykul" faction="0" questName="Anguish of Nifflevar" questId="11344" />
+      <storyline name="The Iron Dwarves" faction="0" questName="Demolishing Megalith" questId="11359" />
+      <storyline name="Sisters of the Fjord" faction="2" questName="Keeper Witherleaf" questId="11428" />
+      <storyline name="The Ill-Equipped Port" faction="0" questName="Let's Go Surfing Now" questId="11436" />
+      <storyline name="the Debt Collector" faction="2" questName="Dead Man's Debt" questId="11467" />
+      <storyline name="The End of Jonah Sterling" faction="2" questName="The Jig is Up" questId="11471" />
+      <storyline name="Iron Rune Constructs" faction="0" questName="News From the East" questId="11501" />
+      <storyline name="Doom Approaches" faction="2" questName="Return to Atuik" questId="11572" />
+      <zone id="495" name="Howling Fjord" hordeQuests="125" allianceQuests="153" />
+    </achievement>
+    <achievement minLevel="58" maxLevel="80"  achievementId="1356" achievementName="I've Toured the Fjord" faction="1" guide="" icon="achievement_zone_howlingfjord_07">
+      <storyline name="Visitors from the Keep" faction="1" questName="Report to Anselm" questId="11234" />
+      <storyline name="The Conqueror of Skorn" faction="1" questName="The Conqueror of Skorn!" questId="11261" />
+      <storyline name="The Scourge and the Vrykul" faction="1" questName="The Frost Wyrm and its Master" questId="11267" />
+      <storyline name="A New Plague" faction="1" questName="Field Test" questId="11307" />
+      <storyline name="Volitile Viscera" faction="1" questName="Warning: Some Assembly Required" questId="11310" />
+      <storyline name="Alpha Worg" faction="1" questName="Alpha Worg" questId="11324" />
+      <storyline name="The Iron Dwarves" faction="1" questName="Demolishing Megalith" questId="11367" />
+      <storyline name="Sisters of the Fjord" faction="2" questName="Keeper Witherleaf" questId="11428" />
+      <storyline name="the Debt Collector" faction="2" questName="Dead Man's Debt" questId="11467" />
+      <storyline name="The End of Jonah Sterling" faction="2" questName="The Jig is Up" questId="11471" />
+      <storyline name="Doom Approaches" faction="2" questName="Return to Atuik" questId="11572" />
+      <storyline name="Assassinating Bjorn Halgurdsson" faction="1" questName="Adding Injury to Insult" questId="12481" />
+      <zone id="495" name="Howling Fjord" hordeQuests="125" allianceQuests="153" />
+    </achievement>
+    <achievement minLevel="61" maxLevel="80"  achievementId="35" achievementName="Might of Dragonblight" faction="0" guide="" icon="achievement_zone_dragonblight_07">
+      <storyline name="Oacha'noa" faction="2" questName="Conversing With the Depths" questId="12032" />
+      <storyline name="Strategic Alliance" faction="2" questName="Really Big Worm" questId="12080" />
+      <storyline name="Redirecting The Ley Lines" faction="2" questName="The End of the Line" questId="12107" />
+      <storyline name="Informing the Queen" faction="2" questName="Informing the Queen" questId="12123" />
+      <storyline name="the Warden's Task" faction="0" questName="The High Cultist" questId="12169" />
+      <storyline name="Frostmourne" faction="0" questName="Frostmourne Cavern" questId="12478" />
+      <storyline name="Angrathar the Wrathgate" faction="0" questName="Return To Angrathar" questId="12499" />
+      <storyline name="The Dragonflights" faction="2" questName="Mystery of the Infinite, Redux" questId="13343" />
+      <zone id="65" name="Dragonblight" hordeQuests="193" allianceQuests="165" />
+    </achievement>
+    <achievement minLevel="61" maxLevel="80"  achievementId="1359" achievementName="Might of Dragonblight" faction="1" guide="" icon="achievement_zone_dragonblight_07">
+      <storyline name="the Taunka" faction="1" questName="Agmar's Hammer" questId="12008" />
+      <storyline name="Oacha'noa" faction="2" questName="Conversing With the Depths" questId="12032" />
+      <storyline name="Strategic Alliance" faction="2" questName="Really Big Worm" questId="12080" />
+      <storyline name="Redirecting the Ley Lines" faction="1" questName="The End of the Line" questId="12110" />
+      <storyline name="Containing the Rot" faction="1" questName="Where the Wild Things Roam" questId="12111" />
+      <storyline name="Informing the Queen" faction="1" questName="Informing the Queen" questId="12124" />
+      <storyline name="Traitors to the Horde" faction="1" questName="The Translated Tome" questId="12136" />
+      <storyline name="The Scarlet Onslaught" faction="1" questName="Do Unto Others" questId="12285" />
+      <storyline name="Angrathar the Wrathgate" faction="1" questName="Return To Angrathar" questId="12500" />
+      <storyline name="The Dragonflights" faction="2" questName="Mystery of the Infinite, Redux" questId="13343" />
+      <zone id="65" name="Dragonblight" hordeQuests="193" allianceQuests="165" />
+    </achievement>
+    <achievement minLevel="63" maxLevel="80"  achievementId="37" achievementName="Fo' Grizzle My Shizzle" faction="0" guide="" icon="achievement_zone_grizzlyhills_07">
+      <storyline name="Revelation!" faction="2" questName="Voices From the Dust" questId="12068" />
+      <storyline name="Eons of Misery" faction="2" questName="Jin'arrak's End" questId="12152" />
+      <storyline name="the Iron Thane" faction="0" questName="The Iron Thane and His Anvil" questId="12153" />
+      <storyline name="Hour of the Worg" faction="2" questName="Hour of the Worg" questId="12164" />
+      <storyline name="Loken's Orders" faction="0" questName="Put on Your Best Face for Loken" questId="12185" />
+      <storyline name="Ursoc, the Bear God" faction="0" questName="Ursoc, the Bear God" questId="12249" />
+      <zone id="394" name="Grizzly Hills" hordeQuests="112" allianceQuests="121" />
+    </achievement>
+    <achievement minLevel="63" maxLevel="80"  achievementId="1357" achievementName="Fo' Grizzle My Shizzle" faction="1" guide="" icon="achievement_zone_grizzlyhills_07">
+      <storyline name="Revelation!" faction="2" questName="Voices From the Dust" questId="12068" />
+      <storyline name="Eons of Misery" faction="2" questName="Jin'arrak's End" questId="12152" />
+      <storyline name="Hour of the Worg" faction="2" questName="Hour of the Worg" questId="12164" />
+      <storyline name="The Iron Thane" faction="1" questName="Bringing Down the Iron Thane" questId="12199" />
+      <storyline name="Loken's Orders" faction="1" questName="Loken's Orders" questId="12203" />
+      <storyline name="Ursoc, the Bear God" faction="1" questName="Ursoc, the Bear God" questId="12236" />
+      <storyline name="The Final Showdown" faction="1" questName="The Conquest Pit: Final Showdown" questId="12431" />
+      <zone id="394" name="Grizzly Hills" hordeQuests="112" allianceQuests="121" />
+    </achievement>
+    <achievement minLevel="64" maxLevel="80"  achievementId="36" achievementName="The Empire of Zul'sDrak" faction="2" guide="" icon="achievement_zone_zuldrak_07">
+      <storyline name="SSertus" faction="2" questName="Too Much of a Good Thing" questId="12516" />
+      <storyline name="The Argent Patrol" faction="2" questName="Pa'Troll" questId="12596" />
+      <storyline name="Quetz'lun" faction="2" questName="You Reap What You Sow" questId="12685" />
+      <storyline name="Betrayal" faction="2" questName="Betrayal" questId="12713" />
+      <storyline name="Akali" faction="2" questName="Convocation at Zol'Heb" questId="12730" />
+      <storyline name="Finding Allies" faction="2" questName="Orders From Drakuru" questId="12883" />
+      <storyline name="The Storm King's Crusade" faction="2" questName="The Storm King's Vengeance" questId="12919" />
+      <storyline name="The Amphitheater of Anguish" faction="2" questName="The Champion of Anguish" questId="12948" />
+      <zone id="66" name="Zul'Drak" hordeQuests="133" allianceQuests="134" />
+    </achievement>
+    <achievement minLevel="66" maxLevel="80"  achievementId="39" achievementName="Into the Basin" faction="2" guide="" icon="achievement_zone_sholazar_07">
+      <storyline name="The wolvar" faction="2" questName="Just Following Orders" questId="12540" />
+      <storyline name="Watching over the Basin" faction="2" questName="Reclamation" questId="12546" />
+      <storyline name="The Lifewarden" faction="2" questName="An Issue of Trust" questId="12561" />
+      <storyline name="The Oracles" faction="2" questName="A Hero's Burden" questId="12581" />
+      <storyline name="Hunting Bigger Game" faction="2" questName="In Search of Bigger Game" questId="12595" />
+      <storyline name="Teeth, Spikes, and Talons" faction="2" questName="Post-partum Aggression" questId="12614" />
+      <zone id="3711" name="Sholazar Basin" hordeQuests="104" allianceQuests="104" />
+    </achievement>
+    <achievement minLevel="67" maxLevel="80"  achievementId="38" achievementName="The Summit of Storm Peaks" faction="2" guide="" icon="achievement_zone_stormpeaks_07">
+      <storyline name="Defending K3" faction="2" questName="Demolitionist Extraordinaire" questId="12824" />
+      <storyline name="The Harpy Problem" faction="0" questName="Sirana Iceshriek" questId="12868" />
+      <storyline name="For the Frostborn King" faction="0" questName="Unwelcome Guests" questId="12876" />
+      <storyline name="Norgannon's Shell" faction="0" questName="Norgannon's Shell" questId="12872" />
+      <storyline name="Norgannon's Shell" faction="1" questName="Norgannon's Shell" questId="12928" />
+      <storyline name="Bearly Ready" faction="2" questName="You'll Need a Bear" questId="12972" />
+      <storyline name="The Sons of Holdir" faction="2" questName="Raising Hodir's Spear" questId="13001" />
+      <storyline name="Brinigng Down the Iron Colossus" faction="2" questName="The Iron Colossus" questId="13007" />
+      <storyline name="Loken" faction="2" questName="The Reckoning" questId="13047" />
+      <storyline name="The Story of Stormhoof" faction="1" questName="Changing the Wind's Course" questId="13058" />
+      <storyline name="Heartbreak" faction="2" questName="Sibling Rivalry" questId="13064" />
+      <storyline name="Pursuing a Legend" faction="1" questName="Forging the Keystone" questId="13285" />
+      <zone id="67" name="The Storm Peaks" hordeQuests="134" allianceQuests="132" />
+    </achievement>
+    <achievement minLevel="67" maxLevel="80"  achievementId="40" achievementName="Icecrown: The Final Goal" faction="2" guide="" icon="achievement_zone_icecrown_07">
+      <storyline name="What's Yours is Mine" faction="0" questName="The Shadow Vault" questId="12898" />
+      <storyline name="What's Yours is Mine" faction="1" questName="The Shadow Vault" questId="12899" />
+      <storyline name="Cursader Bridenbrad" faction="2" questName="Light Within the Darkness" questId="13083" />
+      <storyline name="In Defiance of the Scourge" faction="2" questName="The Crusaders' Pinnacle" questId="13157" />
+      <storyline name="Malykriss: The Vile Hold" faction="2" questName="The Fate of Bloodbane" questId="13164" />
+      <storyline name="Seizing Saronite" faction="2" questName="Amidst the Confusion" questId="13174" />
+      <storyline name="The Unthinkable" faction="2" questName="Battle at Valhalas: Final Challenge" questId="13219" />
+      <storyline name="Teaching the Meaning of Fear" faction="2" questName="The Flesh Giant Champion" questId="13235" />
+      <storyline name="The Heart of the Lich King" faction="0" questName="Tirion's Gambit" questId="13403" />
+      <storyline name="The Heart of the Lich King" faction="1" questName="Tirion's Gambit" questId="13364" />
+      <storyline name="Aldur'thar: The Desolation Gate" faction="0" questName="No Rest For The Wicked" questId="13346" />
+      <storyline name="Aldur'thar: The Desolation Gate" faction="1" questName="No Rest For The Wicked" questId="13367" />
+      <zone id="210" name="Icecrown" hordeQuests="283" allianceQuests="280" />
+    </achievement>
+  </meta>
+  <meta achievementName="Loremaster of Cataclysm" achievementId="4875" faction="2" guide="Loremaster-of-Cataclysm" icon="inv_misc_book_06">
+    <achievement minLevel="80" maxLevel="90"  achievementId="4869" achievementName="Sinking into Vashj'ir" faction="0" guide="" icon="achievement_quests_completed_vashjir">
+      <storyline name="Silver Tide Hollow" faction="2" questName="Back in One Piece" questId="25456" />
+      <storyline name="Defense of The Briny Cutter" faction="0" questName="All or Nothing" questId="25558" />
+      <storyline name="Visions of the Past" faction="0" questName="Visions of the Past: Rise from the Deep" questId="25626" />
+      <storyline name="Smuggler's Scar" faction="2" questName="A Desperate Plea" questId="25638" />
+      <storyline name="A Budding Treasure Hunter" faction="2" questName="Decisions, Decisions" questId="25743" />
+      <storyline name="The Clutch" faction="0" questName="Decompression" questId="25888" />
+      <storyline name="Nespirah" faction="0" questName="Waking the Beast" questId="25922" />
+      <storyline name="The Merciless One" faction="0" questName="Put It On" questId="25987" />
+      <storyline name="L'ghorek" faction="2" questName="All that Rises" questId="26143" />
+      <storyline name="The Tidehunter" faction="0" questName="Defending the Rift" questId="26193" />
+      <zone id="5144" name="Shimmering Expanse" hordeQuests="80" allianceQuests="82" />
+      <zone id="4815" name="Kelp'thar Forest" hordeQuests="44" allianceQuests="42" />
+      <zone id="5145" name="Abyssal Depths" hordeQuests="36" allianceQuests="36" />
+    </achievement>
+    <achievement minLevel="80" maxLevel="90"  achievementId="4982" achievementName="Sinking into Vashj'ir" faction="1" guide="" icon="achievement_quests_completed_vashjir">
+      <storyline name="Silver Tide Hollow" faction="2" questName="Back in One Piece" questId="25456" />
+      <storyline name="Smuggler' Scar" faction="2" questName="A Desperate Plea" questId="25638" />
+      <storyline name="A Budding Treasure Hunter" faction="2" questName="Decisions, Decisions" questId="25743" />
+      <storyline name="Defense of the Immortal Coil" faction="1" questName="Blood and Thunder!" questId="25949" />
+      <storyline name="The Merciless One" faction="1" questName="Put It On" questId="25988" />
+      <storyline name="Nespirah" faction="1" questName="Waking the Beast" questId="25996" />
+      <storyline name="The Clutch" faction="1" questName="Decompression" questId="26008" />
+      <storyline name="Visions of the Past" faction="1" questName="Visions of the Past: Rise from the Deep" questId="26135" />
+      <storyline name="L'ghorek" faction="2" questName="All that Rises" questId="26143" />
+      <storyline name="The Tidehunter" faction="1" questName="Defending the Rift" questId="26194" />
+      <zone id="5144" name="Shimmering Expanse" hordeQuests="80" allianceQuests="82" />
+      <zone id="4815" name="Kelp'thar Forest" hordeQuests="44" allianceQuests="42" />
+      <zone id="5145" name="Abyssal Depths" hordeQuests="36" allianceQuests="36" />
+    </achievement>
+    <achievement minLevel="80" maxLevel="90"  achievementId="4870" achievementName="Coming Down the Mountain" faction="2" guide="" icon="achievement_quests_completed_mounthyjal">
+      <storyline name="Shrine of Goldrinn" faction="2" questName="Get Me Outta Here!" questId="25332" />
+      <storyline name="Awakening Tortolla" faction="2" questName="An Ancient Awakens" questId="25520" />
+      <storyline name="CAvorting with Cultists" faction="2" questName="Twilight Riot" questId="25531" />
+      <storyline name="Extinguish the Firelord" faction="2" questName="The Firelord" questId="25551" />
+      <storyline name="The Return of the Ancients" faction="2" questName="The Return of the Ancients" questId="25584" />
+      <storyline name="The Ancients" faction="2" questName="The Ancients are With Us" questId="25653" />
+      <storyline name="Shrine of Aviana" faction="2" questName="Return to Aviana" questId="25832" />
+      <storyline name="Grove of Aessina" faction="2" questName="Good News... and Bad News" questId="29066" />
+      <zone id="616" name="Mount Hyjal" hordeQuests="189" allianceQuests="189" />
+    </achievement>
+    <achievement minLevel="82" maxLevel="90"  achievementId="4871" achievementName="Deep into Deepholm" faction="2" guide="" icon="achievement_quests_completed_deepholm">
+      <storyline name="The Stone Lords" faction="2" questName="Corruption Destruction" questId="26585" />
+      <storyline name="The Upper World Pillar Fragment" faction="2" questName="The World Pillar Fragment" questId="26876" />
+      <storyline name="Mending the Wound" faction="2" questName="The Binding" questId="26971" />
+      <storyline name="The Middle World Pillar Fragment" faction="2" questName="The Middle Fragment" questId="27938" />
+      <zone id="5042" name="Deepholm" hordeQuests="140" allianceQuests="137" />
+    </achievement>
+    <achievement minLevel="83" maxLevel="90"  achievementId="4872" achievementName="Unearthing Uldum" faction="2" guide="" icon="achievement_quests_completed_uldum">
+      <storyline name="Gnomebliteration" faction="2" questName="Gnomebliteration" questId="27779" />
+      <storyline name="These Obelisks Are Trying to Kill Us!" faction="2" questName="Tailgunner!" questId="27905" />
+      <storyline name="Rescued by Outsiders" faction="2" questName="Escape From the Lost City" questId="28112" />
+      <storyline name="The Furrier, Schnottz" faction="2" questName="Firing Squad" questId="28267" />
+      <storyline name="The Dark Pharoah" faction="2" questName="The Fall of Neferset City" questId="28520" />
+      <storyline name="The High Council's Decision" faction="2" questName="The High Council's Decision" questId="28533" />
+      <storyline name="Promises" faction="2" questName="The Coffer of Promise" questId="28633" />
+      <zone id="5034" name="Uldum" hordeQuests="129" allianceQuests="129" />
+    </achievement>
+    <achievement minLevel="84" maxLevel="90"  achievementId="4873" achievementName="Fading into Twilight" faction="0" guide="" icon="achievement_quests_completed_twilighthighlands">
+      <storyline name="Good News, For Once" faction="0" questName="The Way is Open" questId="27545" />
+      <storyline name="The Dunwalds" faction="0" questName="Doing It Like a Dunwald" questId="27651" />
+      <storyline name="Send Them Packing" faction="2" questName="Unbinding" questId="27662" />
+      <storyline name="Firebeard" faction="0" questName="Dropping the Hammer" questId="27817" />
+      <storyline name="The Eye of Twilight" faction="0" questName="Eye Spy" questId="28244" />
+      <storyline name="The Attack Begins" faction="2" questName="Last of Her Kind" questId="28247" />
+      <storyline name="Wild, Wild, Wildhammer Wedding" faction="0" questName="Wild, Wild, Wildhammer Wedding" questId="28655" />
+      <zone id="4922" name="Twilight Highlands" hordeQuests="134" allianceQuests="159" />
+    </achievement>
+    <achievement minLevel="84" maxLevel="90"  achievementId="5501" achievementName="Fading into Twilight" faction="1" guide="" icon="achievement_quests_completed_twilighthighlands">
+      <storyline name="Goblin Work Ethic" faction="1" questName="Beating the Market" questId="26337" />
+      <storyline name="Return to the Highlands" faction="1" questName="Return to the Highlands" questId="26840" />
+      <storyline name="Send Them Packing" faction="2" questName="Unbinding" questId="27662" />
+      <storyline name="The Eye of Twilight" faction="1" questName="Eye Spy" questId="27955" />
+      <storyline name="The Dragonmaw" faction="1" questName="Fury Unbound" questId="28133" />
+      <storyline name="The Attack Begins" faction="2" questName="Last of Her Kind" questId="28247" />
+      <storyline name="Krazzworks" faction="1" questName="Krazz Works!" questId="28595" />
+      <zone id="4922" name="Twilight Highlands" hordeQuests="134" allianceQuests="159" />
+    </achievement>
+  </meta>
+  <meta achievementName="Loremaster of Pandaria" achievementId="6541" faction="2" guide="Loremaster-of-Pandaria" icon="expansionicon_mistsofpandaria">
+    <achievement minLevel="81" maxLevel="90"  achievementId="6301" achievementName="Rally the Valley" faction="2" guide="" icon="achievement_zone_valleyoffourwinds_loremaster">
+      <storyline name="Thunderfoot Fields" faction="2" questName="A Lesson in Bravery" questId="29918" />
+      <storyline name="Mudmug's Place" faction="2" questName="Broken Dreams" questId="29952" />
+      <storyline name="The Hidden Master" faction="2" questName="Training and Discipline" questId="29990" />
+      <storyline name="Chen's Masterpiece" faction="2" questName="The Emperor" questId="30073" />
+      <storyline name="The Stormstout Brewery" faction="2" questName="Cleaning House" questId="30078" />
+      <storyline name="Nesingwary's Safari" faction="2" questName="Parental Mastery" questId="30186" />
+      <zone id="5805" name="Valley of the Four Winds" hordeQuests="291" allianceQuests="291" />
+    </achievement>
+    <achievement minLevel="83" maxLevel="90"  achievementId="6539" achievementName="One Steppe Forward, Two Steppes Back" faction="2" guide="" icon="achievement_zone_townlongsteppes_loremaster">
+      <storyline name="Fire Camp Osul" faction="2" questName="The Point of No Return" questId="30784" />
+      <storyline name="Mistlurkers in the Sumprushes" faction="2" questName="Mists' Opportunity" questId="30793" />
+      <storyline name="On Hatred's Path" faction="2" questName="Terror of the Dread Wastes" questId="30900" />
+      <storyline name="Tai Ho's Investigation" faction="2" questName="The Terrible Truth" questId="30926" />
+      <storyline name="The Sha of Hatred" faction="2" questName="The Sha of Hatred" questId="30968" />
+      <zone id="5842" name="Townlong Steppes" hordeQuests="135" allianceQuests="135" />
+    </achievement>
+    <achievement minLevel="84" maxLevel="90"  achievementId="6540" achievementName="Dread Haste Makes Dread Waste" faction="2" guide="" icon="achievement_zone_dreadwastes_loremaster">
+      <storyline name="The First Paragons" faction="2" questName="A Cry From Darkness" questId="31066" />
+      <storyline name="Taste of Amber" faction="2" questName="Blood of Ancients" questId="31086" />
+      <storyline name="Like a Deck Boss" faction="2" questName="Mazu's Bounty" questId="31354" />
+      <storyline name="The Might of the Klaxxi" faction="2" questName="Falling to Pieces" questId="31398" />
+      <zone id="6138" name="Dread Wastes" hordeQuests="128" allianceQuests="128" />
+    </achievement>
+    <achievement minLevel="80" maxLevel="90"  achievementId="6300" achievementName="Upjade Complete" faction="0" guide="" icon="achievement_zone_jadeforest_loremaster">
+      <storyline name="Tian Monastery" faction="2" questName="Flying Colors" questId="29639" />
+      <storyline name="Nectarbreeze Orchard" faction="2" questName="Maul Gormal" questId="29670" />
+      <storyline name="Terrace of Ten Thunders" faction="2" questName="Pei-Back" questId="29755" />
+      <storyline name="Dawn's Blossom" faction="2" questName="Quill of Stingers" questId="29882" />
+      <storyline name="The Waterspeaking Ceremony" faction="0" questName="Spirits of the Water" questId="29894" />
+      <storyline name="The White Pawn" faction="0" questName="Anduin's Decision" questId="29901" />
+      <storyline name="Pearlfin Village" faction="0" questName="Carp Diem" questId="29906" />
+      <storyline name="Greenstone Quarry" faction="2" questName="What's Mined Is Yours" questId="29930" />
+      <storyline name="The Temple of the Jade Serpent" faction="2" questName="The Jade Serpent" questId="30000" />
+      <storyline name="Overcoming Doubt" faction="0" questName="Emergency Response" questId="31319" />
+      <storyline name="The Battle for the Forest" faction="0" questName="Last Piece of the Puzzle" questId="31362" />
+      <storyline name="Paw'don Village" faction="0" questName="Onward and Inward" questId="31745" />
+      <zone id="5785" name="The Jade Forest" hordeQuests="232" allianceQuests="228" />
+    </achievement>
+    <achievement minLevel="80" maxLevel="90"  achievementId="6534" achievementName="Upjade Complete" faction="1" guide="" icon="achievement_zone_jadeforest_loremaster">
+      <storyline name="Tian Monastery" faction="2" questName="Flying Colors" questId="29639" />
+      <storyline name="Nectarbreeze Orchard" faction="2" questName="Maul Gormal" questId="29670" />
+      <storyline name="The Remains of Hellscream's Fist" faction="1" questName="Regroup!" questId="29694" />
+      <storyline name="Terrace of Ten Thunders" faction="2" questName="Pei-Back" questId="29755" />
+      <storyline name="Strange Bedfellows" faction="1" questName="Swallowed Whole" questId="29879" />
+      <storyline name="Dawn's Bloosom" faction="2" questName="Quill of Stingers" questId="29882" />
+      <storyline name="Greenstone Quary" faction="2" questName="What's Mined Is Yours" questId="29930" />
+      <storyline name="Grooken Hill" faction="1" questName="Boom Goes the Doonamite!" questId="29967" />
+      <storyline name="The Temple of the Jade Serpent" faction="2" questName="The Jade Serpent" questId="30000" />
+      <storyline name="The Battle for the Forest" faction="1" questName="Last Piece of the Puzzle" questId="30485" />
+      <storyline name="Overcoming Doubt" faction="1" questName="Emergency Response" questId="30504" />
+      <storyline name="First Contact" faction="1" questName="The Darkness Within" questId="31779" />
+      <zone id="5785" name="The Jade Forest" hordeQuests="232" allianceQuests="228" />
+    </achievement>
+    <achievement minLevel="81" maxLevel="90"  achievementId="6535" achievementName="Mighty Roamin' Krasaranger" faction="0" guide="" icon="achievement_zone_krasarangwilds_loremaster">
+      <storyline name="Zhu's Watch" faction="2" questName="Zhu's Despair" questId="30090" />
+      <storyline name="Temple of the Red Crane" faction="2" questName="In the House of the Red Crane" questId="30273" />
+      <storyline name="The Incursion" faction="0" questName="Immortality?" questId="30348" />
+      <storyline name="The Waters of Youth" faction="0" questName="The Waters of Youth" questId="30445" />
+      <storyline name="Nayeli Lagoon" faction="0" questName="Buried Hozen Treasure" questId="30675" />
+      <zone id="6134" name="Krasarang Wilds" hordeQuests="154" allianceQuests="146" />
+    </achievement>
+    <achievement minLevel="81" maxLevel="90"  achievementId="6536" achievementName="Mighty Roamin' Krasaranger" faction="1" guide="" icon="achievement_zone_krasarangwilds_loremaster">
+      <storyline name="Zhu's Watch" faction="2" questName="Zhu's Despair" questId="30090" />
+      <storyline name="Thunder Cleft" faction="1" questName="Life" questId="30131" />
+      <storyline name="Dawnchaser Retreat" faction="1" questName="For Family" questId="30174" />
+      <storyline name="Temple of the Red Crane" faction="2" questName="In the House of the Red Crane" questId="30273" />
+      <storyline name="Nayeli Lagoon" faction="2" questName="Buried Hozen Treasure" questId="30675" />
+      <zone id="6134" name="Krasarang Wilds" hordeQuests="154" allianceQuests="146" />
+    </achievement>
+    <achievement minLevel="82" maxLevel="90"  achievementId="6537" achievementName="Slum It in the Summit" faction="0" guide="" icon="achievement_zone_kunlaisummit_loremaster">
+      <storyline name="The Yak Wash" faction="2" questName="Back in Yak" questId="30492" />
+      <storyline name="Westwind Rest" faction="0" questName="Challenge Accepted" questId="30514" />
+      <storyline name="The Burlap Trail" faction="2" questName="The Leader Hozen" questId="30612" />
+      <storyline name="The Yaungol Invasion" faction="0" questName="The Ordo Warbringer" questId="30660" />
+      <storyline name="Kota Peak" faction="2" questName="The Burlap Grind" questId="30747" />
+      <storyline name="The Shado-Pan" faction="2" questName="Unbelievable!" questId="30752" />
+      <storyline name="The Thunder King" faction="2" questName="Stealing Their Thunder King" questId="30800" />
+      <storyline name="Inkgill Mere" faction="2" questName="The Fall of Shai Hu" questId="30855" />
+      <storyline name="Zouchin Village" faction="2" questName="Revelations" questId="30946" />
+      <storyline name="Temple of the White Tiger" faction="0" questName="A Celestial Experience" questId="31394" />
+      <zone id="5841" name="Kun-Lai Summit" hordeQuests="191" allianceQuests="192" />
+    </achievement>
+    <achievement minLevel="82" maxLevel="90"  achievementId="6538" achievementName="Slum It in the Summit" faction="1" guide="" icon="achievement_zone_kunlaisummit_loremaster">
+      <storyline name="The Yak Wash" faction="2" questName="Back in Yak" questId="30492" />
+      <storyline name="Eastwind Rest" faction="1" questName="Challenge Accepted" questId="30515" />
+      <storyline name="The Burlap Trail" faction="2" questName="The Leader Hozen" questId="30612" />
+      <storyline name="The Yaungol Invasion" faction="1" questName="The Ordo Warbringer" questId="30661" />
+      <storyline name="Kota Peak" faction="2" questName="The Burlap Grind" questId="30747" />
+      <storyline name="The Shado-Pan" faction="2" questName="Unbelievable!" questId="30752" />
+      <storyline name="The Thunder King" faction="2" questName="Stealing Their Thunder King" questId="30800" />
+      <storyline name="Inkgill Mere" faction="2" questName="The Fall of Shai Hu" questId="30855" />
+      <storyline name="Zouchin Village" faction="2" questName="Revelations" questId="30946" />
+      <storyline name="Temple of the White Tiger" faction="1" questName="A Celestial Experience" questId="31395" />
+      <zone id="5841" name="Kun-Lai Summit" hordeQuests="191" allianceQuests="192" />
+    </achievement>
+  </meta>
+  <meta achievementName="Loremaster of Draenor" achievementId="9833" faction="0" guide="Loremaster-of-Draenor" icon="achievement_zone_draenor_01">
+    <achievement minLevel="90" maxLevel="100"  achievementId="8845" achievementName="As I Walk Through the Valley of the Shadow of Moon" faction="0" guide="" icon="achievement_zone_newshadowmoonvalley">
+      <storyline name="The Light Prevails" faction="0" questName="The Defense of Karabor" questId="33256" />
+      <storyline name="Gloomshade Grove" faction="0" questName="Game of Thorns" questId="33271" />
+      <storyline name="Shadows Awaken" faction="0" questName="Shadows Awaken" questId="34019" />
+      <storyline name="Establishing a Foothold" faction="0" questName="Delegating on Draenor" questId="34692" />
+      <storyline name="The Pursuit of Justice" faction="0" questName="The Traitor's True Name" questId="34792" />
+      <storyline name="Purifying the Gene Pool" faction="0" questName="Gestating Genesaur" questId="35015" />
+      <storyline name="Dark Side of the Moon" faction="0" questName="The Dark Side of the Moon" questId="35093" />
+      <zone id="6719" name="Shadowmoon Valley" hordeQuests="41" allianceQuests="207" />
+      <zone id="7078" name="Lunarfall" hordeQuests="25" allianceQuests="231" />
+    </achievement>
+    <achievement minLevel="92" maxLevel="100"  achievementId="8923" achievementName="Putting the Gore in Gorgrond" faction="0" guide="" icon="achievement_zone_gorgrond">
+      <storyline name="We Need An Outpost" faction="0" questName="We Need An Outpost" questId="35063" />
+      <storyline name="Supporting Your Garrison" faction="0" questName="The Sparring Arena" questId="35137" />
+      <storyline name="In the Land of Giants" faction="0" questName="Power of the Genesaur" questId="35255" />
+      <storyline name="The Iron Approach" faction="0" questName="Strike While the Iron is Hot" questId="36576" />
+      <zone id="6721" name="Gorgrond" hordeQuests="119" allianceQuests="120" />
+    </achievement>
+    <achievement minLevel="94" maxLevel="100"  achievementId="8920" achievementName="Don't Let the Tala-door Hit You on the Way Out" faction="0" guide="" icon="achievement_zone_talador">
+      <storyline name="The Plight of the Arakkoa" faction="2" questName="Kura's Vengeance" questId="33582" />
+      <storyline name="The Battle for Shattrath" faction="0" questName="The Battle for Shattrath" questId="34099" />
+      <storyline name="In the Shadows of Auchindoun" faction="0" questName="Destination: Unknown" questId="34154" />
+      <storyline name="Establishing your Outpost" faction="0" questName="Due Cause to Celebrate" questId="34711" />
+      <zone id="6662" name="Talador" hordeQuests="140" allianceQuests="149" />
+    </achievement>
+    <achievement minLevel="96" maxLevel="100"  achievementId="8925" achievementName="Between Arak and a Hard Place" faction="0" guide="" icon="achievement_zone_spiresofarak">
+      <storyline name="Secrets of the Talonpriests" faction="2" questName="Back from Beyond" questId="34942" />
+      <storyline name="The Gods of Arak" faction="2" questName="Sethe, the Dead God" questId="35012" />
+      <storyline name="Pinchwhistle Gearworks" faction="2" questName="Flame On" questId="35298" />
+      <storyline name="Admiral Taylor's Garrison" faction="0" questName="Admiral Taylor" questId="35482" />
+      <storyline name="Legacy of the Apexis" faction="2" questName="Control is King" questId="35634" />
+      <storyline name="Shadows Gather" faction="2" questName="A Gathering of Shadows" questId="35671" />
+      <storyline name="When the Raven Swallows the Day" faction="2" questName="When All Is Aligned" questId="35704" />
+      <storyline name="Terokk's Legend" faction="2" questName="The Avatar of Terokk" questId="35896" />
+      <storyline name="Securing Southport" faction="0" questName="No Time to Waste" questId="36165" />
+      <zone id="6722" name="Spires of Arak" hordeQuests="119" allianceQuests="126" />
+    </achievement>
+    <achievement minLevel="98" maxLevel="100"  achievementId="8927" achievementName="Nagrandeur" faction="0" guide="" icon="achievement_zone_nagrand_02">
+      <storyline name="Trouble at the Overwatch" faction="0" questName="Reglakk's Research" questId="34596" />
+      <storyline name="The Ring of Trails" faction="2" questName="Ring of Trials: Roakk the Zealot" questId="34666" />
+      <storyline name="The Might of Steel and Blood" faction="0" questName="A Choice to Make" questId="34769" />
+      <storyline name="A Blademaster's Honor" faction="0" questName="Challenge of the Masters" questId="34957" />
+      <storyline name="The Taking of Lok-rath" faction="0" questName="The Pride of Lok-rath" questId="35061" />
+      <storyline name="The Shadow of the Void" faction="2" questName="The Shadow of the Void" questId="35088" />
+      <storyline name="The Legacy of Garrosh Hellscream" faction="0" questName="And Justice for Thrall" questId="35169" />
+      <storyline name="The Dark Heart of Oshu'gun" faction="0" questName="The Dark Heart of Oshu'gun" questId="35396" />
+      <zone id="6755" name="Nagrand" hordeQuests="130" allianceQuests="134" />
+    </achievement>
+  </meta>
+  <meta achievementName="Loremaster of Draenor" achievementId="9923" faction="1" guide="Loremaster-of-Draenor" icon="achievement_zone_draenor_01">
+    <achievement minLevel="90" maxLevel="100"  achievementId="8671" achievementName="You'll Get Caught Up In The... Frostfire!" faction="1" guide="" icon="achievement_zone_frostfire">
+      <storyline name="Ga'nar's Vengeance" faction="1" questName="To the Garrison" questId="32796" />
+      <storyline name="Defense of Wor'gol" faction="1" questName="Back to Bladespire Citadel" questId="33473" />
+      <storyline name="Siege of Bladespire Citadel" faction="1" questName="Last Steps" questId="33527" />
+      <storyline name="Thunder's Fall" faction="1" questName="The Master Siegesmith" questId="33828" />
+      <storyline name="The Battle of Thunder Pass" faction="1" questName="The Battle of Thunder Pass" questId="34124" />
+      <storyline name="Foothold in a Savage Land" faction="1" questName="Mission Probable" questId="34775" />
+      <zone id="6720" name="Frostfire Ridge" hordeQuests="162" allianceQuests="19" />
+      <zone id="7004" name="Frostwall" hordeQuests="326" allianceQuests="96" />
+    </achievement>
+    <achievement minLevel="92" maxLevel="100"  achievementId="8924" achievementName="Putting the Gore in Gorgrond" faction="1" guide="" icon="achievement_zone_gorgrond">
+      <storyline name="In the Land of Giants" faction="1" questName="Chains of Iron" questId="35136" />
+      <storyline name="Your Base, Your Choice" faction="1" questName="Your Base, Your Choice" questId="35151" />
+      <storyline name="Supporting Your Garrison" faction="1" questName="The Sparring Arena" questId="35152" />
+      <storyline name="The Iron Approach" faction="1" questName="Strike While the Iron is Hot" questId="36574" />
+      <zone id="6721" name="Gorgrond" hordeQuests="119" allianceQuests="120" />
+    </achievement>
+    <achievement minLevel="94" maxLevel="100"  achievementId="8919" achievementName="Don't Let the Tala-door Hit You on the Way Out" faction="1" guide="" icon="achievement_zone_talador">
+      <storyline name="The Plight of the Arakkoa" faction="2" questName="Kura's Vengeance" questId="33582" />
+      <storyline name="the Battle for Shattrath" faction="1" questName="The Battle for Shattrath" questId="33731" />
+      <storyline name="In the Shadows of Auchindoun" faction="2" questName="Destination: Unknown" questId="34564" />
+      <storyline name="Establishing your Outpost" faction="1" questName="Due Cause to Celebrate" questId="34712" />
+      <zone id="6662" name="Talador" hordeQuests="140" allianceQuests="149" />
+    </achievement>
+    <achievement minLevel="96" maxLevel="100"  achievementId="8926" achievementName="Between Arak and a Hard Place" faction="1" guide="" icon="achievement_zone_spiresofarak">
+      <storyline name="Secrets of the Talonpriests" faction="2" questName="Back from Beyond" questId="34942" />
+      <storyline name="The Gods of Arak" faction="2" questName="Sethe, the Dead God" questId="35012" />
+      <storyline name="Pinchwistle Gearworks" faction="2" questName="Flame On" questId="35298" />
+      <storyline name="Legacy of the Apexis" faction="2" questName="Control is King" questId="35634" />
+      <storyline name="Shadows Gather" faction="2" questName="A Gathering of Shadows" questId="35671" />
+      <storyline name="When the Raven Swallows the Day" faction="2" questName="When All Is Aligned" questId="35704" />
+      <storyline name="Terokk's Legend" faction="2" questName="The Avatar of Terokk" questId="35896" />
+      <storyline name="Establishing Axefall" faction="1" questName="No Time to Waste" questId="36166" />
+      <storyline name="Admiral Taylor's Garrison" faction="2" questName="Admiral Taylor" questId="36183" />
+      <zone id="6722" name="Spires of Arak" hordeQuests="119" allianceQuests="126" />
+    </achievement>
+    <achievement minLevel="98" maxLevel="100"  achievementId="8928" achievementName="Nagrandeur" faction="1" guide="" icon="achievement_zone_nagrand_02">
+      <storyline name="The Ring of Trails" faction="2" questName="Ring of Trials: Roakk the Zealot" questId="34666" />
+      <storyline name="Teh Might of Steel and Blood" faction="1" questName="A Choice to Make" questId="34899" />
+      <storyline name="Remains of Telaar" faction="1" questName="Shields Down!" questId="34918" />
+      <storyline name="The Shadow of the Void" faction="2" questName="The Shadow of the Void" questId="35088" />
+      <storyline name="The taking of Lok-rath" faction="1" questName="The Pride of Lok-rath" questId="35097" />
+      <storyline name="Trouble at the Overwatch" faction="1" questName="Reglakk's Research" questId="35158" />
+      <storyline name="And Justice for Thrall" faction="1" questName="And Justice for Thrall" questId="35171" />
+      <storyline name="The Dark Heart of Oshu'gun" faction="1" questName="The Dark Heart of Oshu'gun" questId="35317" />
+      <zone id="6755" name="Nagrand" hordeQuests="130" allianceQuests="134" />
+    </achievement>
+  </meta>
+  <meta achievementName="Loremaster of Legion" achievementId="11157" faction="2" guide="Loremaster-of-Legion" icon="achievement_zone_wetlands_01">
+    <achievement minLevel="98" maxLevel="110"  achievementId="10763" achievementName="Azsuna Matata" faction="2" guide="" icon="achievements_zone_azsuna">
+      <storyline name="Behind Legion Lines" faction="2" questName="Dark Revelations" questId="37449" />
+      <storyline name="Azsuna Versus Azshara" faction="2" questName="The Head of the Snake" questId="37470" />
+      <storyline name="Against the Giants" faction="2" questName="The Prince is Going Down" questId="37566" />
+      <storyline name="Defending Azurewing Repose" faction="2" questName="Hunger's End" questId="42756" />
+      <zone id="7334" name="Azsuna" hordeQuests="248" allianceQuests="249" />
+    </achievement>
+    <achievement minLevel="98" maxLevel="110"  achievementId="10790" achievementName="Vrykul Story, Bro" faction="2" guide="" icon="achievements_zone_stormheim">
+      <storyline name="The Aftermath" faction="0" questName="Signal Boost" questId="38060" />
+      <storyline name="The Aftermath" faction="1" questName="A Grim Trophy" questId="38362" />
+      <storyline name="The Trial of Will" faction="2" questName="Cry Thunder!" questId="38624" />
+      <storyline name="The Trial of Valor" faction="2" questName="The Final Judgment" questId="38818" />
+      <storyline name="Secrets of the Shieldmaidens" faction="0" questName="Ending the New Beginning" questId="39122" />
+      <storyline name="Secrets of the Shieldmaidens" faction="1" questName="A New Life for Undeath" questId="38882" />
+      <storyline name="The Trial of Might" faction="2" questName="The Blessing of the Watchers" questId="39597" />
+      <storyline name="Greymaine's Gambit" faction="0" questName="Greymaine's Gambit" questId="39800" />
+      <storyline name="Greymaine's Gambit" faction="1" questName="The Splintered Fleet" questId="39801" />
+      <storyline name="To Helheim and Back" faction="2" questName="Paid in Lifeblood" questId="39855" />
+      <storyline name="The Champion of Stormheim" faction="2" questName="Stormheim's Salvation" questId="40005" />
+      <zone id="7541" name="Stormheim" hordeQuests="166" allianceQuests="167" />
+    </achievement>
+    <achievement minLevel="98" maxLevel="110"  achievementId="10698" achievementName="That's Val'ssharah Folks!" faction="2" guide="" icon="achievements_zone_valsharah">
+      <storyline name="Archdruid of the Claw" faction="2" questName="Entangled Dreams" questId="38147" />
+      <storyline name="Archdruid of Lore" faction="2" questName="Death to the Witchmother" questId="38225" />
+      <storyline name="Bradenbrook" faction="2" questName="Jarod's Mission" questId="38691" />
+      <storyline name="Black Rook Hold" faction="2" questName="Lieutenant of the Tower" questId="38721" />
+      <storyline name="All Nightmare Long" faction="2" questName="The Fate of Val'sharah" questId="38743" />
+      <storyline name="Into the Nightmare" faction="2" questName="The Demon's Trail" questId="38753" />
+      <storyline name="Archdruid of the Vale" faction="2" questName="The Nightmare Lord" questId="40573" />
+      <zone id="7558" name="Val'sharah" hordeQuests="143" allianceQuests="143" />
+    </achievement>
+    <achievement minLevel="98" maxLevel="110"  achievementId="10059" achievementName="Ain't No Mountain High Enough" faction="2" guide="" icon="achievements_zone_highmountain">
+      <storyline name="Riverbend" faction="2" questName="Get to High Ground" questId="38909" />
+      <storyline name="The Skyhorn Tribe" faction="2" questName="The Skies of Highmountain" questId="39387" />
+      <storyline name="The Bloodtotem Tribe" faction="2" questName="Blood Debt" questId="39426" />
+      <storyline name="The Rivermane Tribe" faction="2" questName="Crystal Fury" questId="39487" />
+      <storyline name="Secrets of Highmountain" faction="2" questName="The Backdoor" questId="39579" />
+      <storyline name="Battle of Snowblind Mesa" faction="2" questName="The Underking" questId="39780" />
+      <storyline name="Huln's War" faction="2" questName="Huln's War - The Nathrezim" questId="39992" />
+      <zone id="7503" name="Highmountain" hordeQuests="196" allianceQuests="185" />
+    </achievement>
+    <achievement minLevel="110" maxLevel="110"  achievementId="11124" achievementName="Good Suramaritan" faction="2" guide="Good-Suramaritan" icon="achievements_zone_suramar">
+      <storyline name="Tidying Tel'anor" faction="2" questName="Feathersong's Redemption" questId="40321" />
+      <storyline name="Jandvik' Jarl" faction="2" questName="Turning the Tidemistress" questId="40336" />
+      <storyline name="Breaking the Lightbreaker" faction="2" questName="Azoran Must Die" questId="40412" />
+      <storyline name="Moon Guard Stronghold" faction="2" questName="Last Stand of the Moon Guard" questId="40972" />
+      <storyline name="Eminent Grow-main" faction="2" questName="Eminent Grow-main" questId="41494" />
+      <storyline name="An Ancient Gift" faction="2" questName="The Valewalker's Burden" questId="42230" />
+      <storyline name="The Waning Crescent" faction="2" questName="Thalyssra's Abode" questId="42488" />
+      <storyline name="Statecraft" faction="2" questName="Ly'leth's Champion" questId="43318" />
+      <storyline name="A Growing Crisis" faction="2" questName="The Emerald Nightmare: The Stuff of Dreams" questId="43362" />
+      <storyline name="A Change of Seasons" faction="2" questName="Arcan'dor, Gift of the Ancient Magi" questId="43568" />
+      <storyline name="Blood and Wine" faction="2" questName="And They Will Tremble" questId="44052" />
+      <zone id="7637" name="Suramar" hordeQuests="383" allianceQuests="380" />
+    </achievement>
+  </meta>
+</loremaster>

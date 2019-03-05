@@ -1,0 +1,184 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Loremaster of Legion achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Loremaster of Legion Guide";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Loremaster-of-Legion";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well guide-container">
+        <h2>Loremaster of Legion Guide</h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img class="img-responsive guide-banner" src="~/Content/Guides/Legion/LegionGuideBanner.jpg" alt="Legion guide banner image" />
+        <p>
+            The Loremaster of Legion achievement is required by both the Loremaster and Broken Isles Pathfinder achievements.
+            The Broken Isles Pathfinder is required to use flying mounts in the Broken Isles zones, so if you played during the
+            latter half of Legion you likely already have this one completed.
+        </p>
+        <h3>Storyline</h3>
+        <p>
+            If you did not play WoW towards the end of Legion, then odds are you do not have this achievement already.  The main
+            story of the Legion leveling content revolved around collecting the 5 Pillars of Creation: powerful titan artifacts
+            that are the key to defeating the Legion invasion of Azeroth.
+        </p>
+        <p>
+            Four of the Pillars are awarded after completing the major quest chains in each the Legion leveling zones: Azsuna,
+            Stormheim, Val’sharah, and Highmountain.  However, each of the zones had more content than just the primary Pillar
+            of Creation quests.  After getting the Pillar of Creation in each leveling zone, Khadgar sends you right on after
+            the next one.  So, unless you specifically went out of your way to complete the zone Loremaster achievements, you
+            probably need to finish them up.  The <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a>
+            will tell you exactly which zones you need to complete and which character you should use to do it.
+        </p>
+        <img src="~/Content/Guides/Legion/Pillars.jpg" class="img-responsive" alt="Screenshot of the Pillars of Creation in Dalaran" />
+        <p>
+            The fifth Pillar of Creation is in Suramar.  Technically, the fifth Pillar of Creation is discovered during the
+            Nighthold raid, which is not required for the Loremaster of Legion achievement.  However, you do have to complete
+            the Suramar zone achievement: Good Suramaritan.
+        </p>
+        <h3>A Word About Suramar</h3>
+        <p>
+            <img src="~/Content/Guides/Legion/NotQuiteRight.jpg" class="img-right" alt="Something's not quite right" />
+            The Suramar storylines will be the most time-consuming part of this process, having nearly twice as many quests as
+            the other Legion zones.  In addition to the raw number of quests you will need to complete, you will also have to
+            kill Xavius in the Emerald Nightmare raid as well as grind up your rep with the Nightfallen faction.  This can be
+            a bit of a drag if you are trying to power through Loremaster as quickly as possible.
+        </p>
+        <p>
+
+            Despite the time commitment required by Suramar, the story telling is truly the best this game has to offer.  The
+            Suramar story line is this amazing mix of political intrigue and struggling underdog rebellion that would feel at
+            home in a single player gaming experience.  Suramar is something special that everyone who plays WoW should experience.
+            However, like the epic Onyxia attunement, once is enough.
+        </p>
+
+        <h3>Where to Start</h3>
+        <p>
+            <img src="~/Content/Guides/Legion/Gunric.jpg" class="img-right" alt="Highlord Gunric on the Paladin order hall mount" />
+            To get started with the Loremaster of Legion quest lines, you will first have to make some progress on the Legion Class
+            Order Hall quests.  After you obtain your first artifact weapon from you class quest lines you will be able to get the
+            quests to start progressing on the primary Legion zones.  The Class Order Hall quests themselves do not count towards the
+            Loremaster of Legion achievement, but they all offer a different take on the Legion story line.
+        </p>
+        <p>
+
+            If you are of a mind, there are some other achievements and cosmetic rewards from the Legion Class Order Hall content.
+            Upon completion of the main Class Order Hall quest line you will be rewarded with class-specific titles:
+            <table id="legion-title-table">
+                <tbody>
+                    <tr>
+                        <td><b>Death Knight</b><br /> Deathlord</td>
+                        <td><b>Demon Hunter</b><br /> Slayer</td>
+                        <td><b>Druid</b><br /> Arch Druid</td>
+                    </tr>
+                    <tr>
+                        <td><b>Hunter</b><br /> Huntmaster</td>
+                        <td><b>Mage</b><br /> Archmage</td>
+                        <td><b>Monk</b><br /> Grandmaster</td>
+                    </tr>
+                    <tr>
+                        <td><b>Paladin</b><br /> Highlord</td>
+                        <td><b>Priest</b><br /> High Priest</td>
+                        <td><b>Rogue</b><br /> Shadowblade</td>
+                    </tr>
+                    <tr>
+                        <td><b>Shaman</b><br /> Farseer</td>
+                        <td><b>Warlock</b><br /> Netherlord</td>
+                        <td><b>Warrior</b><br /> Battlelord</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <p>
+            If you are feeling ambitious, you can also complete the Broken Shore Legionfall campaign for the class-specific mounts.
+            Just like the Order Hall campaign titles, you must complete the quest chain on each character you want the mount on.
+        </p>
+        <h3>Legion Zone Achievements</h3>
+        <div id="guide-achiev-container">
+            <div id="loremaster-container">
+                <div id="loremaster-pane">
+                    @foreach (Achievement achiev in LoremasterHelper.GameData.Loremaster.Criteria.Where(x => x.Guide == "Loremaster-of-Legion").SelectMany(x => x.Criteria).OrderBy(x => x.MinLevel))
+                    {
+                        <div class="achiev-pane">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="achiev-container">
+                                        <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(achiev.Icon).jpg)'></div>
+                                        <div class="achiev-details">
+                                            <h5>@achiev.Name</h5>
+                                            <div class="achiev-faction-@(achiev.Faction)"></div>
+                                            <div class="ach-quest-count">
+                                                <h6>Level Range</h6>
+                                                <span class="ach-level-range">@achiev.MinLevel - @achiev.MaxLevel</span>
+                                                <h6>Total Quests</h6>
+                                                @if (achiev.Faction == Faction.Neutral)
+                                                {
+                                                    <span>Alliance: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                                else if (achiev.Faction == Faction.Alliance)
+                                                {
+                                                    <span>Allaince: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                            </div>
+                                            @if (!string.IsNullOrWhiteSpace(achiev.Guide))
+                                            {
+                                                <div id='lm-guide-link' class='guide-link achieve-page'>
+                                                    <a href='@Url.Action("Index", "Guides", new { guide = achiev.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                                        <div class='guide-icon-anchor'></div>
+                                                        <span>Guide</span>
+                                                    </a>
+                                                </div>
+                                            }
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="criteria-container">
+                                        <div class="row">
+
+                                            <h6>Storylines</h6>
+                                            @foreach (var nStory in achiev.Storylines.Where(x => x.Faction == Faction.Neutral))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@nStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var bStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@bStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var aStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Alliance)">@aStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var hStory in achiev.Storylines.Where(x => x.Faction == Faction.Horde && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Horde)">@hStory.Name</div>
+                                                </div>
+                                            }
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

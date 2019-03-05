@@ -1,0 +1,24 @@
+﻿@model LoremasterHelper.Models.OAuthTokenForm
+
+
+
+<div class="row lmh-well">
+    <div class="col-md-12">
+        <h2>Oh No!</h2>
+        <p>
+            @Model.ErrorMessage
+        </p>
+        <p>
+            You can still use the <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">Loremaster Calculator</a> by searching for each of your characters by
+            realm name and chacracter name.
+        </p>
+        <p>
+            In order to allow WoW Loremaster to read your World of Warcraft account data you will need to
+            first remove WoW Loremaster as an Authorized Application on your Blizzard account and try again.
+        </p>
+    </div>
+</div>
+
+
+
+

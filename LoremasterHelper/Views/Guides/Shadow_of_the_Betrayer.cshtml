@@ -1,0 +1,437 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Shadow of the Betrayer achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Shadow of the Betrayer: Loremaster guide for Shadowmoon Valley";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Shadow-of-the-Betrayer";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well zone-guide-container">
+        <h2>Shadow of the Betrayer: Loremaster guide for Shadowmoon Valley </h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+
+        <img src="~/Content/Guides/TBC/ShadowmoonValley/smvBanner.jpg" class="img-responsive guide-banner" alt="Shadow of the Betrayer guide banner" />
+        <p>
+            This guide will help you get started working on your Shadow of the Betrayer achievement.  Make sure you first check the
+            <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a> to see if you
+            have already started making progress on quests in Shadowmoon Valley. 
+        <p>
+        <p>
+            Shadowmoon Valley is one of the two "end-game" zones that launched in The Burning Crusade expansion.  Many of the final quests, particularly in
+            the The Cipher of Damnation storyline, are tuned for a group of level 70 characters.  Make sure you have friends if you are trying to complete  
+            these quests while leveling.
+        </p>
+
+        <h3>Getting to Shadowmoon Valley</h3>
+        <p>
+            Shadowmoon Valley is located south east of Shattrath City.  You can just run/fly there whenever you like but you will need to be at least
+            level 67 in order to pick up the starting quests.
+        </p>
+
+        <h3>Pain Points</h3>
+        <p>
+            <img src="~/Content/Guides/TBC/ShadowmoonValley/Vet.jpg" class="img-right" alt="Haggard War Veteran quest giver in Shattrath City" />
+            These quests have generated the most questions, comments, and general frustration on the forums.
+            <dl>
+                <dt>
+                   <span class="guide-quest">
+                        Karabor Training Grounds
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10687">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/10687">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This quest starts off the "Borrowed Power" storyline.  In order to pick up this quest you must first ally yourself with either the Aldors or the Scryers.  If you never played during TBC
+                    this probably means nothing to you.  In The Burning Crusade expansion there were two factions that shared control over Shattrath City: 
+                    the Aldors and the Scryers.  Each faction had some of their own quest content and their own reputation rewards.  If you are coming back
+                    to Shattrath on a high level character you need to pick up the quest <span class="guide-quest">
+                        Haggard War Veteran
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=19684">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/19684">WoW DB</a>)
+                    </span> in Shattrath City in order to start a small quest chain that end with you choosing a faction to represent.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Battle of the Crimson Watch
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10781">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/10781">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    If you are attempting this quest with appropriately-leveled characters, you will want to bring the recommended 5 players.  I suspect if you
+                    have a tank/healer/dps trio you can 3 man it, but it will still be tough.  This quest is also popular with achievement hunters, since
+                    upon completion of the quest you will be awarded with two tabards.  During TBC you used to be awarded a chest with a chance to loot either
+                    a green or purple tabard, but at some point they changed it to just giving players both.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Divination: Gorefiend's Truncheon
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10636">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/10636">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This quest required to you fly around the zone looking for a patrolling mobs the Ghostriders of Karabor.  What the quest fails to make clear is
+                    that you need to wear the Spectrecles headpiece in order for the mobs to be visible.  If you lost yours you can buy new ones from NPCs 
+                    in Wildhammer Stronghold (Alliance) or Shadowmoon Villiage (Horde).
+
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Zuluhed the Whacked
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10866">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/10866">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This is another quest that is quite possibly over tuned for a group of appropriately-leveled characters.  This quest is not strictly required for
+                    the Shadow of the Betrayer achievement.  A requirement to pick up the final quest in the Netherwing Ledge storyline is to have neutral rep
+                    with the Netherwing faction, and this quest does award a healthy chunk of reputation.  
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        The Cipher of Damnation
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10588">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/10588">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This is easily the longest storyline in the Loremaster of Outland meta achievement.  The final parts of the quest were intended to be completed
+                    by level 70 characters working on their end game attunements.  Since the Legion 7.3.5 quest zone overhaul I can't say how the tuning of these
+                    quests were impacted by level scaling, but I expect them to be quite difficult.  This final quest in the storyline has some pretty sweet weapon
+                    models as quest rewards.  They were unique models for the longest time, but in all the years since this quest was introduced they may have been
+                    reused at some point.
+                </dd>
+            </dl>
+        </p>
+
+        <h3>Storylines</h3>
+        <h4 class="alliance-stories">Alliance</h4>
+        <h5>Wildhammer Stronghold</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/HandOfGuldanAlliance.png" />
+                <figcaption>Location of Besieged!</figcaption>
+            </figure>
+            The Wildhammer Stronghold quest chain starts with <span class="guide-quest">
+                Besieged!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10562">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10562">WoW DB</a>)</span>.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Wildhammer Stronghold will be given after completing <span class="guide-quest">
+                News of Victory
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10744">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10744">WoW DB</a>)</span>.
+            This is the introductory Alliance quest chain in Shadowmoon Valley.  It starts and ends at Wildhammer Stronghold.
+        </p>
+        <h5>The Cipher of Damnation</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/HandOfGuldanAlliance.png" />
+                <figcaption>Location of The Hand of Gul'dan</figcaption>
+            </figure>
+            The The Cipher of Damnation quest chain starts with <span class="guide-quest">
+                                                                    The Hand of Gul'dan
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10680">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10680">WoW DB</a>)</span>. 
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Cipher of Damnation will be given after completing <span class="guide-quest">
+                The Cipher of Damnation
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10588">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10588">WoW DB</a>)</span>.
+            The Cipher of Damnation storyline is massive, so buckle up and be prepared for a grind.  For Alliance players,
+            the quest chain begins at Wildhammer Stronghold.  
+        </p>
+        <h5>The First Death Knight</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/HandOfGuldanAlliance.png" />
+                <figcaption>Location of A Ghost in the Machine</figcaption>
+            </figure>
+            The The First Death Knight quest chain starts with <span class="guide-quest">
+                                                                   A Ghost in the Machine
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10642">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10642">WoW DB</a>)</span>.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The First Death Knight will be given after completing <span class="guide-quest">
+                Teron Gorefiend, I am...
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10645">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10645">WoW DB</a>)</span>.
+            Note: Back in the day the Teron Gorefiend, I Am . . . quest would bug out easily.  Make sure you dismount and, if you are a pet class,
+            dismiss you pet before beginning the quest.
+        </p>
+        <h5>Anti-Demon Weapons</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/BaneShard.jpg" />
+                <figcaption>Location of Illidari-Bane Shard</figcaption>
+            </figure>
+            The Anti-Demon Weapons quest chain starts with <span class="guide-quest">
+                                                               Illidari-Bane Shard
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10621">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10621">WoW DB</a>)</span>.
+            
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Anti-Demon Weapons will be given after completing <span class="guide-quest">
+                Quenching the Blade
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10679">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10679">WoW DB</a>)</span>.
+            This quest chain starts from an item dropped by Overseer Ripsaw, a named mob in Legion Hold.  Don't forget to loot it!
+        </p>
+        <h5>Borrowed Power</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/karabortraining.jpg" />
+                <figcaption>Location of Karabor Training Grounds</figcaption>
+            </figure>
+            The Borrowed Power quest chain starts with <span class="guide-quest">
+                                                           Karabor Training Grounds
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10587">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10587">WoW DB</a>)
+            </span> at Altar of Sha'tar if you have chosen to represent the Aldors.  If you have picked Scryers instead, you will start this quest chain with
+            <span class="guide-quest">
+                Karabor Training Grounds
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10687">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10687">WoW DB</a>)</span> at the Sanctum of the Stars.
+            If you didn't play during The Burning Crusade you probably have no idea what or who the Aldors and Scryers are.  In Shattrath there are two
+            not-quite-hostile-towards-each-other factions: the Aldors and the Scryers.  Each faction had different end-game quest content and rep rewards.
+            in order to pick a faction you must complete a small quest chain in Shattrath City that starts with this guy:  <span class="guide-quest">
+                                                                                                                          Haggard War Veteran
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=19684">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/19684">WoW DB</a>)</span>.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Borrowed Power will be given after completing <span class="guide-quest">
+                Varedis Must Be Stopped
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10692">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10692">WoW DB</a>)</span>.
+            Be warned: this quest is pretty difficult to solo with an appropriately leveled character.
+        </p>
+        
+        <h5>The Dark Conclave</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/HandOfGuldanAlliance.png" />
+                <figcaption>Location of The Sketh'lon Wreckage</figcaption>
+            </figure>
+            The The Dark Conclave quest chain starts with <span class="guide-quest">
+                                                              The Sketh'lon Wreckage
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10569">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10569">WoW DB</a>)</span>.  Alliance players pick up this quest in Wildhammer Stronghold.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Dark Conclave will be given after completing <span class="guide-quest">
+                Thwart the Dark Conclave
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10808">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10808">WoW DB</a>)</span>.
+            The quest text is not clear for the last quest in the chain.  The quest item says it requires an "unguarded place."  It is not 
+            clear if that means you have to be standing in the right spot, or if you have to make an "unguarded place" by killing all the guards.
+        </p>
+        <h5>Netherwing Ledge</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/service.jpg" />
+                <figcaption>Location of A Job Unfinished...</figcaption>
+            </figure>
+            The Netherwing Ledge quest chain starts with <span class="guide-quest">
+                In Service of the Illidari
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11013">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11013">WoW DB</a>)</span>.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Netherwing Ledge will be given after completing <span class="guide-quest">
+                A Job Unfinished...
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11041">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11041">WoW DB</a>)</span>.
+            This quest starts from an item dropped by Arvoar the Rapacious, a named mob that patrols  the south-eastern corner of Netherwing Ledge.
+            Please note: <b>you must have flying AND have at least neutral rep with the Netherwing faction </b> in order for the quest item to drop.
+        </p>
+        <h4 class="horde-stories">Horde</h4>
+        <h5>Shadowmoon Village</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/HandOfGuldanHorde.png" />
+                <figcaption>Location of  Besieged!</figcaption>
+            </figure>
+            The Shadowmoon Village quest chain starts with <span class="guide-quest">
+                Besieged!
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10595">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10595">WoW DB</a>)</span>.
+            This is the introductory Horde quest chain in Shadowmoon Valley.  It starts and ends at Shadowmoon Villiage.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Shadowmoon Village will be given after completing <span class="guide-quest">
+                News of Victory
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10745">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10745">WoW DB</a>)</span>.
+        </p>
+        <h5>The Cipher of Damnation</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/HandOfGuldanHorde.png" />
+                <figcaption>Location of The Hand of Gul'dan</figcaption>
+            </figure>
+            The The Cipher of Damnation quest chain starts with <span class="guide-quest">
+                                                                    The Hand of Gul'dan
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10681">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10681">WoW DB</a>)</span>.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Cipher of Damnation will be given after completing <span class="guide-quest">
+                The Cipher of Damnation
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10588">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10588">WoW DB</a>)</span>.
+            The Cipher of Damnation storyline is massive, so buckle up and be prepared for a grind.  For Horde players,
+            the quest chain begins at Shadowmoon Villiage.
+        </p>
+        <h5>The First Death Knight</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/HandOfGuldanHorde.png" />
+                <figcaption>Location of A Haunted History</figcaption>
+            </figure>
+            The The First Death Knight quest chain starts with <span class="guide-quest">
+                                                                   A Haunted History
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10624">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10624">WoW DB</a>)</span>.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The First Death Knight will be given after completing <span class="guide-quest">
+                Teron Gorefiend, I am...
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10639">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10639">WoW DB</a>)</span>.
+            Note: Back in the day the Teron Gorefiend, I Am . . . quest would bug out easily.  Make sure you dismount and, if you are a pet class,
+            dismiss you pet before beginning the quest.
+        </p>
+        <h5>Anti-Demon Weapons</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/BaneShard.jpg" />
+                <figcaption>Location of Illidari-Bane Shard</figcaption>
+            </figure>
+            The Anti-Demon Weapons quest chain starts with <span class="guide-quest">
+                Illidari-Bane Shard
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10621">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10621">WoW DB</a>)</span>.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Anti-Demon Weapons will be given after completing <span class="guide-quest">
+                Quenching the Blade
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10679">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10679">WoW DB</a>)</span>.
+            This quest chain starts from an item dropped by Overseer Ripsaw, a named mob in Legion Hold.  Don't forget to loot it!
+        </p>
+        <h5>Borrowed Power</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/karabortraining.jpg" />
+                <figcaption>Location of Karabor Training Grounds</figcaption>
+            </figure>
+            The Borrowed Power quest chain starts with <span class="guide-quest">
+                Karabor Training Grounds
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10587">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10587">WoW DB</a>)
+            </span> at Altar of Sha'tar if you have chosen to represent the Aldors.  If you have picked Scryers instead, you will start this quest chain with
+            <span class="guide-quest">
+                Karabor Training Grounds
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10687">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10687">WoW DB</a>)
+            </span> at the Sanctum of the Stars.
+            If you didn't play during The Burning Crusade you probably have no idea what or who the Aldors and Scryers are.  In Shattrath there are two
+            not-quite-hostile-towards-each-other factions: the Aldors and the Scryers.  Each faction had different end-game quest content and rep rewards.
+            in order to pick a faction you must complete a small quest chain in Shattrath City that starts with this guy:  <span class="guide-quest">
+                Haggard War Veteran
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=19684">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/19684">WoW DB</a>)</span>.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Borrowed Power will be given after completing <span class="guide-quest">
+                Varedis Must Be Stopped
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10692">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10692">WoW DB</a>)</span>.
+            Be warned: this quest is pretty difficult to solo with an appropriately leveled character.
+        </p>
+        
+        <h5>The Dark Conclave</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/HandOfGuldanHorde.png" />
+                <figcaption>Location of The Sketh'lon Wreckage</figcaption>
+            </figure>
+            The The Dark Conclave quest chain starts with <span class="guide-quest">
+                                                              The Sketh'lon Wreckage
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10760">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10760">WoW DB</a>)</span>.
+            Hode players pick up this quest in Shadowmoon Villiage.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Dark Conclave will be given after completing <span class="guide-quest">
+                Thwart the Dark Conclave
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=10808">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/10808">WoW DB</a>)</span>.
+            The quest text is not clear for the last quest in the chain.  The quest item says it requires an "unguarded place."  It is not
+            clear if that means you have to be standing in the right spot, or if you have to make an "unguarded place" by killing all the guards.
+        </p>
+        <h5>Netherwing Ledge</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/TBC/ShadowmoonValley/service.jpg" />
+                <figcaption>Location of A Job Unfinished...</figcaption>
+            </figure>
+            The Netherwing Ledge quest chain starts with <span class="guide-quest">
+                                                             In Service of the Illidari
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11013">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11013">WoW DB</a>)</span>.
+            
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Netherwing Ledge will be given after completing <span class="guide-quest">
+                A Job Unfinished...
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=11041">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/11041">WoW DB</a>)</span>.
+            This quest starts from an item dropped by Arvoar the Rapacious, a named mob that patrols the south-eastern corner of Netherwing Ledge.
+            Please note: <b>you must have flying AND have at least neutral rep with the Netherwing faction </b> in order for the quest item to drop.
+        </p>
+    </div>
+</div>

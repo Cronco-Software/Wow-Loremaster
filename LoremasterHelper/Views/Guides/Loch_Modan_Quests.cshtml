@@ -1,0 +1,209 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Loch Modan Quests achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Loch Modan Quests: Loremaster guide for Loch Modan";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Loch-Modan-Quests";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well zone-guide-container">
+        <h2>Loch Modan Quests: Loremaster guide for Loch Modan </h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+
+        <img src="~/Content/Guides/Classic/LockModan/lochmodanbanner.jpg" class="img-responsive guide-banner" alt="Loch Modan Guests Guide" />
+        <p>
+            This guide will help you get started working on your Loch Modan Quests achievement. Make sure you first check the
+            <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a> to see if you
+            have already started making progress on quests in Loch Modan.
+        <p>
+        <p>
+            Lock Modan is the traditional 2nd quest zone for Dwarves.  As such, it is only available  to Alliance characters.  The Loch Modan
+            Quests achievement is linked with the Ghostlands Quests achievement, meaning that you only need tom complete one of these for The
+            Loremaster.  The dam that created the loch for which Loch Modan was named was famously destroyed in the Cataclysm cinematic when
+            Deathwing caused the Sundering.
+        </p>
+
+        <h3>Getting to Loch Modan</h3>
+        <p>
+            <img src="~/Content/Guides/Classic/LockModan/LockModanLoc.png" class="img-right" alt="Location of Loch Modan on the Eastern Kingdoms map." />
+            The Lock Modan zone is located to the northeast of Dun Morogh.  The best way to get there is to take a portal to Ironforge and either fly there
+            or walk out of the gates of Ironforge and take the road heading east.
+        </p>
+
+        <h3>Pain Points</h3>
+        <p>
+            These quests have generated the most questions, comments, and general frustration on the forums.
+            <dl>
+                <dt>
+                    <span class="guide-quest">
+                        Explorers' League Document (1 of 6)
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=13656">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/13656">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This is the first quest in a chain that will have you collecting scrolls hidden all over the zone.  The coords for all
+                    of the documents are:
+                    <ul>
+                        <li>1 of 6: 37.0, 61.3</li>
+                        <li>2 of 6: 41.4, 39.0</li>
+                        <li>3 of 6: 61.7, 73.2</li>
+                        <li>4 of 6: 68.1, 66.1</li>
+                        <li>5 of 6: 53.7, 38.1</li>
+                        <li>6 of 6: 73.2, 35.9</li>
+                    </ul>
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Protecting the Shipment
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=309">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/309">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    While nobody loves any escort quest, this one is special.  There are two things to watch out for with this one:
+                    <ol>
+                        <li><b>Stay with the dwarf who gives you the quest.</b>  At some point, the other NPC with him will run off.  Just let him go.</li>
+                        <li>
+                            <b>Don't kill Saean righ away.</b>  During the escort you will get ambushed by dark iron dwarves.  You have to let the one named
+                            Saean get a few hits on the dwarf you are escorting, or the quest will bug out.  If you do kill him right away, then nothing happens you
+                            have to abandon the quest and pick it up again.
+                        </li>
+                    </ol>
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        The Lost Pilot
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=26854">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/26854">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    You pick this quest up on the road between Dun Morogh and Loch Modan, but that NCP you are looking for is back in Dun Morogh. Unfortunately,
+                    he was killed by a giant bear named Mangeclaw.  RIP little buddy.  The next step in the quest chain is to deal with the bear, and that can be
+                    a bit of a challenge for low level characters without heirlooms, so proceed with caution.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Vyrin's Revenge
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=27036">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/27036">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This quest isn't challenging, but it is depressing.  You are sent to kill the bear Ol' Sooty.  After the deed is done you notice 3 bear cubs
+                    that are now left for dead.  You monster.
+                </dd>
+
+            </dl>
+        </p>
+
+        <h3>Storylines</h3>
+        <p>
+            Lock Modan quests are only available to Alliance characters.
+        </p>
+        <h4 class="alliance-stories">Alliance</h4>
+        <h5>The Road to Thelsamar</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Classic/LockModan/Foodquest.png" alt="Location of Thelsamar Blood Sausages" />
+                <figcaption>Location of Thelsamar Blood Sausages</figcaption>
+            </figure>
+            The The Road to Thelsamar quest chain starts with <span class="guide-quest">
+                Thelsamar Blood Sausages
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=26860">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/26860">WoW DB</a>)
+            </span>.  Fun fact: this is likely the source of the "20 bear asses" meme that lampoons
+            traditional RPG and MMO fetch quests.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for The Road to Thelsamar will be given after completing <span class="guide-quest">
+                Looking for Lurkers
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=25118">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/25118">WoW DB</a>)
+            </span>.  Because this wouldn't be a video game if we didn't have to kill giant spiders.
+        </p>
+        <h5>Axis of Awful</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+
+                <img src="~/Content/Guides/Classic/LockModan/Whosincharge.png" alt="Location of Who's In Charge Here?" />
+                <figcaption>Location of Who's In Charge Here?</figcaption>
+            </figure>
+            The Axis of Awful quest chain starts with <span class="guide-quest">
+                Who's In Charge Here?
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=26845">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/26845">WoW DB</a>)
+            </span>.  This quest becomes avaialble after completing <span class="guide-quest">
+                Kobold and Kobolder
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=26844">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/26844">WoW DB</a>)
+            </span>.  If you are attempting this as an approrpirately leveled character it can be a bit of a challenge to kill the boss and his
+            two adds.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Axis of Awful will be given after completing the quest <span class="guide-quest">
+                Axis of Awful
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=26868">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/26868">WoW DB</a>)
+            </span>.  If you watch the RP that happens after you use the Potent Murlock Pheromones on him
+            you will get a Firefly reference.
+        </p>
+
+        <h5>The Farstrider Lodge</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Classic/LockModan/farstrider.png" alt="Location of Wing Nut" />
+                <figcaption>Location of Wing Nut</figcaption>
+            </figure>
+            The Farstrider Lodge quest chain starts with <span class="guide-quest">
+                Wing Nut
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=27031">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/27031">WoW DB</a>)
+            </span>.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Farstrider Lodge will be given after completing <span class="guide-quest">
+                Skystrider's Heart
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=27033">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/27033">WoW DB</a>)
+            </span>.  Warning: this is one of those quests where the text tells you that you have to collect an
+            item, but after you interact with the quest object you don't actually get an item.  So don't freak out
+            if the quest item never shows up in your bags.
+        </p>
+        <h5>Twilight Threats</h5>
+
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Classic/LockModan/Chogall.png" alt="Location of Servants of Cho'gall" />
+                <figcaption>Location of Servants of Cho'gall</figcaption>
+            </figure>
+            The Twilight Threats quest chain starts with <span class="guide-quest">
+                Servants of Cho'gall
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=27075">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/27075">WoW DB</a>)
+            </span>.   Any ogre in the quest area counts for this quest.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Twilight Threads will be given after completing <span class="guide-quest">
+                The Winds of Loch Modan
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=27116">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/27116">WoW DB</a>)
+            </span>.  Congratulations  to the little dude flying off into the sunset, and congratulations  to you
+            on completing Loch Modan Quests!
+        </p>
+    </div>
+</div>

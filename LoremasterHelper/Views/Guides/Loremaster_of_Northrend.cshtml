@@ -1,0 +1,155 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Loremaster of Northrend achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Loremaster of Northrend Guide";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Loremaster-of-Northrend";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well guide-container">
+        <h2>Loremaster of Northrend Guide</h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img src="~/Content/Guides/WotLK/WotLKGuideBanner.jpg" class="img-responsive" alt="Loremaster of Northrend guide banner" />
+        <p>
+            The Wrath of the Lich King expansion was the first time players were given a choice in leveling zones.  Blizzard learned
+            from the chaos of the Burning Crusade expansion launch where everyone on your server was fighting over the same quest targets
+            in Hellfire Peninsula.  In addition to providing some load balancing between the leveling zones, this also made leveling alts
+            more engaging.  You could set your own paths through the zones in Northrend that are different for each character.
+        </p>
+        <p>
+            This design decision has an impact on how you obtain the Loremaster achievement.  Unless you specifically went out of your way to
+            complete all the quests, there will still be many zones you need to finish for Loremaster of Northrend.  The
+            <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a> can tell you
+            how far you have progressed in the WotLK quest zones and what character you should use to finish them off.
+        </p>
+        <h3>Storyline</h3>
+        <p>
+            While the Wrath of the Lich King expansion followed the Burning Crusade expansion, the events of TBC did not greatly influence
+            the storyline of WotLK.  The plot of WotLK picks up after the events of Warcraft III: The Frozen Throne.  This expansion provides a
+            resolution to the Arthas storyline and was WoW's first attempt at structuring an expansion within a cohesive narrative setting.
+        </p>
+        <p>
+            The buildup to the final confrontation with Arthas influenced the storylines of the WotLK leveling zones to some small extent.
+            Each zone still served as its own self-contained unit, but Arthas would make the occasional cameo appearance and attempt to anchor
+            the story of the zone to the rest of the expansion content.
+        </p>
+        <p>
+            <img src="~/Content/Guides/WotLK/TheMenethils.jpg" class="img-right" alt="The end" />
+            Working through Icecrown and finally brining down Arthas are some of the fondest memories I have in World of Warcraft.  Warcraft III:
+            The Frozen Throne launched just after I graduated high school, so I had an entire summer of few responsibilities before starting at
+            University in the fall.  By the time the WoW patch 3.3 was live and we were able to storm Icecrown Citadel itself, I had a career, a
+            baby, and all the responsibilities that comes with a family.
+        </p>
+        <p>
+            Coming back to the Arthas storyline brought me back to a simpler place.  From different people I've talked to IRL, different forums threads,
+            and other online discussions, the experience I had working though this story is not unique to me.  For a large portion of the player base,
+            the story of Arthas is a fond childhood memory.  Thankfully, with this expansion Blizzard really did it justice.
+        </p>
+        <h3>Where to Start</h3>
+        <p>
+            <img src="~/Content/Guides/WotLK/Zep.jpg" class="img-right" alt="Orgrimmar zepplin to Northrend" />
+            The leveling zone revamp implemented in the Legion 7.3.5 patch changed when you can get access to Northrend.  Prior to the 7.3.5 leveling
+            changes, the Northend starting zones, Borean Tundra and Howling Fjord, both became available at level 68.  Now, Northend and Outland zones
+            are both in the 58 – 80 level range.  This means that the questing zones in those two expansions become available starting at level 58 and
+            will scale with your character's level up to 80.
+        </p>
+        <p>
+            <img src="~/Content/Guides/WotLK/Ship.jpg" class="img-left" alt="Stormwind ship to Northrend" />
+            To get to Northwind, you must take a ship, zeppelin, or find a friendly mage to open a portal to the WotLK Dalaran (it is a different
+            spell than the Legion Dalaran portal).  Alliance players can take a ship from the northern dock in Stormwind to get to Borean Tundra or the
+            ship out of Menethil Harbor in the Wetlands zone to get to Howling Fjord.  Horde players can take the zeppelin from the Undercity to Howling
+            Fjord or the zeppelin in Orgrimmar to get to Borean Tundra.
+        </p>
+        <p>
+            When your character is at the appropriate minimum level, a leader quest for each zone will be available on the Command Boards in capital
+            cities and in the Adventure Guide menu.  The level range for individual Nothrend zones are shown below.
+        </p>
+        <h3>Northrend Zone Achievements</h3>
+        <div id="guide-achiev-container">
+            <div id="loremaster-container">
+                <div id="loremaster-pane">
+                    @foreach (Achievement achiev in LoremasterHelper.GameData.Loremaster.Criteria.Where(x => x.Guide == "Loremaster-of-Northrend").SelectMany(x => x.Criteria).OrderBy(x => x.MinLevel))
+                    {
+                        <div class="achiev-pane">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="achiev-container">
+                                        <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(achiev.Icon).jpg)'></div>
+                                        <div class="achiev-details">
+                                            <h5>@achiev.Name</h5>
+                                            <div class="achiev-faction-@(achiev.Faction)"></div>
+                                            <div class="ach-quest-count">
+                                                <h6>Level Range</h6>
+                                                <span class="ach-level-range">@achiev.MinLevel - @achiev.MaxLevel</span>
+                                                <h6>Total Quests</h6>
+                                                @if (achiev.Faction == Faction.Neutral)
+                                                {
+                                                    <span>Alliance: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                                else if (achiev.Faction == Faction.Alliance)
+                                                {
+                                                    <span>Allaince: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                            </div>
+                                            @if (!string.IsNullOrWhiteSpace(achiev.Guide))
+                                            {
+                                                <div id='lm-guide-link' class='guide-link achieve-page'>
+                                                    <a href='@Url.Action("Index", "Guides", new { guide = achiev.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                                        <div class='guide-icon-anchor'></div>
+                                                        <span>Guide</span>
+                                                    </a>
+                                                </div>
+                                            }
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="criteria-container">
+                                        <div class="row">
+
+                                            <h6>Storylines</h6>
+                                            @foreach (var nStory in achiev.Storylines.Where(x => x.Faction == Faction.Neutral))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@nStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var bStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@bStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var aStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Alliance)">@aStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var hStory in achiev.Storylines.Where(x => x.Faction == Faction.Horde && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Horde)">@hStory.Name</div>
+                                                </div>
+                                            }
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

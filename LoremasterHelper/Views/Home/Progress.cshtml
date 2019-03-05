@@ -1,0 +1,240 @@
+﻿@model LoremasterHelper.Models.SimulationForm
+
+@{
+    Model.PageDescription = "Loremaster achievement guides, information, and progress calculator updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "WoW Loremaster";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Calculator";
+}
+
+@section head {
+    <meta name="robots" content="noindex">
+}
+
+<div class="row lmh-well">
+    <div class="col-md-12">
+
+        <div id="div-toonsLoadingError">
+            Oh No!  There was a problem running the simulation
+        </div>
+        <div id="div-toonsLoading">
+            Calculating progress <i class="glyphicon glyphicon-cog glyphicon-refresh-animate"></i>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div id="div-simContainer">
+
+        </div>
+
+    </div>
+    <div class="col-md-5">
+        <div id="div-summaryContainer">
+
+        </div>
+    </div>
+</div>
+
+@section scripts {
+
+    <script type="text/javascript">
+
+        var simHeader = $('#div-simHeader');
+        var simContainer = $('#div-simContainer');
+        var summaryContainer = $('#div-summaryContainer');
+        var progressBar = $('progress');
+        var region = '@Model.Region';
+        var regionLink = '@(string.IsNullOrWhiteSpace(Model.RegionLink) ? "" : "/" + Model.Region)';
+
+        var toonJson = @(Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Toons)));
+
+        function getSimResults() {
+            $('#div-toonsLoading').show();
+            $.ajax({
+                url: '@Url.Action("Simulate", "Services")',
+                method: 'POST',
+                data: {
+                    toonJson: JSON.stringify(toonJson)
+                },
+                success: function (data) {
+
+                    if (data.ErrorMessage != "") {
+                        console.log(data.ErrorMessage);
+                        $('#div-toonsLoadingError').show();
+                        $('#div-toonsLoading').hide();
+                    } else {
+                        console.log(data);
+                        renderResults(data.Sim);
+                        $('#div-toonsLoading').hide();
+                    }
+                },
+                error: function (e, message, error) {
+                    console.log(message);
+                    console.log(error);
+                    $('#div-toonsLoadingError').show();
+                    $('#div-toonsLoading').hide();
+                }
+            })
+        }
+
+        function renderToonSummary(sim) {
+            $(summaryContainer).append("<h3>Zone Progress by Character</h3>");
+            $(summaryContainer).append("<p><i>Use the character suggestions below to complete your remaining quest lines in each zone. </i></p>");
+            if (sim.CharacterSummary != null && sim.CharacterSummary.length > 0) {
+                $.each(sim.CharacterSummary, function (i, t) {
+                    console.log(t);
+                    var toon = $("<div />", {
+                        "class": "toon-pane faction-" + t.Toon.Faction + " " + t.Toon.Class.replace(" ", "-") + " " + t.Toon.Race
+                    });
+                    $(toon).append("<div class='toon-thumbnail' style='background-image:url(https://render-" + region + ".worldofwarcraft.com/character/" + t.Toon.ThumbnailPath + "), url(/Content/portrait-not-found.png);'></div>")
+                    $(toon).append("<div class='toon-details'><span class='name'>" + t.Toon.Name + "</span><span class='server'>" + t.Toon.Realm + "</span><span class='level'>" + t.Toon.Level + "</span></div>")
+                    var sum = $("<div />", {
+                        "class": "ach-summary"
+                    });
+                    var sumList = $("<ul />");
+                    $.each(t.AchievesInProgress, function (i, a) {
+                        $(sumList).append("<li><span class='ach-name'>" + a.Name + "</span> " + a.QuestsCompleted + " of " + a.TotalQuests + " quests completed (" + a.PercentComplete + "%)</li>")
+                    });
+                    $(sum).append(sumList);
+                    $(toon).append(sum);
+                    $(summaryContainer).append(toon);
+                });
+
+            } else {
+                $(summaryContainer).append("<p>No character summary to display</p>")
+            }
+        }
+
+        function renderResults(sim) {
+            var lm = $("<div />", {
+                id: "loremaster-pane",
+            });
+            var lmContainer = $("<div />", {
+                "class": "achiev-container"
+            });
+            lmContainer.append("<div class='achiev-icon' style='background-image:url(https://render-" + region + ".worldofwarcraft.com/icons/56/" + sim.Icon + ".jpg)'></div>");
+            var lmDetails = $("<div />", {
+                "class": "achiev-details"
+            });
+            lmDetails.append('<h3>' + sim.Name + '</h3>');
+
+            if (sim.GuideLink) {
+                lmDetails.append("<div id='lm-guide-link' class='guide-link'><a href='" + sim.GuideLink + regionLink + "' alt='Read Guide'><div class='guide-icon-anchor' ></div><span>Guide</span></a></div>")
+            }
+
+            if (sim.CompletedTimestamp) {
+                var completed = new Date(sim.CompletedTimestamp);
+                lmDetails.append("<span class='lmh-time'>Achievement awarded on " + new Date(sim.CompletedTimestamp).toLocaleDateString() + "</span>")
+            }
+
+            lmDetails.append("<span class='lmh-progress'><span class='done'>" + sim.CompletedMetas + "</span> of <span class='total'>" + sim.TotalMetas + "</span> meta achievements</span>")
+            lmDetails.append("<span class='lmh-progress-quests'>" + sim.QuestsCompleted + " of " + sim.TotalQuests + " quests (<span class='lmh-prog-percent'>" + sim.QuestCompletedPercent + "%</span>)</span>");
+
+            lmContainer.append(lmDetails);
+            var lmCriteria = $("<div />", {
+                "class": "criteria-container"
+            });
+            lm.append(lmContainer);
+            lm.append(lmCriteria);
+
+            $.each(sim.MetaProgress, function (i, m) {
+                var meta = $("<div />", {
+                    "class": "meta-pane"
+                });
+
+                var mContainer = $('<div />', {
+                    "class": "achiev-container"
+                });
+                mContainer.append("<div class='achiev-icon' style='background-image:url(https://render-" + region + ".worldofwarcraft.com/icons/56/" + m.Icon + ".jpg)'></div>");
+                var mDetails = $("<div />", {
+                    "class": "achiev-details"
+                });
+                mContainer.append(mDetails);
+                mDetails.append('<h4>' + m.Name + '</h4>');
+
+                if (m.GuideLink) {
+                    mDetails.append("<div id='lm-guide-link' class='guide-link'><a href='" + m.GuideLink + regionLink + "' alt='Read Guide'><div class='guide-icon-anchor' ></div><span>Guide</span></a></div>")
+                }
+
+                if (m.CompletedTimestamp) {
+                    mDetails.append("<span class='lmh-time'>Achievement awarded on " + new Date(m.CompletedTimestamp).toLocaleDateString() + "</span>")
+                }
+                mDetails.append("<span class='lmh-progress'><span class='done'>" + m.CompletedAchieves + "</span> of <span class='total'>" + m.TotalAchievs + "</span> zones</span>")
+                mDetails.append("<span class='lmh-progress-quests'>" + m.QuestsCompleted + " of " + m.TotalQuests + " quests (<span class='lmh-prog-percent'>" + m.QuestsCompletedPercent + "%</span>)</span>");
+                mDetails.append('<a href="#" data-lmhstate="hide" class="ach-toggle">Show Zones <span class="glyphicon glyphicon-plus"></span></a>');
+
+                var mCriteria = $('<div />', {
+                    "class": "criteria-container"
+                });
+
+                meta.append(mContainer);
+                meta.append(mCriteria);
+                $.each(m.AchievProgress, function (i, a) {
+                    var acheiv = $("<div />",
+                    {
+                        "class": "achiev-pane achiev-faction-" + a.Faction
+                    });
+                    var aContainer = $("<div />", {
+                        "class": "achiev-container"
+                    });
+                    aContainer.append("<div class='achiev-icon' style='background-image:url(https://render-" + region + ".worldofwarcraft.com/icons/56/" + a.Icon + ".jpg)'></div>");
+                    var aDetails = $("<div />", {
+                        "class": "achiev-details"
+                    });
+                    aContainer.append(aDetails);
+                    aDetails.append("<h5>" + a.Name + "</h5>");
+
+                    if (a.GuideLink) {
+                        aDetails.append("<div id='lm-guide-link' class='guide-link'><a href='" + a.GuideLink + regionLink +"' alt='Read Guide'><div class='guide-icon-anchor' ></div><span>Guide</span></a></div>")
+                    }
+
+                    if (a.CompletedTimestamp) {
+                        aDetails.append("<span class='lmh-time'>Completed on " + new Date(a.CompletedTimestamp).toLocaleDateString() + "</span>")
+                    } else if (a.Recomended) {
+                        var recomend = $("<div />", {
+                            "class": "achiev-recomend"
+                        });
+                        aDetails.addClass("faction-" + a.Recomended.Faction);
+                        aDetails.addClass(a.Recomended.Class.replace(" ", "-"));
+                        aDetails.append("<span class='name'>" + a.Recomended.Name + "</span> <span class='server'> (" + a.Recomended.Realm + ")</span>");
+                        aDetails.append("<span class='achiev-completed-quests'> <span class='q-value'>" + a.QuestsCompleted + "</span> of <span class='q-value'>" + a.TotalQuests + "</span> quests <span class='q-percent'>(" + a.PercentComplete + "%)</span></span>")
+                        acheiv.append(recomend);
+                    } else {
+                        aDetails.append("<span class='achiev-unstarted'>No storyline progress on any character</span>");
+                    }
+
+                    acheiv.append(aContainer);
+                    mCriteria.append(acheiv);
+
+                });
+
+                lmCriteria.append(meta);
+            })
+
+
+            $(simContainer).append(lm);
+
+            renderToonSummary(sim);
+        }
+
+        $(document).ready(function () {
+            getSimResults();
+            $(simContainer).on('click', '.external-trigger', function (e) {
+                e.preventDefault();
+                $(this).parent().children('.resource-link').toggle();
+            });
+            $(simContainer).on('click', '.ach-toggle', function (e) {
+                e.preventDefault();
+                if ($(this).data('lmhstate') == 'hide') {
+                    $(this).data('lmhstate', "show");
+                    $(this).html("Hide Zones <span class='glyphicon glyphicon-minus'></span>");
+                    $(this).closest('.meta-pane').find('.achiev-pane').show();
+                } else {
+                    $(this).data('lmhstate', "hide");
+                    $(this).html("Show Zones <span class='glyphicon glyphicon-plus'></span>");
+                    $(this).closest('.meta-pane').find('.achiev-pane').hide();
+                }
+            });
+        })
+    </script>
+
+}
+

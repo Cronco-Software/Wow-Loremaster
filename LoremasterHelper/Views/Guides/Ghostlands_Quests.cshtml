@@ -1,0 +1,171 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Ghostlands Quests achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Ghostlands Quests: Loremaster guide for Ghostlands";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Ghostlands-Quests";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well zone-guide-container">
+        <h2>Ghostlands Quests: Loremaster guide for Ghostlands </h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img src="~/Content/Guides/Classic/Ghostlands/ghostlandsbanner.jpg" class="img-responsive" alt="Ghostlands guide banner image" />
+        <p>
+            This guide will help you get started working on your Ghostlands Quests achievement.  Make sure you first check the
+            <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a> to see if you
+            have already started making progress towards this achievement.
+        </p>
+        <p>
+            The Ghostlands was added in the Burning Crusade as the 2nd Blood Elf leveling zone.  As such, it is only available to Horde
+            characters.  The Ghostlands Quests achievement is linked with the Loch Modan Quests achievement, meaning that
+            you only need to complete one of these two achievements for The Loremaster.  
+        <p>
+
+            <h3>Getting to Ghostlands</h3>
+        <p>
+            <img src="~/Content/Guides/Classic/Ghostlands/ghostlandslocation.jpg" class="img-right" alt="Map of the northern part of the Eastern Kingdoms showing Ghostlands" />
+            The Ghostlands is located to the south of Eversong Wood.  The quickest way to get there is take a portal to Silvermoon and start heading south.  If you are completing these
+            quests on a max level character, you will quickly notice that flying has not yet been implemented for Silvermoon, Eversong Woods, or the Ghostlands.
+        </p>
+
+        <h3>Pain Points</h3>
+        <p>
+            These quests have generated the most questions, comments, and general frustration on the forums.
+            <dl>
+                <dt>
+                    <span class="guide-quest">
+                        The Traitor's Destruction
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9167">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/9167">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    This quest is a reminder that this is some of the oldest content still on the live servers.  Back in the day,
+                    some quest content was designed to not be completed solo.  This one is particularly nasty, since it assumes that the
+                    player(s) fighting the boss have access to the Blood Elf racial silence.  Which is great immersive game design
+                    if you are playing on a Blood Elf, less great if you are a race/class combination without access to a spell
+                    interrupt  in your toolkit.  The boss casts a fear that will send you into adds, and your likely death.  You have to
+                    somehow interrupt  that fear in order to make it through the fight.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Wanted: Knucklerot and Luzran
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9156">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/9156">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    Both mobs you have to kill for this quest are elite, and can be dangerous for players attempting this quest on appropriately-leveled
+                    characters.  The first challenge is finding the mobs, since they both follow different patrol routes through the zone.  Luzran
+                    can be found walking the scar around the Bleeding Ziggurat.  Knucklerot can be found on the road around the Hollowing Ziggurat.  As with <span class="guide-quest">
+                        The Traitor's Destruction
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9167">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/9167">WoW DB</a>)
+                    </span>, you will want to bring a friend with you if possible.  This is required if you are trying to level without using heirlooms.
+                </dd>
+                <dt>
+                    <span class="guide-quest">
+                        Bring Me Kel'gash's Head!
+                        (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9215">Wowhead</a> |
+                        <a class="external-link quest-link" href="https://www.wowdb.com/quests/9215">WoW DB</a>)
+                    </span>
+                </dt>
+                <dd>
+                    Difficult elite quests seems to be the theme of the Ghostlands.  Kel'gash the Wicked is a tough mob to solo, and is another one
+                    that requires the players to interrupt  a spell cast.  If you are playing on a Blood Elf that is not a problem, but with other race/class
+                    combinations that do have access to a spell interrupt  this will be a challenge.
+                </dd>
+
+            </dl>
+        </p>
+
+        <h3>Storylines</h3>
+        <p>
+            Ghostlands quests are only available to Horde characters.
+        </p>
+        <h4 class="horde-stories">Horde</h4>
+        <h5>Citizens of Tranquillien</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Classic/Ghostlands/andaroth.jpg" alt="Location of the quest giver for Inventigate An'daroth'" />
+                <figcaption>Location of Investigate An'daroth</figcaption>
+            </figure>
+            The Citizens of Tranquillien quest chain starts with <span class="guide-quest">
+                Investigate An'daroth
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9160">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/9160">WoW DB</a>)
+            </span>.
+            This quest this quest will become available only after you are friendly with the Tranquillien rep.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Citizens of Tranquillien will be given after completing <span class="guide-quest">
+                Deactivate An'owyn
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9169">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/9169">WoW DB</a>)
+            </span>.
+            Low drop rate warning: the Crystal Controlling Orb you need to complete the quest has a very
+            low drop rate.  Be prepared to kill 20+ mobs in order to get it to to drop.
+        </p>
+        <h5>Dar'Khan Drathir</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Classic/Ghostlands/reporttohelios.jpg" alt="Location of the quest giver for Report to Captain Helios" />
+                <figcaption>Location of Report to Captain Helios</figcaption>
+            </figure>
+            The Dar'Khan Drathir quest chain starts with Report to <span class="guide-quest">
+                Captain Helios
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9146">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/9146">WoW DB</a>)
+            </span>.
+            The location of this quest giver moved during the Legion 7.3.5 quest zone update.
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Dar'Khan Drathir will be given after completing
+            <span class="guide-quest">
+                Troll Juju
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9199">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/9199">WoW DB</a>)
+            </span>.  You should complete this quest
+            at the same time as <span class="guide-quest">
+                Investigate the Amani Catacombs
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9193">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/9193">WoW DB</a>)
+            </span>.  Don't forget to pick up <span class="guide-quest">
+                Escape from the Catacombs
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9212">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/9212">WoW DB</a>)
+            </span> while you are in the cave.  You will need both to finish off the zone.
+        </p>
+        <h5>Farstrider Enclave</h5>
+        <h6>Start</h6>
+        <p>
+            <figure class="img-right">
+                <img src="~/Content/Guides/Classic/Ghostlands/Sanctumofthesun.jpg" alt="location of The sanctum of the Sun" />
+                <figcaption>Location of The Sanctum of the Sun</figcaption>
+            </figure>
+            The Farstrider Enclave quest chain starts with <span class="guide-quest">
+                The Sanctum of the Sun
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9151">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/9151">WoW DB</a>)
+            </span>.
+            You must be at revered rep with Tranquillien for this quest to become available.  It sounds like
+            a lot, but all of the Ghostlands quests give you enough rep that if you do them in order it won't be an issue.
+
+        </p>
+        <h6>End</h6>
+        <p>
+            Credit for Farstrider Enclave will be given after completing <span class="guide-quest">
+                War on Deatholme
+                (<a class="external-link quest-link" href="http://www.wowhead.com/quest=9220">Wowhead</a> |
+                <a class="external-link quest-link" href="https://www.wowdb.com/quests/9220">WoW DB</a>)
+            </span>.  This quest can be a bit brutal so solo on an appropriately leveled character.  There are a lot of mobs
+            in the quest area and it is easy to pull adds.  Once you get through this last quest you will have your Ghostlands Quests
+            achievement.
+        </p>
+    </div>
+</div>

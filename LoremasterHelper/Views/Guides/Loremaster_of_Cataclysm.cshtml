@@ -1,0 +1,143 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Loremaster of Cataclysm achievement guide updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Loremaster of Cataclysm Guide";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Guides/Loremaster-of-Cataclysm";
+}
+
+<div class="row">
+    <div class="col-md-12 lmh-well guide-container">
+        <h2>Loremaster of Cataclysm Guide</h2>
+        <span class="guide-version">Updated for @Config.WowVersionPhrase</span>
+        <img src="~/Content/Guides/Cata/CataGuideBanner.jpg" class="img-responsive guide-banner" alt="Loremaster of cataclysm guide banner" />
+        <p>
+            If you played WoW during the Cataclysm expansion, then you are probably about halfway towards your goal of Loremaster of Cataclysm.
+            Unless you specifically went out of your way to complete all of the leveling content, you could reach level cap (85 when Cataclysm launched)
+            by completing a little over half of the quests in the leveling zones.  Before you get started make sure to check the
+            <a href="@Url.Action("Calculator", "Home", new { region = Model.RegionLink })">WoW Loremaster Calculator</a> to see how close you are to
+            completing Loremaster of Cataclysm and which characters you should use to finish it off.
+        </p>
+        <p>
+            If you did not level through the Cataclysm zones when they were current content, then you likely only completed one zone, if any.  Prior
+            to the Legion 7.3.5 leveling zone revamp, you could hit level 85 in Mount Hyjal alone with full Heirloom gear and a few dungeon queues.
+        </p>
+        <h3>Storyline</h3>
+        <p>
+            <img src="~/Content/Guides/Cata/TwiliightTower.jpg" class="img-right" alt="Screenshot of the tower in Twilight Highlands" />
+            If you started playing World of Warcraft only after the launch of Mists of Pandaria, the storylines of the older content will be harder to
+            pin down.  In Pandaria onward there is one central story and all the content attempts to push that one narrative forward.  Prior to that,
+            Cataclysm included, there is a setting, but no real central story.  At the beginning of each expansion, you get to meet the primary antagonist,
+            and towards the end of the expansion you get to defeat him or her in a raid.  Everything that happens in between just takes place in the setting
+            when that big bad guy was introduced.  The zone storylines do not follow the central narrative.
+        </p>
+        <p>
+            The events of Cataclysm start when the black Dragon Aspect Neltharion, the Earth-Warder, was driven insane by the Old God infestation of Azeroth.
+            Now known as Deathwing, the Worldbreaker, the once black Dragon Aspect breaks out of Deepholm and causes the Shattering.  Deathwing then tries to
+            execute his plan to bring about the Hour of Twilight: an "existential threat to end the world" kind of scheme.
+        </p>
+        <p>
+            The leveling zones introduced in Cataclysm all take place in this setting and the individual stories somewhat involve characters dealing with the
+            ramifications of the Shattering or Deathwing's plot to end the world.  Each of the leveling zones are disjoint, both in location and in terms of
+            storyline.  The result is that Cataclysm doesn't feel like a cohesive whole, with each zone being its own disconnected narrative unit.
+        </p>
+
+        <h3>Where to Start</h3>
+        <p>
+            <img src="~/Content/Guides/Cata/Uldum.jpg" class="img-right" alt="Uldum vista" />
+            The level zone updates released during the Legion 7.3.5 patch changed the requirements for accessing the Cataclysm leveling zones.  Prior to 7.3.5, you
+            had to visit your faction capitol to pick up a quest to talk to Thrall at the Malestrom, after which you got to choose to go to Mount Hyjal or Vashj'ir.
+        </p>
+        <p>
+            Now, the Cataclysm zones share a level range with the Mists of Pandaria content.  Both expansions’ zones will become available on the Command Boards in
+            capital cities and the Adventure Guide menu based on your character's level, starting at level 80.  Quests and monsters within the Cataclysm zones will
+            scale with your character’s level up to a max level of 90.  The level ranges for the individual Cataclysm zones are shown below.
+        </p>
+        <h3>Cataclysm Zone Achievements</h3>
+        <div id="guide-achiev-container">
+            <div id="loremaster-container">
+                <div id="loremaster-pane">
+                    @foreach (Achievement achiev in LoremasterHelper.GameData.Loremaster.Criteria.Where(x => x.Guide == "Loremaster-of-Cataclysm").SelectMany(x => x.Criteria).OrderBy(x => x.MinLevel))
+                    {
+                        <div class="achiev-pane">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="achiev-container">
+                                        <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(achiev.Icon).jpg)'></div>
+                                        <div class="achiev-details">
+                                            <h5>@achiev.Name</h5>
+                                            <div class="achiev-faction-@(achiev.Faction)"></div>
+                                            <div class="ach-quest-count">
+                                                <h6>Level Range</h6>
+                                                <span class="ach-level-range">@achiev.MinLevel - @achiev.MaxLevel</span>
+                                                <h6>Total Quests</h6>
+                                                @if (achiev.Faction == Faction.Neutral)
+                                                {
+                                                    <span>Alliance: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                                else if (achiev.Faction == Faction.Alliance)
+                                                {
+                                                    <span>Allaince: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                }
+                                            </div>
+                                            @if (!string.IsNullOrWhiteSpace(achiev.Guide))
+                                            {
+                                                <div id='lm-guide-link' class='guide-link achieve-page'>
+                                                    <a href='@Url.Action("Index", "Guides", new { guide = achiev.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                                        <div class='guide-icon-anchor'></div>
+                                                        <span>Guide</span>
+                                                    </a>
+                                                </div>
+                                            }
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="criteria-container">
+                                        <div class="row">
+
+                                            <h6>Storylines</h6>
+                                            @foreach (var nStory in achiev.Storylines.Where(x => x.Faction == Faction.Neutral))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@nStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var bStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Neutral)">@bStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var aStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Alliance)">@aStory.Name</div>
+                                                </div>
+                                            }
+                                            @foreach (var hStory in achiev.Storylines.Where(x => x.Faction == Faction.Horde && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                            {
+                                                <div class="col-md-6 col-sm-12">
+                                                    <div class="storyline faction-@(Faction.Horde)">@hStory.Name</div>
+                                                </div>
+                                            }
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

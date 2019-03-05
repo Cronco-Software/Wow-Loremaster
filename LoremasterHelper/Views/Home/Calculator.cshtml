@@ -1,0 +1,309 @@
+﻿@model LoremasterHelper.Models.SimulationForm
+
+@{ 
+    Model.PageDescription = "Loremaster achievement guides, info, and progress calculator updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "WoW Loremaster";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Calculator";
+}
+
+<div class="row lmh-well">
+    <div class="col-md-12">
+        <h2>WoW Loremaster</h2>
+        <p>
+            Your source of WoW  Loremaster information, guides, and progress calculator updated for @Config.WowVersionPhrase.
+        </p>
+        <h2>Calculator</h2>
+        <p>
+            WoW Loremaster calculates how many quests each of your characters has completed in the Loremaster-eligible zones 
+            and uses that information to track your account-wide progress. More importantly, it tells you what character to use to finish off each zone.
+        </p>
+        <p>
+            To use this utility you can either:
+            <ol>
+                <li>Search for each of your characters by Realm and character name</li>
+                <li><i>(Optional)</i> Sign into your Blizzard account and authorize WoW Loremaster Calculator to read your World of Warcraft profile</li>
+            </ol>
+        </p>
+    </div>
+</div>
+<div class="row lmh-well">
+    <div id="col-bnet" class="col-md-5">
+        <h2>My Characters</h2>
+        @if (Model.IsAuthenticated)
+        {
+            <div id="div-hi">
+                <span class="spn-btag">Hi @Model.BattleTag</span>
+                <a href="@Url.Action("Logout", "OAuth")">Log out</a>
+            </div>
+            <button type="button" disabled="disabled" class="btn btn-primary btn-sim">View Loremaster Progress</button>
+
+            <div id="div-toonsLoading">
+                Loading account characters <i class="glyphicon glyphicon-cog glyphicon-refresh-animate"></i>
+            </div>
+            <div id="div-toonsLoadingError">
+                Oh No!  Unable to retreive account characters.  Please try again in a few seconds.
+            </div>
+        }
+        else
+        {
+            <div id="div-toonForm">
+                <h5>1.  Add by Realm &amp; character name</h5>
+
+                <div class="form-group">
+                    <label class="control-label" for="txt-toonServer">Realm</label>
+                    <input type="text" id="txt-toonServer" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="txt-toonName">Character Name</label>
+                    <input type="text" id="txt-toonName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="button" id="btn-toonSearch" class="btn btn-primary">Search</button>
+                    <span id="spn-addToonError"></span>
+                </div>
+                <div class="form-group">
+                    <button type="button" disabled="disabled" class="btn btn-primary btn-sim">View Loremaster Progress</button>
+                </div>
+            </div>
+            <div id="big-or">
+                <h5>2. <i>(Optional)</i> Authorize WoW profile data</h5>
+                <p>
+                    This allows WoW Loremaster Calculator to pull your list of characters automatically.  See the <a href="@Url.Action("FAQ", new { region = Model.RegionLink })"> FAQ </a> for more details.
+                </p>
+                
+                <a id="a-signIn"  href="@Url.Action("Index", "OAuth", new { region = Model.Region })">Sign in to your Blizzard account</a>
+            </div>
+            <div id="div-region" class="form-group">
+                <span>Region: @Model.Region</span>
+                <a href="@(Url.Action("Calculator", "Home", new { region = (Model.Region == "us" ? "eu" : "us") }))">Looking for @( Model.Region == "us" ? "eu" : "us") instead?</a>
+            </div>
+
+
+        }
+        <form id="frm-sim" action="@Url.Action("Sim", "Home", new { region = Model.RegionLink})" style="display:none;" method="post"></form>
+    </div>
+    <div id="col-toons" class="col-md-7">
+
+        <div id="div-toonContainer">
+
+        </div>
+        <div class="visible-sm visible-xs">
+            <div class="form-group">
+                <button type="button"  disabled="disabled" class="btn btn-primary btn-sim">View Loremaster Progress</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section scripts {
+    <script src="~/Scripts/typeahead.bundle.min.js"></script>
+    <script src="~/Scripts/wowservers.js"></script>
+    <script type="text/javascript">
+
+        var toonContainer = $('#div-toonContainer');
+        var region = '@Model.Region';
+        var isAuthenticated = @(Model.IsAuthenticated? "true" : "false");
+        var searchError = $('#spn-addToonError');
+        var btnSearch = $('#btn-toonSearch');
+        var txtServer = $('#txt-toonServer')
+        var txtName = $('#txt-toonName');
+        var btnSim = $('.btn-sim');
+
+        //this looks odd, but it populates the quest & achievemnt cache on the server as long
+        //as the user stays on this page checking out their characters.
+
+        //i've found this is more consistent than kicking off an async job on the server
+        function beginServerCharacterCache(toons)
+        {
+            $.each(toons, function(i, e) {
+                $.ajax({
+                    url: '@Url.Action("GetCharacter", "Services")',
+                    type: 'POST',
+                    data: {
+                        Region: region,
+                        Server: e.Realm,
+                        Name: e.Name
+                    },
+                    success: function(data) {
+                        console.log(data);
+                    },
+                    error: function(e, error, status) {
+                        console.log(error);
+                    }
+                })
+            })
+        }
+
+        function htmlEncode(value) {
+            return $('<div/>').text(value).html();
+        }
+
+        function htmlDecode(value) {
+            return $('<div/>').html(value).text();
+        }
+
+        function loadAccountToons() {
+            $('#div-toonsLoading').show();
+            $.ajax({
+                url: '@Url.Action("GetAccountCharacters", "Services")',
+                method: 'POST',
+                success: function(data) {
+                    $('#div-toonsLoading').hide();
+                    if (data.ErrorMessage !== "") {
+                        $('#div-toonsLoadingError').show();
+                        console.log(data.ErrorMessage);
+                        setTimeout(function () { window.location = "@Url.Action("Logout", "OAuth", new { region = Model.Region })" }, 5000);
+                    } else {
+                        $.each(data.Toons, function(i, e) {
+                            addToon(e);
+                        })
+                        beginServerCharacterCache(data.Toons);
+                    }
+                },
+                error: function(e, message, error) {
+                    console.log(message);
+                    console.log(error);
+                    $('#div-toonsLoading').hide();
+                    $('#div-toonsLoadingError').show();
+                    setTimeout(function () { window.location = "@Url.Action("Logout", "OAuth", new { region = Model.Region })" }, 5000);
+                }
+            })
+        }
+
+        function characterSearch() {
+            var server = $(txtServer).val();
+            var name = $(txtName).val();
+
+            if (server == '' || name == '') {
+                $(searchError).html("Search requires a realm and character name.");
+                $(searchError).show();
+            } else {
+                $(searchError).hide();
+                $(btnSearch).html('Search <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>');
+                $(btnSearch).prop('disabled', true);
+                $(txtName).prop('disabled', true);
+                $.ajax({
+                    url: '@Url.Action("GetCharacter", "Services")',
+                    type: 'POST',
+                    data: {
+                        Region: region,
+                        Server: server,
+                        Name: name
+                    },
+                    success: function(data) {
+                        $(btnSearch).html('Search');
+                        $(btnSearch).prop('disabled', false);
+                        $(txtName).prop('disabled', false);
+
+                        if (data.ErrorMessage != "") {
+                            $(searchError).html("Search could not find a character named " + name + " on the realm " + server);
+                            $(searchError).show();
+                            $(txtName).val('');
+                            $(txtName).focus();
+                            console.log(data.ErrorMessage);
+                        } else {
+                            addToon(data.Toon);
+                            $(txtName).val('');
+                            $(txtName).focus();
+                        }
+                    },
+                    error: function(e, message, error) {
+                        $(btnSearch).html('Search');
+                        $(btnSearch).prop('disabled', false);
+                        $(txtName).prop('disabled', false);
+                        $(searchError).html("Search could not find a character named " + name + " on the realm " + server);
+                        $(searchError).show();
+                        $(txtName).val('');
+                        $(txtName).focus();
+                        console.log(message);
+                        console.log(error);
+                    }
+                })
+            }
+        }
+
+        function addToon(toon) {
+
+            $(toonContainer).children('.toon-pane').each(function (i, e) {
+                var name = $(e).data('lmhname');
+                var server = $(e).data('lmhserver');
+                if (toon.Name == name && toon.Server == server) {
+                    return;
+                }
+            })
+
+            $(toonContainer).append('<div class="toon-pane faction-' + toon.Faction + ' ' + toon.Class.replace(" ", "-") + " " + toon.Race + '" data-lmhname="' + toon.Name + '" data-lmhserver="' + toon.Realm + '" >' +
+                    "<div class='toon-thumbnail' style='background-image:url(https://render-" + region + ".worldofwarcraft.com/character/" + toon.ThumbnailPath + "), url(/Content/portrait-not-found.png);'></div>" +
+                    "<div class='toon-details'>" +
+                        "<span class='name'>" + toon.Name + "</span>" +
+                        "<span class='server'>" + toon.Realm + "</span>" +
+                        "<span class='level'>" + toon.Level + "</span>" +
+                    "<a href='#' class='btn-removeToon'><i class='glyphicon glyphicon-remove'></i></a>" +
+                    "</div>" +
+                "</div");
+
+            $(btnSim).prop('disabled', false);
+        }
+
+        $(txtServer).typeahead({
+            hint:true,
+            highlight:true,
+            minLength:1
+        },
+        {
+            name: 'servers',
+            source: new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.whitespace,
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                local: window.ServerList
+            })
+        });
+
+        $(document).ready(function () {
+            $(toonContainer).on('click', '.btn-removeToon', function (e) {
+                e.preventDefault();
+                $(this).closest('.toon-pane').remove();
+            });
+
+            $(btnSearch).click(function () {
+                characterSearch();
+            })
+
+            $(txtName).keyup(function (e) {
+                if(e.keyCode == 13) {
+                    characterSearch();
+                }
+            })
+
+
+            if (isAuthenticated) {
+                loadAccountToons();
+            }
+
+            $(btnSim).click(function () {
+                var i = 0;
+                var form = $('#frm-sim');
+                $(form).empty();
+
+                $(toonContainer).children('.toon-pane').each(function (i, e) {
+                    var name = $(e).data('lmhname');
+                    var server = $(e).data('lmhserver');
+
+                    $(form).append('<input type="hidden" name="Toons.Index" value="' + i + '" />');
+                    $(form).append('<input type="hidden" name="Toons['+ i + '].Region" value="' + region + '" />');
+                    $(form).append('<input type="hidden" name="Toons[' + i + '].Server" value="' + server + '" />');
+                    $(form).append('<input type="hidden" name="Toons[' + i + '].Name" value="' + name + '" />');
+
+                    i++;
+                });
+                $(form).submit();
+            })
+        });
+
+    </script>
+
+}
+

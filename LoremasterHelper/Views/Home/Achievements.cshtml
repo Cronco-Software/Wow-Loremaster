@@ -1,0 +1,190 @@
+﻿@model LoremasterHelper.Models.Layout
+
+@{
+    Model.PageDescription = "Loremaster achievement information updated for " + Config.WowVersionPhrase;
+    Model.PageTitle = "Loremaster Achievement Guides";
+    Model.CannonicalUrl = Config.CanonicalUrlBase + "Achievements";
+}
+
+<div class="row lmh-well">
+    <div class="col-md-12">
+        <h2>Achievements</h2>
+        <p>
+            To complete The Loremaster Achievement you need to finish all of the story quests in each zone in the game.  The requrements
+            are slightly different for Horde and Alliance characters, since many zones have faction-specific storylines.
+        </p>
+        <p>
+            <i>The quest counts shown on WoW Loremaster reflect the total available quests that take place within each zone: the acutal number of quests you need to complete the Loremaster may vary slightly</i>
+        </p>
+        <div id="loremaster-container">
+            <div id="loremaster-pane">
+                <div class="achiev-container">
+                    <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(GameData.Loremaster.Icon).jpg)'></div>
+                    <div class="achiev-details">
+                        <h3>@(GameData.Loremaster.Name)</h3>
+                        <div class="achiev-faction-@(Faction.Neutral)"></div>
+                        <div class="ach-quest-count">
+                            <h6>Total Quests</h6>
+                            <span>Alliance: @(GameData.Loremaster.Criteria.SelectMany(x => x.Criteria).SelectMany(x => x.Zones).Sum(x => x.AllianceQuestCount))</span>
+                            <span>Horde: @(GameData.Loremaster.Criteria.SelectMany(x => x.Criteria).SelectMany(x => x.Zones).Sum(x => x.HordeQuestCount))</span>
+                        </div>
+                        <div id='lm-guide-link' class='guide-link achieve-page'>
+                            <a href='@Url.Action("Index", "Guides", new { guide = GameData.Loremaster.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                <div class='guide-icon-anchor'></div>
+                                <span>Guide</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="criteria-container">
+                    @foreach (var meta in GameData.Loremaster.Criteria)
+                    {
+                        <div class="meta-pane">
+                            <div class="achiev-container">
+                                <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(meta.Icon).jpg)'></div>
+                                <div class="achiev-details">
+                                    <h4>@meta.Name</h4>
+                                    <div class="achiev-faction-@(meta.Faction)"></div>
+                                    <div class="ach-quest-count">
+                                        <h6>Total Quests</h6>
+                                        @if (meta.Faction == Faction.Neutral)
+                                        {
+                                            <span>Alliance: @(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.AllianceQuestCount))</span>
+                                            <span>Horde: @(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.HordeQuestCount))</span>
+                                        }
+                                        else if (meta.Faction == Faction.Alliance)
+                                        {
+                                            <span>Allaince: @(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.AllianceQuestCount))</span>
+                                        }
+                                        else
+                                        {
+                                            <span>Horde:@(meta.Criteria.SelectMany(x => x.Zones).Sum(x => x.HordeQuestCount))</span>
+                                        }
+                                    </div>
+                                    @if (!string.IsNullOrWhiteSpace(meta.Guide))
+                                    {
+                                        <div id='lm-guide-link' class='guide-link achieve-page'>
+                                            <a href='@Url.Action("Index", "Guides", new { guide = meta.Guide, region = Model.RegionLink})' alt='Read Guide'>
+                                                <div class='guide-icon-anchor'></div>
+                                                <span>Guide</span>
+                                            </a>
+                                        </div>
+                                    }
+                                    <a href="#" data-lmhstate="hide" class="ach-toggle">Show Zones <span class='glyphicon glyphicon-plus'></span></a>
+                                </div>
+
+                            </div>
+                            <div class="criteria-container">
+                                @foreach (var achiev in meta.Criteria.OrderBy(x => x.MinLevel))
+                                {
+                                    <div class="achiev-pane">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="achiev-container">
+                                                    <div class='achiev-icon' style='background-image:url(https://render-@(Model.Region).worldofwarcraft.com/icons/56/@(achiev.Icon).jpg)'></div>
+                                                    <div class="achiev-details">
+                                                        <h5>@achiev.Name</h5>
+                                                        <div class="achiev-faction-@(achiev.Faction)"></div>
+
+                                                        <div class="ach-quest-count">
+                                                            <h6>Level Range</h6>
+                                                            <span class="ach-level-range">@achiev.MinLevel - @achiev.MaxLevel</span>
+                                                            <h6>Total Quests</h6>
+                                                            @if (achiev.Faction == Faction.Neutral)
+                                                            {
+                                                                <span>Alliance: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                                <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                            }
+                                                            else if (achiev.Faction == Faction.Alliance)
+                                                            {
+                                                                <span>Allaince: @(achiev.Zones.Sum(x => x.AllianceQuestCount))</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                <span>Horde: @(achiev.Zones.Sum(x => x.HordeQuestCount))</span>
+                                                            }
+                                                        </div>
+                                                        @if (!string.IsNullOrWhiteSpace(achiev.Guide))
+                                                        {
+                                                            <div id='lm-guide-link' class='guide-link achieve-page'>
+                                                                <a href='@Url.Action("Index", "Guides", new { guide = achiev.Guide, region = Model.RegionLink })' alt='Read Guide'>
+                                                                    <div class='guide-icon-anchor'></div>
+                                                                    <span>Guide</span>
+                                                                </a>
+                                                            </div>
+                                                        }
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="criteria-container">
+                                                    <div class="row">
+
+                                                        <h6>Storylines</h6>
+                                                        @foreach (var nStory in achiev.Storylines.Where(x => x.Faction == Faction.Neutral))
+                                                        {
+                                                            <div class="col-md-6 col-sm-12">
+                                                                <div class="storyline faction-@(Faction.Neutral)">@nStory.Name</div>
+                                                            </div>
+                                                        }
+                                                        @foreach (var bStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                                        {
+                                                            <div class="col-md-6 col-sm-12">
+                                                                <div class="storyline faction-@(Faction.Neutral)">@bStory.Name</div>
+                                                            </div>
+                                                        }
+                                                        @foreach (var aStory in achiev.Storylines.Where(x => x.Faction == Faction.Alliance && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                                        {
+                                                            <div class="col-md-6 col-sm-12">
+                                                                <div class="storyline faction-@(Faction.Alliance)">@aStory.Name</div>
+                                                            </div>
+                                                        }
+                                                        @foreach (var hStory in achiev.Storylines.Where(x => x.Faction == Faction.Horde && !achiev.Storylines.Any(y => y.Name == x.Name && y.Faction != x.Faction)))
+                                                        {
+                                                            <div class="col-md-6 col-sm-12">
+                                                                <div class="storyline faction-@(Faction.Horde)">@hStory.Name</div>
+                                                            </div>
+                                                        }
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.external-trigger').click(function (e) {
+                e.preventDefault();
+                $(this).parent().children('.resource-link').toggle();
+            })
+
+            $('.ach-toggle').click(function (e) {
+                e.preventDefault();
+                if ($(this).data('lmhstate') == 'hide') {
+                    $(this).data('lmhstate', "show");
+                    $(this).html("Hide Zones <span class='glyphicon glyphicon-minus'></span>");
+                    $(this).closest('.meta-pane').find('.achiev-pane').show();
+                } else {
+                    $(this).data('lmhstate', "hide");
+                    $(this).html("Show Zones <span class='glyphicon glyphicon-plus'></span>");
+                    $(this).closest('.meta-pane').find('.achiev-pane').hide();
+                }
+            });
+        })
+    </script>
+}

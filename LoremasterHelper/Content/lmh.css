@@ -1,0 +1,862 @@
+﻿* {
+    box-sizing:border-box;
+}
+body {
+
+    background-image:url(background.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+    font-family: "Open Sans",Arial,Helvetica,sans-serif;
+    color: #ebdec2;
+    font-size:16px;
+}
+
+header {
+    padding:5px 15px;
+    overflow:auto;
+    background-color:#170e09;
+    background-repeat: no-repeat;
+    background-image: -moz-linear-gradient(top, #170e09, #28180F);
+    background-image: -ms-linear-gradient(top, #170e09, #28180F);
+    background-image: -webkit-linear-gradient(top, #170e09, #28180F);
+    background-image: -o-linear-gradient(top, #170e09, #28180F);
+    background-image: linear-gradient(top, #170e09, #28180F);
+}
+
+header h1 {
+    float: left;
+    padding-left:10px;
+}
+
+header img {
+    float:left;
+}
+
+#div-region span {
+    display:block;
+}
+
+#div-region a {
+    color: #0e86ca;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Semplicita Pro","Open Sans",Arial,Helvetica,sans-serif;
+    color:#ffd100;
+}
+h4 {
+    font-size:20px;
+}
+h5 {
+    font-size:18px;
+}
+h6 {
+    font-size:16px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+#div-toonsLoading {
+    font-size:18px;
+}
+.glyphicon-refresh-animate {
+    -webkit-transform-origin: 50% 58%;
+     transform-origin:50% 58%;
+     -ms-transform-origin:50% 58%; 
+    -animation: spin 1.5s infinite linear;
+    -ms-animation: spin 1.5s infinite linear;
+    -webkit-animation: spinw 1.5s infinite linear;
+    -moz-animation: spinm 1.5s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: scale(1) rotate(0deg);}
+    100% { transform: scale(1) rotate(360deg);}
+}
+  
+@-webkit-keyframes spinw {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spinm {
+    0% { -moz-transform: rotate(0deg);}
+    100% { -moz-transform: rotate(360deg);}
+}
+
+#spn-addToonError {
+    display:none;
+    color:red;
+    display:block;
+}
+
+#div-toonsLoading {
+    display:none;
+}
+
+#div-toonsLoadingError {
+    color: red;
+    display:none;
+}
+
+#div-toonContainer {
+    min-height:400px;
+    max-height:500px;
+    overflow-y:scroll;
+        
+}
+
+#div-toonContainer h3 {
+    margin-top:0;
+}
+
+#div-toonContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+#div-toonContainer::-webkit-scrollbar-track {
+    background-color:#000;
+}
+
+#div-toonContainer::-webkit-scrollbar-thumb {
+    background-color:#ebdec2;
+}
+
+.toon-pane {
+    overflow:auto;
+    position:relative;
+    background-color:#211510;
+
+    margin:10px 5px;
+    border-radius:1px
+}
+
+.toon-pane.faction-0 {
+    box-shadow:0 0 2px 3px #144587;
+    border:1px solid #144587;
+    
+}
+
+.toon-pane.faction-0 .toon-thumbnail {
+    border-right:1px solid #144587;
+}
+
+.toon-pane.faction-1 {
+    box-shadow:0 0 2px 3px #a70000;
+    border:1px solid #a70000;
+}
+
+.toon-pane.faction-1 .toon-thumbnail {
+    border-right:1px solid #a70000;
+}
+.toon-pane .toon-thumbnail {
+    width:84px;
+    height:84px;
+    float:left;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.toon-pane .toon-details {
+    width:calc(100% - 84px);
+    float:left;
+    padding-left:10px;
+}
+
+.toon-pane .toon-details span {
+    display:block;
+}
+
+.toon-pane .toon-details .name {
+    font-size:1.3em
+}
+.toon-pane .btn-removeToon {
+    position:absolute;
+    top:5px;
+    right:5px;
+    color:red;
+}
+
+
+
+.monitize-side {
+    background-color:#808080;
+    min-height:400px;
+
+}
+
+.monitize-bottom {
+    background-color:#808080;
+    min-height:100px;
+    margin-top:15px;
+}
+.lmh-well {
+    background-color:rgba(33,21,16,0.9);
+    margin-bottom:15px;
+    padding-bottom:15px
+}
+
+.alliance {
+    color:#144587;
+}
+
+.horde {
+    color:#a70000;
+}
+
+.Paladin .name {
+    color: #F58CBA;
+}
+
+.Death-Knight .name {
+    color:#C41F3B;
+}
+
+.Demon-Hunter .name {
+    color:#A330C9;
+}
+
+.Druid .name {
+    color:#FF7D0A;
+}
+
+.Hunter .name {
+    color: #ABD473;
+}
+
+.Mage .name {
+    color: #69CCF0;
+}
+
+.Monk .name {
+    color:#00FF96 ;
+}
+
+.Priest .name {
+    color: #FFFFFF;
+}
+
+.Rogue .name {
+    color: #FFF569;
+}
+
+.Shaman .name {
+    color: #0070DE;
+}
+
+.Warlock .name {
+    color:#9482C9;
+}
+
+.Warrior .name {
+    color: #C79C6E;
+}
+
+#a-signIn {
+    background-color:#0e86ca;
+    border: solid 1px #00aeff;
+    color:#fff;
+    padding:3px;
+    text-align:center;
+    display:block;
+    font-size:16px;
+    text-decoration:none;
+    margin:15px;
+}
+
+.btn-primary {
+     background-color:#0e86ca;
+    border: solid 1px #00aeff;
+    color:#fff;
+    border-radius:0;
+}
+
+#div-hi .spn-btag {
+    font-size:18px;
+    color:#fff;
+    display:block;
+}
+
+.btn-sim {
+    margin:15px 0;
+    font-size:1.1em;
+}
+
+.tt-query,
+.tt-input, /* UPDATE: newer versions use tt-input instead of tt-query */
+.tt-hint {
+    width: 396px;
+    height: 30px;
+    padding: 8px 12px;
+    line-height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.twitter-typeahead {
+    display:block !important;
+}
+
+.tt-query,.tt-input { /* UPDATE: newer versions use tt-input instead of tt-query */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+    color: #ebdec2;
+    border:1px solid;
+}
+
+.tt-menu { /* UPDATE: newer versions use tt-menu instead of tt-dropdown-menu */
+    width: 100%;
+    max-width:280px;
+    margin-top: 12px;
+    padding: 6px;
+    background-color: #211510;
+    border: 1px solid;
+    border-radius: 2px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+    padding: 3px 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.tt-suggestion.tt-is-under-cursor,
+.tt-suggestion.tt-cursor { /* UPDATE: newer versions use .tt-suggestion.tt-cursor */
+    color: #ebdec2;
+    background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+    margin: 0;
+}
+
+.meta-pane, .achiev-pane, #loremaster-container  {
+    border:1px solid #504137;
+    padding:5px;
+    margin:5px;
+    margin-left:15px;
+    
+}
+
+.meta-pane {
+    border:3px solid #504137;
+}
+
+#div-simContainer .achiev-container {
+    max-width:500px
+}
+
+.achiev-total-quests {
+    display:block
+}
+
+.toon-pane .ach-summary {
+    clear:both;
+    padding:5px;
+}
+
+.toon-pane .ach-summary ul {
+    list-style-type:none;
+    padding-left:10px;
+}
+
+#div-summaryContainer .toon-pane.faction-0 .ach-summary {
+    border-top:3px solid #144587;
+}
+
+#div-summaryContainer .toon-pane.faction-1 .ach-summary {
+    border-top:3px solid #a70000;
+}
+
+.achiev-container {
+    overflow:auto;
+}
+
+.achiev-icon {
+    width: 56px;
+    height: 56px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.achiev-details {
+     float:left;
+     width:calc(100% - 56px);
+     padding:5px;
+}
+
+#div-simContainer {
+    min-height:500px;
+}
+
+#loremaster-pane h1, #loremaster-pane h2, #loremaster-pane h3, #loremaster-pane h4, #loremaster-pane h5 {
+    margin: 0 0 5px 0;
+}
+
+.ach-summary li {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+.ach-name {
+    color: #ffd100;
+    font-style:normal;
+}
+
+#loremaster-pane > .achiev-container {
+    padding:15px 0 0 5px;
+}
+
+#loremaster-container .meta-pane .achiev-details,
+#loremaster-container #loremaster-pane .achiev-details {
+    max-width:380px;
+}
+
+
+
+.achiev-faction-Neutral {
+    width:53px;
+    height:32px;
+    background-image:url(Logo-alliance-tiny.png), url(Logo-horde-tiny.png);
+    background-position:left, right;
+    background-repeat:no-repeat;
+    float:right;
+}
+
+.achiev-faction-Alliance {
+    width:25px;
+    height:32px;
+    background-image:url(Logo-alliance-tiny.png);
+    float:right;
+
+}
+.achiev-faction-Horde {
+    width:25px;
+    height:32px;
+    background-image:url(Logo-horde-tiny.png);
+    float:right;
+
+}
+
+#loremaster-container h3, #loremaster-container h4, #loremaster-container h5 {
+    float:left;
+    padding-right:10px
+}
+
+#loremaster-container h6 {
+    margin-left:15px;
+}
+
+.storyline {
+    margin-left:15px;
+}
+
+.achiev-description {
+    clear:both;
+    display:inline-block;
+}
+
+.storyline.faction-Alliance::before {
+    content:" ";
+    background:url(faction-bullets.png) 0 0;
+    width:10px;
+    height:10px;
+    position:absolute;
+    left:15px;
+    top:6px;
+}
+
+.storyline.faction-Neutral::before {
+    content:" ";
+    background:url(faction-bullets.png) -10px 0;
+    width:10px;
+    height:10px;
+    position:absolute;
+    left:15px;
+    top:6px;
+}
+
+.storyline.faction-Horde::before {
+    content:" ";
+    background:url(faction-bullets.png) -20px 0;
+    width:10px;
+    height:10px;
+    position:absolute;
+    left:15px;
+    top:6px;
+}
+
+.navbar-default {
+    background-color: #184668;
+    border:none;
+    border-top: 2px solid #ffd100;
+    border-radius:0;
+    margin-bottom:5px;
+}
+.navbar-default .navbar-nav>li>a
+ {
+    color: #ffd100;
+    font-size:1.5em;
+}
+
+.dropdown-menu li:hover {
+    cursor: pointer;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #ffd100 !important;
+    font-size:1.5em;
+    background-color: #184668;
+}
+
+.dropdown-menu {
+    color: #ffd100 !important;
+    background-color: #184668;
+}
+
+.dropdown-menu>li>a {
+    color: #ffd100 !important;
+    font-size:1.1em;
+}
+
+.dropdown-menu>li>a:hover {
+    color:#fff;
+    background-color:inherit;
+}
+
+.navbar-default .navbar-nav>li>a:hover, 
+.navbar-default .navbar-nav>li>a:focus {
+    color:#fff;
+    cursor:pointer;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #170e09;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #ffd100;
+    background-color:#ebdec2;
+    border-radius:2px
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #ffd100;
+}
+
+#lmh-wrapper {
+    min-height:calc(100vh - 200px);
+}
+
+footer {
+    background-color: #170e09;
+    border-top: 2px solid #504137;
+    padding-top:15px;
+    margin-top:15px;
+    height:200px;
+}
+
+    footer a {
+        color: #ffd100;
+        padding-right: 15px;
+    }
+footer a:hover {
+    color:#fff;
+}
+
+#div-copyright {
+    text-align:center;
+    color:#fff;
+}
+
+
+
+.external-links {
+    clear:both;
+    font-size:12px;
+    padding-bottom:5px;
+}
+
+.external-links a {
+    padding-right:10px;
+    
+}
+
+.external-trigger {
+    display:block;
+    margin-bottom:7px;
+}
+
+.resource-link {
+    display:none;
+}
+
+.achiev-completed-quests {
+    display:block;
+    font-size:12px;
+}
+
+.ach-quest-count  {
+    clear:both;
+}
+
+.ach-quest-count h6 {
+    margin:0 !important;
+    font-size:12px;
+}
+.ach-quest-count span {
+    font-size:12px;
+    padding-right:7px;
+}
+
+.toon-details .level {
+    font-size:12px;
+}
+
+.achiev-pane {
+    display: none;
+}
+
+#guide-achiev-container .achiev-pane {
+    display:block;
+}
+
+.ach-toggle, .ach-toggle:hover, .ach-toggle:visited, .ach-toggle:focus {
+    text-decoration: none;
+    color: #ffd100;
+    font-size: 14px;
+    display: block;
+}
+
+.lmh-progress-quests, .lmh-progress {
+    display:block;
+    font-size:14px;
+}
+
+#big-or {
+    border-top:1px solid;
+    margin:30px 0 15px 0;
+    border-bottom:1px solid;
+}
+
+#big-or p {
+    font-size:12px;
+}
+
+.lmh-prog-percent {
+    color: #fff;
+}
+
+#div-toonForm {
+    border-top:1px solid;
+    padding-top:5px;
+}
+
+#faq-well dt {
+    color: #ffd100;
+    margin-top:7px;
+}
+
+#faq-well dd {
+    padding-left:10px;
+}
+
+#faq-well {
+    min-height:600px;
+    padding-bottom:15px;
+}
+
+.guide-banner {
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.guide-container,
+.zone-guide-container {
+    padding-top:5px;
+    overflow:auto;
+}
+
+.guide-container h2,
+.guide-container h3,
+.guide-container h4,
+.guide-container h5,
+.guide-container h6 {
+    margin-top:20px;
+    clear:both;
+}
+
+.guide-container h2,
+.zone-guide-container h2{
+    margin-bottom:0;
+}
+
+    .guide-container .adsbygoogle, 
+    .zone-guide-container .adsbygoogle  {
+        margin:10px 0;
+    }
+    .guide-container .img-left,
+    .zone-guide-container .img-left {
+        float: left;
+        margin-right: 10px;
+        max-width: 50%;
+    }
+
+.guide-container .img-right,
+.zone-guide-container .img-right {
+    float:right;
+    margin-left:10px;
+    max-width:50%;
+}
+
+figcaption {
+    font-size:12px;
+    font-style:italic;
+}
+
+.zone-guide-container .img-left,
+.zone-guide-container .img-right {
+    margin-bottom:10px;
+}
+
+.zone-guide-container h6 {
+    color:#fff;
+
+}
+
+.zone-guide-container h5 {
+    clear:both;
+    
+    margin-top:10px;
+    padding-top:10px
+}
+
+.zone-guide-container h4 {
+    clear: both;
+    border-bottom:1px dotted #ebdec2;
+    margin-top:10px;
+    padding-bottom:10px
+}
+.guide-quest {
+    color:#fff;
+}
+
+.guide-quest::before {
+    content: url(questGiver.png);
+}
+
+.zone-guide-container dd {
+    padding-left:20px;
+    font-size:14px;
+    padding-bottom: 10px;
+}
+#legion-title-table td {
+    padding:5px 20px;
+}
+
+#legion-title-table b {
+    color:#fff;
+}
+
+.lmh-time {
+    color:#fff;
+    font-size:14px;
+}
+
+.guide-version {
+    font-size:12px;
+    color: #FFFFFF;
+}
+
+.guide-link {
+    float: right;
+    text-align: center;
+    overflow: auto;
+    width: 80px;
+    border: 1px solid #ffd100;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.guide-link.achieve-page {
+    float:none;
+    margin:7px 0;
+}
+
+.guide-link span {
+    line-height:28px;
+}
+
+#lm-guide-link {
+    margin-right:20px;
+}
+
+.guide-link a, .guide-link a:hover, .guide-link a:visited, .guide-link a:focus {
+    color: #fff;
+}
+.guide-icon-anchor {
+    width:28px;
+    height:28px;
+    background-image:url(icon_read_guide.jpg);
+    background-size:cover;
+    float:left;
+}
+
+figure.img-right > img,
+figure.img-left > img {
+    width:100%;
+}
+
+#donate {
+    padding-top:20px;
+}
+
+#donate h2 {
+    font-size:20px;
+}
+
+#supportIcon {
+    border:1px solid #ffd100;
+    border-radius:2px;
+    margin-bottom:7px;
+}
+
+.ach-level-range {
+    font-size: 12px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+@media only screen and (max-width : 992px) {
+    .meta-pane, .achiev-pane {
+        margin-left:0;
+    }
+
+    .guide-link {
+        float:none;
+    }
+}
